@@ -1,0 +1,27 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	'BookingHandler',
+	3,
+	'BookingHandler',
+	'',
+	"039b251e-463b-4e95-ba19-5c91e87add53");
+INSERT INTO O_ID
+	VALUES (0,
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ID
+	VALUES (1,
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ID
+	VALUES (2,
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO S_SS_PROXY
+	VALUES ("039b251e-463b-4e95-ba19-5c91e87add53",
+	'BookingSystem',
+	'',
+	'',
+	0,
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	"00000000-0000-0000-0000-000000000000",
+	'../BookingSystem.xtuml');

@@ -1,0 +1,104 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("dcc52400-5b69-4695-83ba-850d575ec2a9",
+	'CreditCardDetails',
+	13,
+	'CreditCardDetails',
+	'',
+	"039b251e-463b-4e95-ba19-5c91e87add53");
+INSERT INTO O_NBATTR
+	VALUES ("78f618f2-83be-4538-a73e-6c5e94bbf00e",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_BATTR
+	VALUES ("78f618f2-83be-4538-a73e-6c5e94bbf00e",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_ATTR
+	VALUES ("78f618f2-83be-4538-a73e-6c5e94bbf00e",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9",
+	"00000000-0000-0000-0000-000000000000",
+	'card_number',
+	'',
+	'',
+	'card_number',
+	0,
+	"c7a2e65a-2a1a-41cf-833b-af02be37a69f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("c7a2e65a-2a1a-41cf-833b-af02be37a69f",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'integer',
+	'',
+	'',
+	'../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("128f2d25-985a-44e2-965a-5ccb4bfa26f0",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_BATTR
+	VALUES ("128f2d25-985a-44e2-965a-5ccb4bfa26f0",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_ATTR
+	VALUES ("128f2d25-985a-44e2-965a-5ccb4bfa26f0",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9",
+	"78f618f2-83be-4538-a73e-6c5e94bbf00e",
+	'expiration_date',
+	'',
+	'',
+	'expiration_date',
+	0,
+	"e80e06d5-0a82-4b03-a9aa-c8540ba6866c",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("e80e06d5-0a82-4b03-a9aa-c8540ba6866c",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'date',
+	'Time as known in the external world. For example, 12 October 1492,
+13:25:10. The accuracy of external time is dependent on the architecture and
+implementation.',
+	'',
+	'../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("0f9c3eec-633a-46d8-9dbe-a77feff7ae24",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_BATTR
+	VALUES ("0f9c3eec-633a-46d8-9dbe-a77feff7ae24",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_ATTR
+	VALUES ("0f9c3eec-633a-46d8-9dbe-a77feff7ae24",
+	"dcc52400-5b69-4695-83ba-850d575ec2a9",
+	"128f2d25-985a-44e2-965a-5ccb4bfa26f0",
+	'card_holder',
+	'',
+	'',
+	'card_holder',
+	0,
+	"c788446a-a560-4d13-8c20-0a3c426118b6",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("c788446a-a560-4d13-8c20-0a3c426118b6",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'string',
+	'',
+	'',
+	'../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_ID
+	VALUES (1,
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO O_ID
+	VALUES (2,
+	"dcc52400-5b69-4695-83ba-850d575ec2a9");
+INSERT INTO S_SS_PROXY
+	VALUES ("039b251e-463b-4e95-ba19-5c91e87add53",
+	'BookingSystem',
+	'',
+	'',
+	0,
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	"00000000-0000-0000-0000-000000000000",
+	'../BookingSystem.xtuml');
