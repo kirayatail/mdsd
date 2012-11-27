@@ -7,6 +7,56 @@ INSERT INTO O_OBJ
 	'Accommodation',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53");
+INSERT INTO O_NBATTR
+	VALUES ("99937204-90ad-440c-b177-67a8ce9c9967",
+	"d31ca909-c05c-42da-91fc-0b4903b9d35a");
+INSERT INTO O_BATTR
+	VALUES ("99937204-90ad-440c-b177-67a8ce9c9967",
+	"d31ca909-c05c-42da-91fc-0b4903b9d35a");
+INSERT INTO O_ATTR
+	VALUES ("99937204-90ad-440c-b177-67a8ce9c9967",
+	"d31ca909-c05c-42da-91fc-0b4903b9d35a",
+	"00000000-0000-0000-0000-000000000000",
+	'id',
+	'',
+	'',
+	'id',
+	0,
+	"0a39c6d9-6fae-4e19-a75b-ade88b8f0d0c",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("0a39c6d9-6fae-4e19-a75b-ade88b8f0d0c",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'unique_id',
+	'',
+	'',
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("06958d92-3827-4892-99af-f8c1563f79e7",
+	"d31ca909-c05c-42da-91fc-0b4903b9d35a");
+INSERT INTO O_BATTR
+	VALUES ("06958d92-3827-4892-99af-f8c1563f79e7",
+	"d31ca909-c05c-42da-91fc-0b4903b9d35a");
+INSERT INTO O_ATTR
+	VALUES ("06958d92-3827-4892-99af-f8c1563f79e7",
+	"d31ca909-c05c-42da-91fc-0b4903b9d35a",
+	"99937204-90ad-440c-b177-67a8ce9c9967",
+	'bookable',
+	'',
+	'',
+	'bookable',
+	0,
+	"4cc4b81d-24c2-4d0e-9087-74175a1dc7da",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("4cc4b81d-24c2-4d0e-9087-74175a1dc7da",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'boolean',
+	'',
+	'',
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"d31ca909-c05c-42da-91fc-0b4903b9d35a");
@@ -24,4 +74,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/BookingSystem/BookingSystem.xtuml');
