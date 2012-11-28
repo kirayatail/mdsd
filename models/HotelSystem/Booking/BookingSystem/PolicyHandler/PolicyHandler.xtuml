@@ -7,6 +7,67 @@ INSERT INTO O_OBJ
 	'PolicyHandler',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53");
+INSERT INTO O_TFR
+	VALUES ("531258d0-3eac-41b1-b8b9-5d21fd4a4f7f",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1",
+	'validateSearch',
+	'',
+	"4cc4b81d-24c2-4d0e-9087-74175a1dc7da",
+	1,
+	'',
+	3,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("4cc4b81d-24c2-4d0e-9087-74175a1dc7da",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'boolean',
+	'',
+	'',
+	'../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("3e08501f-9d41-4116-b9b3-2b62bf55ab6f",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
+INSERT INTO O_BATTR
+	VALUES ("3e08501f-9d41-4116-b9b3-2b62bf55ab6f",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
+INSERT INTO O_ATTR
+	VALUES ("3e08501f-9d41-4116-b9b3-2b62bf55ab6f",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1",
+	"00000000-0000-0000-0000-000000000000",
+	'max_stay',
+	'',
+	'',
+	'max_stay',
+	0,
+	"c7a2e65a-2a1a-41cf-833b-af02be37a69f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("c7a2e65a-2a1a-41cf-833b-af02be37a69f",
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	'integer',
+	'',
+	'',
+	'../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("b9e806ab-8224-436a-a7f0-695dd24a6510",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
+INSERT INTO O_BATTR
+	VALUES ("b9e806ab-8224-436a-a7f0-695dd24a6510",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
+INSERT INTO O_ATTR
+	VALUES ("b9e806ab-8224-436a-a7f0-695dd24a6510",
+	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1",
+	"3e08501f-9d41-4116-b9b3-2b62bf55ab6f",
+	'max_num_accommodations',
+	'',
+	'',
+	'max_num_accommodations',
+	0,
+	"c7a2e65a-2a1a-41cf-833b-af02be37a69f",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
