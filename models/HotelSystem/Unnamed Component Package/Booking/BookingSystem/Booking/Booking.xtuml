@@ -1,0 +1,113 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("ed88e44c-b050-4190-ab86-6d52344f528e",
+	'Booking',
+	2,
+	'Booking',
+	'',
+	"039b251e-463b-4e95-ba19-5c91e87add53");
+INSERT INTO O_TFR
+	VALUES ("c28e613f-ff4e-4466-bffb-259ba78ca178",
+	"ed88e44c-b050-4190-ab86-6d52344f528e",
+	'getTabSum',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	1,
+	'',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("e1eeb3a1-7b23-4163-ad2e-48739b29ab67",
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_BATTR
+	VALUES ("e1eeb3a1-7b23-4163-ad2e-48739b29ab67",
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_ATTR
+	VALUES ("e1eeb3a1-7b23-4163-ad2e-48739b29ab67",
+	"ed88e44c-b050-4190-ab86-6d52344f528e",
+	"7753fdae-e35a-4cdf-8b41-f572f81a329d",
+	'start',
+	'',
+	'',
+	'start',
+	0,
+	"bf232dc7-d342-49ca-8c62-e039f4c30e2f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("bf232dc7-d342-49ca-8c62-e039f4c30e2f",
+	"00000000-0000-0000-0000-000000000000",
+	'date',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("a6472b75-d9cb-4bbd-bad3-402f75f346af",
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_BATTR
+	VALUES ("a6472b75-d9cb-4bbd-bad3-402f75f346af",
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_ATTR
+	VALUES ("a6472b75-d9cb-4bbd-bad3-402f75f346af",
+	"ed88e44c-b050-4190-ab86-6d52344f528e",
+	"e1eeb3a1-7b23-4163-ad2e-48739b29ab67",
+	'end',
+	'',
+	'',
+	'end',
+	0,
+	"bf232dc7-d342-49ca-8c62-e039f4c30e2f",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("7753fdae-e35a-4cdf-8b41-f572f81a329d",
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_BATTR
+	VALUES ("7753fdae-e35a-4cdf-8b41-f572f81a329d",
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_ATTR
+	VALUES ("7753fdae-e35a-4cdf-8b41-f572f81a329d",
+	"ed88e44c-b050-4190-ab86-6d52344f528e",
+	"00000000-0000-0000-0000-000000000000",
+	'id',
+	'',
+	'',
+	'id',
+	0,
+	"d649ab46-edb7-416c-b293-6b495adb66bd",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("d649ab46-edb7-416c-b293-6b495adb66bd",
+	"00000000-0000-0000-0000-000000000000",
+	'unique_id',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_ID
+	VALUES (1,
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO O_ID
+	VALUES (2,
+	"ed88e44c-b050-4190-ab86-6d52344f528e");
+INSERT INTO S_SS_PROXY
+	VALUES ("039b251e-463b-4e95-ba19-5c91e87add53",
+	'BookingSystem',
+	'',
+	'',
+	0,
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	"00000000-0000-0000-0000-000000000000",
+	'../BookingSystem.xtuml');
