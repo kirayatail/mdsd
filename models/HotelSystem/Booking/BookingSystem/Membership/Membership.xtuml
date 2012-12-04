@@ -22,16 +22,16 @@ INSERT INTO O_ATTR
 	'',
 	'member_id',
 	0,
-	"c788446a-a560-4d13-8c20-0a3c426118b6",
+	"c7a2e65a-2a1a-41cf-833b-af02be37a69f",
 	'',
 	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("c788446a-a560-4d13-8c20-0a3c426118b6",
+	VALUES ("c7a2e65a-2a1a-41cf-833b-af02be37a69f",
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
-	'string',
+	'integer',
 	'',
 	'',
-	'../../Datatypes/Datatypes.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("2df9e8eb-c214-46aa-83c0-425c01486c85",
 	"0cb3939b-98da-49e8-b127-85220579ab51");
@@ -56,7 +56,7 @@ INSERT INTO S_DT_PROXY
 	'real',
 	'',
 	'',
-	'../../Datatypes/Datatypes.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("fa7e95a0-090f-4a68-980d-f1472253ced7",
 	"0cb3939b-98da-49e8-b127-85220579ab51");
@@ -83,7 +83,7 @@ INSERT INTO S_DT_PROXY
 13:25:10. The accuracy of external time is dependent on the architecture and
 implementation.',
 	'',
-	'../../Datatypes/Datatypes.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"0cb3939b-98da-49e8-b127-85220579ab51");
@@ -101,4 +101,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/BookingSystem/BookingSystem.xtuml');

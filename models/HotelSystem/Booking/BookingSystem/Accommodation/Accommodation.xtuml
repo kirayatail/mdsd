@@ -22,13 +22,13 @@ INSERT INTO O_ATTR
 	'',
 	'id',
 	0,
-	"0a39c6d9-6fae-4e19-a75b-ade88b8f0d0c",
+	"c7a2e65a-2a1a-41cf-833b-af02be37a69f",
 	'',
 	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("0a39c6d9-6fae-4e19-a75b-ade88b8f0d0c",
+	VALUES ("c7a2e65a-2a1a-41cf-833b-af02be37a69f",
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
-	'unique_id',
+	'integer',
 	'',
 	'',
 	'../../../../../../HotelSystem/models/HotelSystem/Booking/Datatypes/Datatypes.xtuml');
