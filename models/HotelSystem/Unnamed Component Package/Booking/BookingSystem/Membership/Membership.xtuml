@@ -99,4 +99,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Booking/BookingSystem/BookingSystem.xtuml');
