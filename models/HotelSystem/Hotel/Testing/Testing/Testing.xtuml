@@ -1,0 +1,46 @@
+-- BP 7.1 content: Subsystem syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO S_SS
+	VALUES ("400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	'Testing',
+	'',
+	'',
+	0,
+	"c242977e-23f8-4b6f-8354-c48c5903a4e3",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SID
+	VALUES ("c242977e-23f8-4b6f-8354-c48c5903a4e3",
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab");
+INSERT INTO S_DOM_PROXY
+	VALUES ("c242977e-23f8-4b6f-8354-c48c5903a4e3",
+	'Testing',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000002",
+	"00000000-0000-0000-0000-000000000000",
+	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
+INSERT INTO GD_MD
+	VALUES ("fd8da28d-150b-4a67-8cb0-2462d2e0923c",
+	5,
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	11,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'');
+INSERT INTO DIM_DIA
+	VALUES ("fd8da28d-150b-4a67-8cb0-2462d2e0923c",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
