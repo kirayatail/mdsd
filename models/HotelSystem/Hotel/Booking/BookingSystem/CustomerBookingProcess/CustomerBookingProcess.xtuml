@@ -2,9 +2,9 @@
 
 INSERT INTO O_OBJ
 	VALUES ("ba3969a2-27c0-45b5-8774-177f64622576",
-	'CustomerBookingHandler',
+	'CustomerBookingProcess',
 	14,
-	'CustomerBookingHandler',
+	'CustomerBookingProcess',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53");
 INSERT INTO O_NBATTR
@@ -25,13 +25,6 @@ INSERT INTO O_ATTR
 	"d649ab46-edb7-416c-b293-6b495adb66bd",
 	'',
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("d649ab46-edb7-416c-b293-6b495adb66bd",
-	"00000000-0000-0000-0000-000000000000",
-	'unique_id',
-	'',
-	'',
-	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"ba3969a2-27c0-45b5-8774-177f64622576");
@@ -49,4 +42,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
