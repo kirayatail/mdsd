@@ -106,6 +106,12 @@ INSERT INTO SM_STATE
 	'Check in',
 	1,
 	0);
+INSERT INTO SM_CH
+	VALUES ("0d237647-ba5c-4762-b19f-6b0b43324ec2",
+	"0c988814-9850-4528-89c5-f656ac287e30",
+	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO SM_SEME
 	VALUES ("0d237647-ba5c-4762-b19f-6b0b43324ec2",
 	"0c988814-9850-4528-89c5-f656ac287e30",
@@ -305,7 +311,7 @@ INSERT INTO SM_STATE
 	"00000000-0000-0000-0000-000000000000",
 	'Complete check in',
 	5,
-	0);
+	1);
 INSERT INTO SM_CH
 	VALUES ("fa25c95c-93da-413d-a2cf-65d0873befeb",
 	"0c988814-9850-4528-89c5-f656ac287e30",
@@ -424,17 +430,6 @@ INSERT INTO SM_SEME
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_NSTXN
-	VALUES ("9a75edb6-3fa7-418d-9d13-1caa5b825416",
-	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	"0d237647-ba5c-4762-b19f-6b0b43324ec2",
-	"0c988814-9850-4528-89c5-f656ac287e30",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_TXN
-	VALUES ("9a75edb6-3fa7-418d-9d13-1caa5b825416",
-	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	"443ab84d-24c3-480a-8e77-a02133c3e28c",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NSTXN
 	VALUES ("8a71a271-6dc6-429f-ab19-5062a7a980c5",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
 	"0d237647-ba5c-4762-b19f-6b0b43324ec2",
@@ -521,8 +516,15 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("fbf66355-c325-4539-860b-8ab87f72c2f8",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
+	1,
+	'//Select booking b, b.id = bID
+	//Check b is valid
+	//if b==null or b invalid (incomplete, start>=end, already checked in)
+		//send error to cID
+		//send terminate
+	//else self b=b self.caller=cID
+		//relate b to self
+		//send checkPaymentDetails to self',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("007a5f33-85d3-4a64-b78e-74251d1ed1fe",
@@ -534,8 +536,9 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("007a5f33-85d3-4a64-b78e-74251d1ed1fe",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
+	1,
+	'//set b.Customer.PaymentDetails to given detail
+//send checkPaymentDetails to self',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("fd3c6552-1685-486b-87eb-2f9114ddf7f5",
@@ -547,8 +550,13 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("fd3c6552-1685-486b-87eb-2f9114ddf7f5",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
+	1,
+	'//Select paymentDetails from b.Customer
+//if paymentDetails==null or paymentDetails invalid
+	//ask for input for new paymentDetails from caller
+	//Caller sends newPaymentDetail or terminate(?)
+//else
+	//send findAccommodations to self',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("1a32cfe8-4eb4-44f8-8cd2-4c92ae7095cd",
@@ -560,8 +568,13 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("1a32cfe8-4eb4-44f8-8cd2-4c92ae7095cd",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
+	1,
+	'//Select accommodation where the type is the specified and the accommodation is not occupied
+//if accommodations found
+	//send assignAccommodations
+//else
+	//notify caller about error
+	//manualy assign accommodations (?)',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("3f2cde86-9d7b-4355-860d-4803330890a6",
@@ -573,8 +586,12 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("3f2cde86-9d7b-4355-860d-4803330890a6",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
+	1,
+	'//Relate accommodations to b
+//Set b.checkedIn = true
+//Unrelate b from self
+//Return true to caller
+//Terminate self',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("6b6a46f1-b383-4480-9d9e-d7d785857a9a",
@@ -586,21 +603,10 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("6b6a46f1-b383-4480-9d9e-d7d785857a9a",
 	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
-	'');
-INSERT INTO SM_TAH
-	VALUES ("8c87c760-9b55-4b56-a343-86601fe529b2",
-	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	"9a75edb6-3fa7-418d-9d13-1caa5b825416");
-INSERT INTO SM_AH
-	VALUES ("8c87c760-9b55-4b56-a343-86601fe529b2",
-	"27cc0231-dd89-486f-ae3c-2bea253ea4ee");
-INSERT INTO SM_ACT
-	VALUES ("8c87c760-9b55-4b56-a343-86601fe529b2",
-	"27cc0231-dd89-486f-ae3c-2bea253ea4ee",
-	3,
-	'',
+	1,
+	'//send confirmation about the termination to caller
+//unrelate b to self
+//delete self',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("c3c732f3-fd75-4528-955a-434d2117928b",
@@ -929,118 +935,6 @@ INSERT INTO DIM_CON
 	4284.000000,
 	3312.000000,
 	"88cba6cd-9797-4940-99a4-851c8e8affd6");
-INSERT INTO GD_GE
-	VALUES ("0b40baf8-70fe-4218-b975-405f1397c246",
-	"1fdc04b1-097c-48b1-99c8-e3e681f3747a",
-	"9a75edb6-3fa7-418d-9d13-1caa5b825416",
-	42,
-	0);
-INSERT INTO GD_CON
-	VALUES ("0b40baf8-70fe-4218-b975-405f1397c246",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO GD_CTXT
-	VALUES ("83418a57-b7b9-4687-8613-a6f77c1bf0c6",
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	1,
-	0.000000,
-	0.000000);
-INSERT INTO DIM_ND
-	VALUES (0.000000,
-	0.000000,
-	"83418a57-b7b9-4687-8613-a6f77c1bf0c6");
-INSERT INTO DIM_GE
-	VALUES (0.000000,
-	0.000000,
-	"83418a57-b7b9-4687-8613-a6f77c1bf0c6",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("83418a57-b7b9-4687-8613-a6f77c1bf0c6",
-	0,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO GD_CTXT
-	VALUES ("7115f998-e458-443c-a5b2-46ca7e1b4285",
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	3,
-	0.000000,
-	0.000000);
-INSERT INTO DIM_ND
-	VALUES (0.000000,
-	0.000000,
-	"7115f998-e458-443c-a5b2-46ca7e1b4285");
-INSERT INTO DIM_GE
-	VALUES (4130.000000,
-	3075.000000,
-	"7115f998-e458-443c-a5b2-46ca7e1b4285",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("7115f998-e458-443c-a5b2-46ca7e1b4285",
-	0,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO GD_CTXT
-	VALUES ("dfcef9d1-7fbf-479a-856e-d0cd8d12bf5b",
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	2,
-	0.000000,
-	0.000000);
-INSERT INTO DIM_ND
-	VALUES (0.000000,
-	0.000000,
-	"dfcef9d1-7fbf-479a-856e-d0cd8d12bf5b");
-INSERT INTO DIM_GE
-	VALUES (0.000000,
-	0.000000,
-	"dfcef9d1-7fbf-479a-856e-d0cd8d12bf5b",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("dfcef9d1-7fbf-479a-856e-d0cd8d12bf5b",
-	0,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO GD_LS
-	VALUES ("865b70cf-3032-4296-915c-f5e13d2e2dd5",
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	"00000000-0000-0000-0000-000000000000",
-	"82e967a4-ff11-4ad8-a49c-3cab7c7bddac",
-	"f0e11fa2-c3e6-4d3c-a383-26ae8fd5f4dd");
-INSERT INTO GD_LS
-	VALUES ("acaee1e5-780e-46a4-9573-67eb11b13f13",
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	"865b70cf-3032-4296-915c-f5e13d2e2dd5",
-	"f0e11fa2-c3e6-4d3c-a383-26ae8fd5f4dd",
-	"25463f69-2bb1-4e68-85c8-2d29c4745429");
-INSERT INTO DIM_WAY
-	VALUES ("82e967a4-ff11-4ad8-a49c-3cab7c7bddac",
-	4200.000000,
-	3144.000000,
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	"00000000-0000-0000-0000-000000000000",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_WAY
-	VALUES ("25463f69-2bb1-4e68-85c8-2d29c4745429",
-	4344.000000,
-	3108.000000,
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	"00000000-0000-0000-0000-000000000000",
-	"82e967a4-ff11-4ad8-a49c-3cab7c7bddac");
-INSERT INTO DIM_WAY
-	VALUES ("f0e11fa2-c3e6-4d3c-a383-26ae8fd5f4dd",
-	4200.000000,
-	3108.000000,
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	"00000000-0000-0000-0000-000000000000",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_GE
-	VALUES (0.000000,
-	0.000000,
-	"0b40baf8-70fe-4218-b975-405f1397c246",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("0b40baf8-70fe-4218-b975-405f1397c246",
-	0,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ED
-	VALUES ("ac93c759-6301-4d46-81f5-dea253c3ab86",
-	"bc1ffea9-d980-4cff-9035-137b402f66c0",
-	"0b40baf8-70fe-4218-b975-405f1397c246");
 INSERT INTO GD_GE
 	VALUES ("67b720c1-1d3c-459b-8006-9796ef428e52",
 	"1fdc04b1-097c-48b1-99c8-e3e681f3747a",
