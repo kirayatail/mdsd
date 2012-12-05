@@ -83,7 +83,7 @@ INSERT INTO C_PP
 	VALUES ("0a77c9c8-817c-497c-aac0-10ffb57a44ea",
 	"f71dc9de-ebaa-4be8-9414-d70686f5c51c",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'persons',
+	'processId',
 	'',
 	0,
 	'',
