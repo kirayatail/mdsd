@@ -1,0 +1,45 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
+	'CheckInProcess',
+	19,
+	'CheckInProcess',
+	'',
+	"039b251e-463b-4e95-ba19-5c91e87add53");
+INSERT INTO O_NBATTR
+	VALUES ("1de9ab73-ad76-4839-b5c2-30ff13d3c207",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_BATTR
+	VALUES ("1de9ab73-ad76-4839-b5c2-30ff13d3c207",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_ATTR
+	VALUES ("1de9ab73-ad76-4839-b5c2-30ff13d3c207",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
+	"00000000-0000-0000-0000-000000000000",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_ID
+	VALUES (1,
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_ID
+	VALUES (2,
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO S_SS_PROXY
+	VALUES ("039b251e-463b-4e95-ba19-5c91e87add53",
+	'BookingSystem',
+	'',
+	'',
+	0,
+	"c0eb1a5b-457e-4353-a295-25de28f467f1",
+	"00000000-0000-0000-0000-000000000000",
+	'../BookingSystem.xtuml');
