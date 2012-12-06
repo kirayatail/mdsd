@@ -13,7 +13,7 @@ INSERT INTO O_TFR
 	'StartAllTests',
 	'',
 	"3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
-	1,
+	0,
 	'numberOfCBTest = 100;
 id = 0;
 while (id < numberOfCBTest)
