@@ -101,7 +101,7 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../Datatypes/Datatypes.xtuml');
+	'../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO S_MBR
 	VALUES ("ee386306-72e2-4bf3-b65f-58d1c43d7ad9",
 	'name',
@@ -110,13 +110,6 @@ INSERT INTO S_MBR
 	"856c2096-9d47-49f5-a1d5-f50fd9558416",
 	"ea8a18e2-255c-4cd2-95ad-43eb86d73842",
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
-	"00000000-0000-0000-0000-000000000000",
-	'string',
-	'',
-	'',
-	'../Datatypes/Datatypes.xtuml');
 INSERT INTO S_MBR
 	VALUES ("7c626970-29a1-4a5a-8f13-f98a3c71b642",
 	'price',
@@ -146,7 +139,7 @@ INSERT INTO S_SDT
 	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b");
 INSERT INTO S_MBR
 	VALUES ("f7dcba27-631f-4c30-9a2f-b08cce1b637c",
-	'bookingId',
+	'id',
 	'',
 	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
@@ -192,7 +185,7 @@ INSERT INTO S_SYS_PROXY
 	VALUES ("1a1e260f-1d5c-40bc-b318-3a8e7348cc6f",
 	'HotelSystem',
 	0,
-	'../HotelSystem.xtuml');
+	'../../../../HotelSystem/models/HotelSystem/HotelSystem.xtuml');
 INSERT INTO SLD_SDINP
 	VALUES ("de5c9262-0f37-4495-bd9f-c6c561bc7611",
 	"39e9020c-5f64-461d-8ad1-7713ad65a35b",

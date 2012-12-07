@@ -28,24 +28,24 @@ INSERT INTO SM_EVT
 	'BookingHandler_A1',
 	'');
 INSERT INTO SM_SGEVT
-	VALUES ("f51e187e-bc87-47f0-9052-3130ccfc8299",
+	VALUES ("73d95a16-9bad-446c-abfe-a59e17ca453b",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000",
-	"a81ddb36-0f92-4280-91fe-ed8d8bd30a8d",
+	"1a70a81b-ff72-4316-b3bc-522475c17473",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SPR_PS_PROXY
-	VALUES ("a81ddb36-0f92-4280-91fe-ed8d8bd30a8d",
+	VALUES ("1a70a81b-ff72-4316-b3bc-522475c17473",
 	'showBooking',
 	'',
 	'',
-	1,
-	'../../../Booking.xtuml');
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO SM_SEVT
-	VALUES ("f51e187e-bc87-47f0-9052-3130ccfc8299",
+	VALUES ("73d95a16-9bad-446c-abfe-a59e17ca453b",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_EVT
-	VALUES ("f51e187e-bc87-47f0-9052-3130ccfc8299",
+	VALUES ("73d95a16-9bad-446c-abfe-a59e17ca453b",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000",
 	2,
@@ -55,24 +55,24 @@ INSERT INTO SM_EVT
 	'BookingHandler_A2',
 	'');
 INSERT INTO SM_SGEVT
-	VALUES ("32cfceec-934c-4ee3-836d-4faaa82bd6ba",
+	VALUES ("efbb0b73-c131-401f-a1c0-2b9994122e0f",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000",
-	"27cf7b56-9309-4bc3-96df-919e5153595e",
+	"85bb2968-3517-41ef-b1de-32341c4fbde7",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SPR_PS_PROXY
-	VALUES ("27cf7b56-9309-4bc3-96df-919e5153595e",
+	VALUES ("85bb2968-3517-41ef-b1de-32341c4fbde7",
 	'startCustomerBooking',
 	'',
 	'',
-	1,
-	'../../../Booking.xtuml');
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO SM_SEVT
-	VALUES ("32cfceec-934c-4ee3-836d-4faaa82bd6ba",
+	VALUES ("efbb0b73-c131-401f-a1c0-2b9994122e0f",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_EVT
-	VALUES ("32cfceec-934c-4ee3-836d-4faaa82bd6ba",
+	VALUES ("efbb0b73-c131-401f-a1c0-2b9994122e0f",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000",
 	3,
@@ -101,19 +101,19 @@ INSERT INTO SM_SEME
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_SEME
 	VALUES ("7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
-	"f51e187e-bc87-47f0-9052-3130ccfc8299",
+	"73d95a16-9bad-446c-abfe-a59e17ca453b",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_SEME
 	VALUES ("7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
-	"32cfceec-934c-4ee3-836d-4faaa82bd6ba",
+	"efbb0b73-c131-401f-a1c0-2b9994122e0f",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_NSTXN
 	VALUES ("c3b5e836-86ac-426c-8563-fa20ac0244ab",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
-	"32cfceec-934c-4ee3-836d-4faaa82bd6ba",
+	"efbb0b73-c131-401f-a1c0-2b9994122e0f",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("c3b5e836-86ac-426c-8563-fa20ac0244ab",
@@ -124,7 +124,7 @@ INSERT INTO SM_NSTXN
 	VALUES ("df01bb5b-dc02-405a-898a-3cf8cf570c78",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
-	"f51e187e-bc87-47f0-9052-3130ccfc8299",
+	"73d95a16-9bad-446c-abfe-a59e17ca453b",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("df01bb5b-dc02-405a-898a-3cf8cf570c78",
@@ -177,7 +177,7 @@ select any selectedType related by booking->Type[R27];
 
 create object instance bs of BookingSummary;
 
-bs.summary.bookingId = booking.id;
+bs.summary.id = booking.id;
 bs.summary.starts = booking.starts;
 bs.summary.ends = booking.ends;
 bs.summary.type.id = selectedType.id;
@@ -186,8 +186,9 @@ bs.summary.type.price = selectedType.price;
 bs.summary.type.beds = selectedType.amount_of_beds;
 bs.summary.price = selectedType.price;
 
-// Not finished! Send the signal, kill the object.
-',
+send CustomerPort::showBookingResponse(summary: bs.summary);
+
+delete object instance bs;',
 	'');
 INSERT INTO GD_MD
 	VALUES ("3063f5af-50a0-4745-9f36-5f3f63edab2f",
@@ -540,4 +541,4 @@ INSERT INTO O_OBJ_PROXY
 	'BookingHandler',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../BookingHandler.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingHandler/BookingHandler.xtuml');
