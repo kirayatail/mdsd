@@ -89,7 +89,7 @@ INSERT INTO S_SDT
 	VALUES ("f73b4669-5a29-44df-918c-1c1420dd8261");
 INSERT INTO S_MBR
 	VALUES ("ea8a18e2-255c-4cd2-95ad-43eb86d73842",
-	'typeId',
+	'id',
 	'',
 	"f73b4669-5a29-44df-918c-1c1420dd8261",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
@@ -104,7 +104,7 @@ INSERT INTO S_DT_PROXY
 	'../Datatypes/Datatypes.xtuml');
 INSERT INTO S_MBR
 	VALUES ("ee386306-72e2-4bf3-b65f-58d1c43d7ad9",
-	'info',
+	'name',
 	'',
 	"f73b4669-5a29-44df-918c-1c1420dd8261",
 	"856c2096-9d47-49f5-a1d5-f50fd9558416",
@@ -124,6 +124,14 @@ INSERT INTO S_MBR
 	"f73b4669-5a29-44df-918c-1c1420dd8261",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	"ee386306-72e2-4bf3-b65f-58d1c43d7ad9",
+	'');
+INSERT INTO S_MBR
+	VALUES ("e2fd4b3f-3426-4142-a7f4-6c8d77273b1e",
+	'beds',
+	'',
+	"f73b4669-5a29-44df-918c-1c1420dd8261",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"7c626970-29a1-4a5a-8f13-f98a3c71b642",
 	'');
 INSERT INTO S_DIP
 	VALUES ("de5c9262-0f37-4495-bd9f-c6c561bc7611",
@@ -146,7 +154,7 @@ INSERT INTO S_MBR
 	'');
 INSERT INTO S_MBR
 	VALUES ("b1cec1e0-c1dd-4a21-8f7c-0549ebabe617",
-	'start',
+	'starts',
 	'',
 	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
@@ -154,7 +162,7 @@ INSERT INTO S_MBR
 	'');
 INSERT INTO S_MBR
 	VALUES ("4d71e5fe-b892-48e8-ac0a-832f757788ee",
-	'end',
+	'ends',
 	'',
 	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",

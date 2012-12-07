@@ -121,6 +121,31 @@ INSERT INTO O_TPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("d4464040-10e2-4090-bdad-e445f4ca1b97",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_BATTR
+	VALUES ("d4464040-10e2-4090-bdad-e445f4ca1b97",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ATTR
+	VALUES ("d4464040-10e2-4090-bdad-e445f4ca1b97",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	"00000000-0000-0000-0000-000000000000",
+	'tempBookingSummary',
+	'',
+	'',
+	'tempBookingSummary',
+	0,
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"00000000-0000-0000-0000-000000000000",
+	'BookingSummary',
+	'',
+	'',
+	'../../../../HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
