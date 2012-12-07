@@ -249,10 +249,10 @@ INSERT INTO C_EP
 	VALUES ("e5576f92-ca7a-439e-b82f-8b47408fca44",
 	"b8183d2b-c293-42b1-afc9-0aa5c6fafe59",
 	-1,
-	'paymentAccepted');
+	'paymentDetailsAccepted');
 INSERT INTO C_AS
 	VALUES ("e5576f92-ca7a-439e-b82f-8b47408fca44",
-	'paymentAccepted',
+	'paymentDetailsAccepted',
 	'',
 	1,
 	"db8b609e-6eb0-46ca-940e-e660aaddf087");
