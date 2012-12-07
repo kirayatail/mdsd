@@ -249,10 +249,10 @@ INSERT INTO C_EP
 	VALUES ("e5576f92-ca7a-439e-b82f-8b47408fca44",
 	"b8183d2b-c293-42b1-afc9-0aa5c6fafe59",
 	-1,
-	'paymentAccepted');
+	'paymentDetailsAccepted');
 INSERT INTO C_AS
 	VALUES ("e5576f92-ca7a-439e-b82f-8b47408fca44",
-	'paymentAccepted',
+	'paymentDetailsAccepted',
 	'',
 	1,
 	"db8b609e-6eb0-46ca-940e-e660aaddf087");
@@ -342,15 +342,6 @@ INSERT INTO C_AS
 	1,
 	"f92f8127-37c0-47dc-8156-d9d7367d7de7");
 INSERT INTO C_PP
-	VALUES ("d64aa600-75cc-4cb2-9d2c-025d86e2eb1e",
-	"3702f8ae-274e-40a1-b5c6-14b6724d52c4",
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'booking',
-	'',
-	0,
-	'',
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO C_PP
 	VALUES ("ebec6fc4-ee6b-4fa6-bf86-9ced421cd9a4",
 	"3702f8ae-274e-40a1-b5c6-14b6724d52c4",
 	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
@@ -358,7 +349,7 @@ INSERT INTO C_PP
 	'',
 	0,
 	'',
-	"d64aa600-75cc-4cb2-9d2c-025d86e2eb1e");
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO S_DT_PROXY
 	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
 	"00000000-0000-0000-0000-000000000000",
