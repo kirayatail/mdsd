@@ -1,0 +1,17 @@
+-- BP 7.1 content: Interface syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO C_I
+	VALUES ("484ddcc1-d05f-458e-97c2-08054a279658",
+	"292db3a9-8d29-4506-a0ec-58dab308a3da",
+	'StaffInterface',
+	'');
+INSERT INTO IP_IP_PROXY
+	VALUES ("292db3a9-8d29-4506-a0ec-58dab308a3da",
+	"00000000-0000-0000-0000-000000000000",
+	"1a1e260f-1d5c-40bc-b318-3a8e7348cc6f",
+	"1a1e260f-1d5c-40bc-b318-3a8e7348cc6f",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'HotelInterfaces',
+	'',
+	'../HotelInterfaces.xtuml');

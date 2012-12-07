@@ -46,6 +46,29 @@ INSERT INTO DIM_ELE
 	VALUES ("d500cf0c-1c21-4bd3-9663-560da780bc85",
 	0,
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_GE
+	VALUES ("1e08b73b-b7a4-4ef7-a5f7-2bcf4a0970ff",
+	"5a6f2b5f-8b66-42f3-b312-6c836a491535",
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	101,
+	0);
+INSERT INTO GD_SHP
+	VALUES ("1e08b73b-b7a4-4ef7-a5f7-2bcf4a0970ff");
+INSERT INTO GD_NCS
+	VALUES ("1e08b73b-b7a4-4ef7-a5f7-2bcf4a0970ff");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"1e08b73b-b7a4-4ef7-a5f7-2bcf4a0970ff");
+INSERT INTO DIM_GE
+	VALUES (4790.000000,
+	3100.000000,
+	"1e08b73b-b7a4-4ef7-a5f7-2bcf4a0970ff",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("1e08b73b-b7a4-4ef7-a5f7-2bcf4a0970ff",
+	0,
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_DIA
 	VALUES ("5a6f2b5f-8b66-42f3-b312-6c836a491535",
 	'',
@@ -59,7 +82,7 @@ INSERT INTO S_DIP
 INSERT INTO S_DT
 	VALUES ("f73b4669-5a29-44df-918c-1c1420dd8261",
 	"00000000-0000-0000-0000-000000000000",
-	'Suggestion',
+	'Type',
 	'',
 	'');
 INSERT INTO S_SDT
@@ -78,7 +101,7 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../Datatypes/Datatypes.xtuml');
 INSERT INTO S_MBR
 	VALUES ("ee386306-72e2-4bf3-b65f-58d1c43d7ad9",
 	'info',
@@ -93,7 +116,7 @@ INSERT INTO S_DT_PROXY
 	'string',
 	'',
 	'',
-	'../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../Datatypes/Datatypes.xtuml');
 INSERT INTO S_MBR
 	VALUES ("7c626970-29a1-4a5a-8f13-f98a3c71b642",
 	'price',
@@ -101,6 +124,57 @@ INSERT INTO S_MBR
 	"f73b4669-5a29-44df-918c-1c1420dd8261",
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	"ee386306-72e2-4bf3-b65f-58d1c43d7ad9",
+	'');
+INSERT INTO S_DIP
+	VALUES ("de5c9262-0f37-4495-bd9f-c6c561bc7611",
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b");
+INSERT INTO S_DT
+	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"00000000-0000-0000-0000-000000000000",
+	'BookingSummary',
+	'',
+	'');
+INSERT INTO S_SDT
+	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b");
+INSERT INTO S_MBR
+	VALUES ("f7dcba27-631f-4c30-9a2f-b08cce1b637c",
+	'bookingId',
+	'',
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_MBR
+	VALUES ("b1cec1e0-c1dd-4a21-8f7c-0549ebabe617",
+	'start',
+	'',
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"f7dcba27-631f-4c30-9a2f-b08cce1b637c",
+	'');
+INSERT INTO S_MBR
+	VALUES ("4d71e5fe-b892-48e8-ac0a-832f757788ee",
+	'end',
+	'',
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"b1cec1e0-c1dd-4a21-8f7c-0549ebabe617",
+	'');
+INSERT INTO S_MBR
+	VALUES ("c2d6fc7b-5a7e-4008-aca4-9f3bd11c124a",
+	'price',
+	'',
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"4d71e5fe-b892-48e8-ac0a-832f757788ee",
+	'');
+INSERT INTO S_MBR
+	VALUES ("72742528-0154-423d-9e56-30442ffbbeeb",
+	'type',
+	'',
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"f73b4669-5a29-44df-918c-1c1420dd8261",
+	"c2d6fc7b-5a7e-4008-aca4-9f3bd11c124a",
 	'');
 INSERT INTO SLD_SDINP
 	VALUES ("de5c9262-0f37-4495-bd9f-c6c561bc7611",
@@ -110,7 +184,11 @@ INSERT INTO S_SYS_PROXY
 	VALUES ("1a1e260f-1d5c-40bc-b318-3a8e7348cc6f",
 	'HotelSystem',
 	0,
-	'../../../../HotelSystem/models/HotelSystem/HotelSystem.xtuml');
+	'../HotelSystem.xtuml');
+INSERT INTO SLD_SDINP
+	VALUES ("de5c9262-0f37-4495-bd9f-c6c561bc7611",
+	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"1a1e260f-1d5c-40bc-b318-3a8e7348cc6f");
 INSERT INTO SLD_SDP
 	VALUES ("1a1e260f-1d5c-40bc-b318-3a8e7348cc6f",
 	"de5c9262-0f37-4495-bd9f-c6c561bc7611");
