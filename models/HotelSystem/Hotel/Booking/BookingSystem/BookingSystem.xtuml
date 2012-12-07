@@ -18,7 +18,7 @@ INSERT INTO S_DOM_PROXY
 	0,
 	"00000000-0000-0000-0000-000000000002",
 	"00000000-0000-0000-0000-000000000000",
-	'../Booking.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("ad7d765f-3f05-449f-bbd1-e7219c725c68");
 INSERT INTO R_REL
@@ -491,14 +491,6 @@ INSERT INTO R_OIR
 	"a804923d-e395-4da4-b411-3cfedf7975ab",
 	"375067fa-4065-4edf-a41c-882e01d1233a",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("ba9f6d12-0861-4d32-96fd-fa25a08fcbf4",
-	'PaymentDetails',
-	12,
-	'PaymentDetails',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./PaymentDetails/PaymentDetails.xtuml');
 INSERT INTO R_SUB
 	VALUES ("dcc52400-5b69-4695-83ba-850d575ec2a9",
 	"a804923d-e395-4da4-b411-3cfedf7975ab",
@@ -512,14 +504,6 @@ INSERT INTO R_OIR
 	"a804923d-e395-4da4-b411-3cfedf7975ab",
 	"e9ea58b0-c2e0-4437-853e-3b910957514c",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("dcc52400-5b69-4695-83ba-850d575ec2a9",
-	'CreditCardDetails',
-	13,
-	'CreditCardDetails',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./CreditCardDetails/CreditCardDetails.xtuml');
 INSERT INTO R_SUB
 	VALUES ("54eaccf1-c131-42c4-8876-c11af94be633",
 	"a804923d-e395-4da4-b411-3cfedf7975ab",
@@ -533,14 +517,6 @@ INSERT INTO R_OIR
 	"a804923d-e395-4da4-b411-3cfedf7975ab",
 	"8710170c-6deb-46a7-820e-1e6070cb9f7f",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("54eaccf1-c131-42c4-8876-c11af94be633",
-	'InvoiceDetails',
-	16,
-	'InvoiceDetails',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./InvoiceDetails/InvoiceDetails.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("99e14717-1959-49e8-9f75-84314e1f6996");
 INSERT INTO R_REL
@@ -565,14 +541,6 @@ INSERT INTO R_OIR
 	"99e14717-1959-49e8-9f75-84314e1f6996",
 	"3bc2f180-d86d-4e64-9419-c7bb022e3db2",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
-	'BookingHandler',
-	3,
-	'BookingHandler',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./BookingHandler/BookingHandler.xtuml');
 INSERT INTO R_PART
 	VALUES ("6924bc38-a85f-4e2d-b2fd-9151fe1fc2d5",
 	"99e14717-1959-49e8-9f75-84314e1f6996",
@@ -590,14 +558,6 @@ INSERT INTO R_OIR
 	"99e14717-1959-49e8-9f75-84314e1f6996",
 	"fe98e2f4-e642-4b11-87a0-b7e0c1a645f7",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("6924bc38-a85f-4e2d-b2fd-9151fe1fc2d5",
-	'SessionHandler',
-	17,
-	'SessionHandler',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./SessionHandler/SessionHandler.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("07aa0464-43aa-4be4-9185-9a7675ad87b7");
 INSERT INTO R_REL
@@ -639,14 +599,6 @@ INSERT INTO R_OIR
 	"07aa0464-43aa-4be4-9185-9a7675ad87b7",
 	"c5c7d4d9-140c-4e6e-83e4-afe77612c3d6",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("7f2a7b22-5f8a-474e-ae49-7cfe4b0f37ae",
-	'StaffBookingProcess',
-	15,
-	'StaffBookingProcess',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./StaffBookingProcess/StaffBookingProcess.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("dde2e954-d72e-4012-967b-67ebed6b3cae");
 INSERT INTO R_REL
@@ -688,14 +640,6 @@ INSERT INTO R_OIR
 	"dde2e954-d72e-4012-967b-67ebed6b3cae",
 	"2ef04f3f-c83f-4490-926c-9aa9db8ef5d0",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("ba3969a2-27c0-45b5-8774-177f64622576",
-	'CustomerBookingProcess',
-	14,
-	'CustomerBookingProcess',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./CustomerBookingProcess/CustomerBookingProcess.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("e5c50f90-3b8d-48af-8bf8-43ad3a4c219f");
 INSERT INTO R_REL
@@ -720,14 +664,6 @@ INSERT INTO R_OIR
 	"e5c50f90-3b8d-48af-8bf8-43ad3a4c219f",
 	"8ce0beb0-1519-4b03-a55b-7d6bf5f20747",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1",
-	'PolicyHandler',
-	1,
-	'PolicyHandler',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./PolicyHandler/PolicyHandler.xtuml');
 INSERT INTO R_PART
 	VALUES ("f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
 	"e5c50f90-3b8d-48af-8bf8-43ad3a4c219f",
@@ -786,14 +722,6 @@ INSERT INTO R_OIR
 	"b5c783a7-a49b-408e-9051-d36e51d7f1ec",
 	"63bf48ad-3896-41d0-a564-234b729c217d",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("ed88e44c-b050-4190-ab86-6d52344f528e",
-	'Booking',
-	2,
-	'Booking',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./Booking/Booking.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("7c7c0412-ecce-46fe-8af6-a59d05342759");
 INSERT INTO R_REL
@@ -859,14 +787,6 @@ INSERT INTO R_OIR
 	"27764e25-920c-4183-b6df-3a1ab7a47be0",
 	"7a207e44-cb5f-4e54-a5b5-4712d0594151",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("e815aa95-e0d5-441a-b449-1b7099c06280",
-	'AccommodationHandler',
-	18,
-	'AccommodationHandler',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./AccommodationHandler/AccommodationHandler.xtuml');
 INSERT INTO R_PART
 	VALUES ("d31ca909-c05c-42da-91fc-0b4903b9d35a",
 	"27764e25-920c-4183-b6df-3a1ab7a47be0",
@@ -884,14 +804,6 @@ INSERT INTO R_OIR
 	"27764e25-920c-4183-b6df-3a1ab7a47be0",
 	"a50b5745-0cd5-4b7c-b600-7d7997b952bb",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("d31ca909-c05c-42da-91fc-0b4903b9d35a",
-	'Accommodation',
-	4,
-	'Accommodation',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./Accommodation/Accommodation.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("0c63a524-e5ad-4f89-a56f-39c775d7ff00");
 INSERT INTO R_REL
@@ -933,14 +845,6 @@ INSERT INTO R_OIR
 	"0c63a524-e5ad-4f89-a56f-39c775d7ff00",
 	"2ba90681-870b-402a-87f9-4b991ab9c9fb",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("95dbf185-d540-4172-8aa7-33aeff63057a",
-	'Feature',
-	6,
-	'Feature',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./Feature/Feature.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("507bb631-40c3-433a-b410-b245a5be9b7e");
 INSERT INTO R_REL
@@ -982,14 +886,6 @@ INSERT INTO R_OIR
 	"507bb631-40c3-433a-b410-b245a5be9b7e",
 	"2de40f19-9465-4b99-9fca-4e7038d9f5a7",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO O_OBJ_PROXY
-	VALUES ("b28d2aec-01c0-4f36-9cc4-758e26e76dca",
-	'Type',
-	5,
-	'Type',
-	'',
-	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'./Type/Type.xtuml');
 INSERT INTO R_SIMP
 	VALUES ("b2add491-8455-4dae-a078-10dd47cb0596");
 INSERT INTO R_REL
@@ -4716,7 +4612,7 @@ INSERT INTO GD_SHP
 INSERT INTO GD_NCS
 	VALUES ("39527910-47b4-4ee0-94c1-b37056091850");
 INSERT INTO DIM_ND
-	VALUES (157.000000,
+	VALUES (193.000000,
 	121.000000,
 	"39527910-47b4-4ee0-94c1-b37056091850");
 INSERT INTO DIM_GE

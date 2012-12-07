@@ -25,13 +25,6 @@ INSERT INTO O_ATTR
 	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
 	'',
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
-	"00000000-0000-0000-0000-000000000000",
-	'BookingSummary',
-	'',
-	'',
-	'../../../../HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"48b7c882-8393-4823-bf27-0b62c7f805d4");
@@ -49,4 +42,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
