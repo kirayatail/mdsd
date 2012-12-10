@@ -166,9 +166,9 @@ INSERT INTO SM_ACT
 	VALUES ("c0e6686f-84cc-4c72-a455-0d967f664512",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'send CustomerInterface::startCustomerBooking(id,1,2,1,1,"test");
-
-//if (signal BookingCreated) -> generate CustomerBookingTest2::BookingCreated;',
+	'send CustomerInterface::startCustomerBooking(callerId:self.id,start:self.start,end:self.end,
+	persons:self.persons,rooms:self.rooms,name:self.name);
+',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("72558ec5-71c5-4bd2-be1c-6f7f18deafa4",

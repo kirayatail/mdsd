@@ -16,9 +16,21 @@ INSERT INTO O_TFR
 	0,
 	'numberOfCBTest = 100;
 id = 0;
+k = TIM::current_clock ();
+hej = 1;
+hej = hej * 1103515245 + 12345;
 while (id < numberOfCBTest)
 	create object instance t of CustomerBookingTest;
 	t.id = id;
+	t.start = hej%100;
+	hej = hej * 1103515245 + 12345;
+	t.end = hej%100;
+	hej = hej * 1103515245 + 12345;
+	t.rooms = hej%3;
+	hej = hej * 1103515245 + 12345;
+	t.persons = hej%5;
+	hej = hej * 1103515245 + 12345;
+	t.name = "testnamn";
 	id = id + 1;
 end while;
 
@@ -29,13 +41,6 @@ end for;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
-	"00000000-0000-0000-0000-000000000000",
-	'void',
-	'',
-	'',
-	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"33ef95d0-4e51-4627-bdff-efeac8816372");
@@ -53,4 +58,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c242977e-23f8-4b6f-8354-c48c5903a4e3",
 	"00000000-0000-0000-0000-000000000000",
-	'../Testing.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/Testing.xtuml');
