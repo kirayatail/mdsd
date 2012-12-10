@@ -9,6 +9,38 @@ INSERT INTO SM_SM
 	0);
 INSERT INTO SM_MOORE
 	VALUES ("ac13c1bd-8ca9-4893-8577-8eb7ec945bb6");
+INSERT INTO SM_EVTDI
+	VALUES ("3f512085-a32d-4699-b613-fbc772ca0bf5",
+	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
+	'processId',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"d46861a3-382d-465f-b33b-e5cf744110c3",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO SM_EVTDI
+	VALUES ("b10a23a1-2a0f-4033-9131-9b3105995574",
+	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
+	'typeId',
+	'',
+	"f73b4669-5a29-44df-918c-1c1420dd8261",
+	'',
+	"d46861a3-382d-465f-b33b-e5cf744110c3",
+	"3f512085-a32d-4699-b613-fbc772ca0bf5");
+INSERT INTO S_DT_PROXY
+	VALUES ("f73b4669-5a29-44df-918c-1c1420dd8261",
+	"00000000-0000-0000-0000-000000000000",
+	'Type',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("956b044e-be47-4b40-b295-a7d51bf68b56",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -193,8 +225,8 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("b3d90052-2235-4d40-ba88-2fcae307a4eb",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
-	'',
+	1,
+	'send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:rcvd_evt.typeId.id);',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("91c1fdda-5c73-4207-923e-6c8045e845d0",
