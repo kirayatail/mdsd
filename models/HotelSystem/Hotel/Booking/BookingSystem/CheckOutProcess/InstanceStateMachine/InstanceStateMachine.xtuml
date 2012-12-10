@@ -1,0 +1,44 @@
+-- BP 7.1 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO SM_ISM
+	VALUES ("bc3c6035-ed6a-45bf-a618-b0c76ade3205",
+	"9760d707-eed5-4abb-b207-c7b2fa266c8d");
+INSERT INTO SM_SM
+	VALUES ("bc3c6035-ed6a-45bf-a618-b0c76ade3205",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("bc3c6035-ed6a-45bf-a618-b0c76ade3205");
+INSERT INTO GD_MD
+	VALUES ("f7a7d4d8-d7fd-422c-8163-19d89701f811",
+	8,
+	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'');
+INSERT INTO DIM_DIA
+	VALUES ("f7a7d4d8-d7fd-422c-8163-19d89701f811",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("9760d707-eed5-4abb-b207-c7b2fa266c8d",
+	'CheckOutProcess',
+	22,
+	'CheckOutProcess',
+	'',
+	"039b251e-463b-4e95-ba19-5c91e87add53",
+	'../CheckOutProcess.xtuml');
