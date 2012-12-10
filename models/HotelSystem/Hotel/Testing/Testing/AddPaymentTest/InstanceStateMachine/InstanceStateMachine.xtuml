@@ -1,0 +1,44 @@
+-- BP 7.1 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO SM_ISM
+	VALUES ("7d9739b4-6b22-4e94-97af-264a6110860e",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO SM_SM
+	VALUES ("7d9739b4-6b22-4e94-97af-264a6110860e",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("7d9739b4-6b22-4e94-97af-264a6110860e");
+INSERT INTO GD_MD
+	VALUES ("c6e6eaad-c981-4cfb-8f64-b42ef131117c",
+	8,
+	"7d9739b4-6b22-4e94-97af-264a6110860e",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'');
+INSERT INTO DIM_DIA
+	VALUES ("c6e6eaad-c981-4cfb-8f64-b42ef131117c",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("4e0b192d-89c4-42b0-b614-13ce37aa6ea2",
+	'AddPaymentTest',
+	6,
+	'AddPaymentTest',
+	'',
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/AddPaymentTest/AddPaymentTest.xtuml');

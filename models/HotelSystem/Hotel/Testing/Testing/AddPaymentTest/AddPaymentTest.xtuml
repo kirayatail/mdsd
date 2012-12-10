@@ -7,6 +7,74 @@ INSERT INTO O_OBJ
 	'AddPaymentTest',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab");
+INSERT INTO O_NBATTR
+	VALUES ("2d0e2318-5430-4522-ba6d-9f92c162fa41",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO O_BATTR
+	VALUES ("2d0e2318-5430-4522-ba6d-9f92c162fa41",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO O_ATTR
+	VALUES ("2d0e2318-5430-4522-ba6d-9f92c162fa41",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2",
+	"00000000-0000-0000-0000-000000000000",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	"00000000-0000-0000-0000-000000000000",
+	'state<State_Model>',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("3892db84-f856-4a55-b579-a3633ddc5cbc",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO O_BATTR
+	VALUES ("3892db84-f856-4a55-b579-a3633ddc5cbc",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO O_ATTR
+	VALUES ("3892db84-f856-4a55-b579-a3633ddc5cbc",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2",
+	"2d0e2318-5430-4522-ba6d-9f92c162fa41",
+	'processId',
+	'',
+	'',
+	'processId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("3aed9a9e-2411-4983-ab58-129a13662f12",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO O_BATTR
+	VALUES ("3aed9a9e-2411-4983-ab58-129a13662f12",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
+INSERT INTO O_ATTR
+	VALUES ("3aed9a9e-2411-4983-ab58-129a13662f12",
+	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2",
+	"3892db84-f856-4a55-b579-a3633ddc5cbc",
+	'amount',
+	'',
+	'',
+	'amount',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"4e0b192d-89c4-42b0-b614-13ce37aa6ea2");
