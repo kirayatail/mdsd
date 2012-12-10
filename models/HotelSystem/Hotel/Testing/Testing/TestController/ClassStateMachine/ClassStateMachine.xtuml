@@ -46,7 +46,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("6b41aef4-b881-4602-a568-1963e0b53c11",
 	"a3c28647-87ca-47ab-9795-67906da7eff8",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO GD_MD
@@ -127,4 +127,4 @@ INSERT INTO O_OBJ_PROXY
 	'TestController',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../TestController.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/TestController/TestController.xtuml');
