@@ -1,0 +1,27 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("23a44bdf-704e-4aa4-a7a9-c8e66db25255",
+	'AddPaymentDetailsTest',
+	5,
+	'AddPaymentDetailsTest',
+	'',
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab");
+INSERT INTO O_ID
+	VALUES (0,
+	"23a44bdf-704e-4aa4-a7a9-c8e66db25255");
+INSERT INTO O_ID
+	VALUES (1,
+	"23a44bdf-704e-4aa4-a7a9-c8e66db25255");
+INSERT INTO O_ID
+	VALUES (2,
+	"23a44bdf-704e-4aa4-a7a9-c8e66db25255");
+INSERT INTO S_SS_PROXY
+	VALUES ("400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	'Testing',
+	'',
+	'',
+	0,
+	"c242977e-23f8-4b6f-8354-c48c5903a4e3",
+	"00000000-0000-0000-0000-000000000000",
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/Testing.xtuml');
