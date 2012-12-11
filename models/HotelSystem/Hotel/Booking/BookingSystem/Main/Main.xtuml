@@ -14,10 +14,19 @@ INSERT INTO O_TFR
 	'',
 	"3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
 	0,
-	'select any handler from instances of BookingHandler;
-if (empty handler)
-  create object instance handler of BookingHandler;
-end if;',
+	'select any bookHandler from instances of BookingHandler;
+if (empty bookHandler)
+  create object instance bookHandler of BookingHandler;
+  bookHandler.idCounter = 0;
+end if;
+
+select any accHandler from instances of AccommodationHandler;
+if (empty accHandler)
+	create object instance accHandler of AccommodationHandler;
+	accHandler.initDummyData();
+	relate bookHandler to accHandler across R24;
+end if;
+',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
@@ -27,7 +36,7 @@ INSERT INTO S_DT_PROXY
 	'void',
 	'',
 	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"25a52861-ff92-4157-8205-aecb86044359");
@@ -45,4 +54,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
+	'../BookingSystem.xtuml');

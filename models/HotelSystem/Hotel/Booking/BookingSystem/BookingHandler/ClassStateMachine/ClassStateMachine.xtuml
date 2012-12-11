@@ -290,6 +290,8 @@ select any handler from instances of BookingHandler;
 relate handler to process across R32;
 relate handler to booking across R26;
 relate booking to process across R19;
+handler.idCounter = handler.idCounter +1;
+booking.id = handler.idCounter; 
 
 generate CustomerBookingProcess1:start(callerID: rcvd_evt.callerId, 
 									   starts: rcvd_evt.start,

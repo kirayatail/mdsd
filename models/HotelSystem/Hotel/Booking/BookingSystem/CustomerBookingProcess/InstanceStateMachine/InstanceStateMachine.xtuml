@@ -316,7 +316,17 @@ INSERT INTO SM_ACT
 	1,
 	'select one booking related by self->Booking[R19];
 
-',
+booking.starts = rcvd_evt.starts;
+booking.ends = rcvd_evt.ends;
+
+select one handler related by self -> BookingHandler[R32];
+typeID = handler.checkAvailability(persons:rcvd_evt.persons, starts: rcvd_evt.starts, ends: rcvd_evt.ends);
+
+if(typeID == 0)
+	// Send error signal: No available rooms of a type that''s big enough
+else
+	// Send struct ''type'' with signal customerBookingStarted
+end if;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("db4da281-ff97-4784-a66a-abf28fcb8d98",

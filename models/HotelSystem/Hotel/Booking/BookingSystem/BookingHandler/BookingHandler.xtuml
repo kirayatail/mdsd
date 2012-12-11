@@ -121,31 +121,82 @@ INSERT INTO O_TPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO O_TFR
+	VALUES ("a27bf336-92c1-49e6-9537-c532644ea089",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	'checkAvailability',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	1,
+	'
+// Get all types
+select one accHandler related by self -> AccommodationHandler[R24];
+select many types related by accHandler -> Type[R23];
+
+
+// For each type t
+for each t in types
+	// if t size >= persons
+	if (t.amount_of_beds >= param.persons)
+		// get n = number of accommodations with type t
+//		tNum = accHandler.getAccsByType(type: t.id);
+		// get all bookings bs where type == t and starts < b.ends and ends > b.starts
+		
+		// if n > bs.size
+			// return t.id
+		// end if;
+	 end if;
+end for;
+
+return 0;',
+	1,
+	'',
+	"6d463373-4c84-4f22-a030-bc2a5a1c1f1c");
+INSERT INTO O_TPARM
+	VALUES ("ecdb2aaa-af87-4d52-b166-95d4ab90a68d",
+	"a27bf336-92c1-49e6-9537-c532644ea089",
+	'persons',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("02402e7b-b285-409f-8f45-1faed9fc95bd",
+	"a27bf336-92c1-49e6-9537-c532644ea089",
+	'starts',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	0,
+	'',
+	"ecdb2aaa-af87-4d52-b166-95d4ab90a68d",
+	'');
+INSERT INTO O_TPARM
+	VALUES ("ba2c28e9-8aa0-42ad-a7ae-e888fac6f5ff",
+	"a27bf336-92c1-49e6-9537-c532644ea089",
+	'ends',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	0,
+	'',
+	"02402e7b-b285-409f-8f45-1faed9fc95bd",
+	'');
 INSERT INTO O_NBATTR
-	VALUES ("d4464040-10e2-4090-bdad-e445f4ca1b97",
+	VALUES ("3dcfe8a5-f640-4f8c-89c0-62a07cda597e",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
 INSERT INTO O_BATTR
-	VALUES ("d4464040-10e2-4090-bdad-e445f4ca1b97",
+	VALUES ("3dcfe8a5-f640-4f8c-89c0-62a07cda597e",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
 INSERT INTO O_ATTR
-	VALUES ("d4464040-10e2-4090-bdad-e445f4ca1b97",
+	VALUES ("3dcfe8a5-f640-4f8c-89c0-62a07cda597e",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
 	"00000000-0000-0000-0000-000000000000",
-	'tempBookingSummary',
+	'idCounter',
 	'',
 	'',
-	'tempBookingSummary',
+	'idCounter',
 	0,
-	"39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
-	"00000000-0000-0000-0000-000000000000",
-	'BookingSummary',
-	'',
-	'',
-	'../../../../HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
