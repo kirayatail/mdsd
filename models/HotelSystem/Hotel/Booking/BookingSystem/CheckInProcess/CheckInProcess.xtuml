@@ -8,13 +8,13 @@ INSERT INTO O_OBJ
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53");
 INSERT INTO O_NBATTR
-	VALUES ("1de9ab73-ad76-4839-b5c2-30ff13d3c207",
+	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
 INSERT INTO O_BATTR
-	VALUES ("1de9ab73-ad76-4839-b5c2-30ff13d3c207",
+	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
 INSERT INTO O_ATTR
-	VALUES ("1de9ab73-ad76-4839-b5c2-30ff13d3c207",
+	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
 	"00000000-0000-0000-0000-000000000000",
 	'current_state',
@@ -22,9 +22,16 @@ INSERT INTO O_ATTR
 	'',
 	'current_state',
 	0,
-	"00000000-0000-0000-0000-000000000000",
+	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	"00000000-0000-0000-0000-000000000000",
+	'state<State_Model>',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
