@@ -9,33 +9,6 @@ INSERT INTO SM_SM
 	0);
 INSERT INTO SM_MOORE
 	VALUES ("554591c9-1bd8-494a-a337-8c49d5a56b8b");
-INSERT INTO SM_SGEVT
-	VALUES ("f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
-	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	"00000000-0000-0000-0000-000000000000",
-	"00000000-0000-0000-0000-000000000000",
-	"94128f2a-79a5-49a1-9f68-f70db0154743");
-INSERT INTO SPR_RS_PROXY
-	VALUES ("94128f2a-79a5-49a1-9f68-f70db0154743",
-	'customerBookingStarted',
-	'',
-	'',
-	3,
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
-INSERT INTO SM_SEVT
-	VALUES ("f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
-	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_EVT
-	VALUES ("f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
-	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	"00000000-0000-0000-0000-000000000000",
-	1,
-	'customerBookingStarted',
-	0,
-	'',
-	'CustomerBookingTest_A1',
-	'');
 INSERT INTO SM_LEVT
 	VALUES ("e02c4d96-f6c6-41df-a1e4-1c716e04dcea",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
@@ -61,11 +34,6 @@ INSERT INTO SM_STATE
 	'Wait state',
 	1,
 	0);
-INSERT INTO SM_SEME
-	VALUES ("ea0fa972-aa31-4933-95cb-d255387f3d52",
-	"f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
-	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_CH
 	VALUES ("ea0fa972-aa31-4933-95cb-d255387f3d52",
 	"e02c4d96-f6c6-41df-a1e4-1c716e04dcea",
@@ -84,27 +52,15 @@ INSERT INTO SM_STATE
 	'A Booking started',
 	2,
 	0);
-INSERT INTO SM_CH
-	VALUES ("8d8a630e-993a-494f-8f90-487d7cb92d15",
-	"f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
-	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO SM_SEME
-	VALUES ("8d8a630e-993a-494f-8f90-487d7cb92d15",
-	"f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
-	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_SEME
 	VALUES ("8d8a630e-993a-494f-8f90-487d7cb92d15",
 	"e02c4d96-f6c6-41df-a1e4-1c716e04dcea",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NSTXN
+INSERT INTO SM_NETXN
 	VALUES ("d212b6f0-241b-4368-8d08-3db46cb4f6ce",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
 	"ea0fa972-aa31-4933-95cb-d255387f3d52",
-	"f1bd4ee1-cba3-4705-aaf1-0a51d29cea64",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("d212b6f0-241b-4368-8d08-3db46cb4f6ce",
@@ -479,4 +435,4 @@ INSERT INTO O_OBJ_PROXY
 	'CustomerBookingTest',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/CustomerBookingTest/CustomerBookingTest.xtuml');
+	'../CustomerBookingTest.xtuml');
