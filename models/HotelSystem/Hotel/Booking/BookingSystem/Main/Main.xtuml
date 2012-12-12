@@ -18,6 +18,10 @@ INSERT INTO O_TFR
 if (empty bookHandler)
   create object instance bookHandler of BookingHandler;
   bookHandler.idCounter = 0;
+  bookHandler.cbpCounter = 0;
+  bookHandler.cipCounter = 0;
+  bookHandler.copCounter = 0;
+  bookHandler.sbpCounter = 0;
 end if;
 
 select any accHandler from instances of AccommodationHandler;
@@ -36,7 +40,7 @@ INSERT INTO S_DT_PROXY
 	'void',
 	'',
 	'',
-	'../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"25a52861-ff92-4157-8205-aecb86044359");
@@ -54,4 +58,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
