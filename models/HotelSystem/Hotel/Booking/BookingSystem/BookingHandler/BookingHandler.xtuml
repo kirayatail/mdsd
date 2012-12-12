@@ -137,7 +137,7 @@ if not empty types
 	// For each suitable type 
 	for each t in types
 		//Count how many rooms of the type are booked
-		select many bookings related by t -> Booking[R27] where param.starts < selected.ends
+		select many bookings related by t -> Booking[R35] where param.starts < selected.ends
 														 and param.ends > selected.starts;
 		bookingCount = cardinality bookings;
 

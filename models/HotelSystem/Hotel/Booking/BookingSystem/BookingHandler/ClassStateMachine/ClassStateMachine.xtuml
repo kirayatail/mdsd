@@ -38,8 +38,8 @@ INSERT INTO SPR_PS_PROXY
 	'checkIn',
 	'',
 	'',
-	3,
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
+	1,
+	'../../../Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("1cbbfaee-d3c2-4550-8e54-0e7b7ca33348",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -65,8 +65,8 @@ INSERT INTO SPR_PS_PROXY
 	'checkOut',
 	'',
 	'',
-	3,
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
+	1,
+	'../../../Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("f00302e7-33ce-49c8-bf57-2507bb95f308",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -92,8 +92,8 @@ INSERT INTO SPR_PS_PROXY
 	'showBooking',
 	'',
 	'',
-	3,
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
+	1,
+	'../../../Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("9895560c-6567-4e0b-9151-2ea0b01156aa",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -119,8 +119,8 @@ INSERT INTO SPR_PS_PROXY
 	'startCustomerBooking',
 	'',
 	'',
-	3,
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
+	1,
+	'../../../Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("25a4d66f-e107-45a7-8226-5c37fd25b477",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -277,7 +277,7 @@ INSERT INTO SM_ACT
 	'
 select any handler from instances of BookingHandler;
 select any booking related by handler->Booking[R26] where (selected.id == rcvd_evt.bookingId);
-select any selectedType related by booking->Type[R27];
+select one selectedType related by booking->Type[R35];
 
 create object instance bs of BookingSummary;
 
@@ -287,7 +287,7 @@ bs.summary.ends = booking.ends;
 bs.summary.type.id = selectedType.id;
 bs.summary.type.name = selectedType.name;
 bs.summary.type.price = selectedType.price;
-bs.summary.type.beds = selectedType.amount_of_beds;
+bs.summary.type.beds = selectedType.beds;
 bs.summary.price = selectedType.price;
 
 send CustomerPort::showBookingResponse(summary: bs.summary);
@@ -304,7 +304,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("234b6b72-4a8e-46c3-8065-bb16074f28b8",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -973,4 +973,4 @@ INSERT INTO O_OBJ_PROXY
 	'BookingHandler',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingHandler/BookingHandler.xtuml');
+	'../BookingHandler.xtuml');
