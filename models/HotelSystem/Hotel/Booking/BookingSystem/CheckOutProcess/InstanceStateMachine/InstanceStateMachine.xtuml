@@ -483,7 +483,7 @@ INSERT INTO SM_ACT
 	1,
 	'Select one booking related by self -> Booking[R29];
 
-Select many accommodations related by booking -> Accommodation[R8];
+Select many accommodations related by booking -> Accommodation[R33];
 if empty accommodations
 	send StaffInterface::checkOutStarted(
 		callerId:self.callerId, 
