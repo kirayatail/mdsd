@@ -18,13 +18,6 @@ INSERT INTO O_TFR
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
-	"00000000-0000-0000-0000-000000000000",
-	'void',
-	'',
-	'',
-	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TFR
 	VALUES ("2ec425e5-8438-41d3-8f04-b62812e26b73",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
@@ -56,13 +49,6 @@ INSERT INTO O_TPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TPARM
 	VALUES ("32262546-d60c-47f0-8c6c-a0ea9f233db7",
 	"b05651f5-5b22-4763-97ce-79b1cd021308",
@@ -129,24 +115,30 @@ INSERT INTO O_TFR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	1,
 	'
-// Get all types
+// Get all types with enough beds
 select one accHandler related by self -> AccommodationHandler[R24];
-select many types related by accHandler -> Type[R23];
+select many types related by accHandler -> Type[R23] where selected.beds >= param.persons;
 
-
-// For each type t
+if not empty types
+// For each suitable type 
 for each t in types
-	// if t size >= persons
-	if (t.amount_of_beds >= param.persons)
+	select many bookings related by self -> Booking[R26] where param.starts < selected.ends 
+														 and param.ends > selected.starts;
+		bookingCount = 0;
+		for each b in bookings
+			select one type related by b -> Type[R27];
+			if type.id == t.id
+				bookingCount = bookingCount + 1;
+			end if;
+		end for;												 
 		// get n = number of accommodations with type t
-//		tNum = accHandler.getAccsByType(type: t.id);
+		// tNum = accHandler.getAccsByType(type: t.id);
 		// get all bookings bs where type == t and starts < b.ends and ends > b.starts
 		
 		// if n > bs.size
-			// return t.id
-		// end if;
-	 end if;
-end for;
+		// return t.id
+	end for;
+end if;
 
 return 0;',
 	1,
@@ -214,4 +206,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
