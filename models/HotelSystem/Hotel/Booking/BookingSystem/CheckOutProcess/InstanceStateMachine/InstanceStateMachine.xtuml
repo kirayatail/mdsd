@@ -339,7 +339,7 @@ INSERT INTO SM_STATE
 	"00000000-0000-0000-0000-000000000000",
 	'Checked out',
 	8,
-	0);
+	1);
 INSERT INTO SM_CH
 	VALUES ("da46697a-bb22-4734-b40d-bbc382c7b032",
 	"8f98a16b-57c9-46ee-89b7-789eb1125f2c",
@@ -492,6 +492,9 @@ if empty accommodations
 		checkedIn:false);
 	generate CheckOutProcess2:terminate to self;
 else
+	for each accommodation in accommodations
+		unrelate accommodation from booking across R8;
+	end for;
 	generate CheckOutProcess3:checkPaymentLeft to self;
 end if;',
 	'');
@@ -506,9 +509,10 @@ INSERT INTO SM_ACT
 	VALUES ("3d00c9d6-0d4d-44df-8e5c-a04bb3dfa39a",
 	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
 	1,
-	'//send confirmation about the termination to caller
-//unrelate b from self
-//delete self',
+	'send StaffInterface::checkedOut(bookingId:-1); //send notification about the termination to caller
+
+select one booking related by self -> Booking[R29];
+unrelate booking from self across R29;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("b28130c6-d409-4345-80fa-df88b822f0dd",
@@ -628,8 +632,10 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("29919668-64d9-4624-b259-7ab728a43bbd",
 	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
-	3,
-	'',
+	1,
+	'select one booking related by self -> Booking[R29];
+
+send StaffInterface::checkedOut(bookingId:booking.id);',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("3533492f-6339-4778-8750-412bfe5ff1dc",
