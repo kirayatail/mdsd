@@ -24,7 +24,7 @@ INSERT INTO S_DT_PROXY
 	'void',
 	'',
 	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TFR
 	VALUES ("2ec425e5-8438-41d3-8f04-b62812e26b73",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
@@ -62,7 +62,7 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TPARM
 	VALUES ("32262546-d60c-47f0-8c6c-a0ea9f233db7",
 	"b05651f5-5b22-4763-97ce-79b1cd021308",
@@ -151,7 +151,7 @@ if not empty types
 	end for;
 end if;
 
-return 0;',
+return -1;',
 	1,
 	'',
 	"6d463373-4c84-4f22-a030-bc2a5a1c1f1c");
@@ -200,6 +200,78 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("d363c898-4a16-4112-be5e-530b4a2d3a6f",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_BATTR
+	VALUES ("d363c898-4a16-4112-be5e-530b4a2d3a6f",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ATTR
+	VALUES ("d363c898-4a16-4112-be5e-530b4a2d3a6f",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	"3dcfe8a5-f640-4f8c-89c0-62a07cda597e",
+	'cbpCounter',
+	'',
+	'',
+	'cbpCounter',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("e9742f2e-e2f4-4192-bc46-cf599c80653b",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_BATTR
+	VALUES ("e9742f2e-e2f4-4192-bc46-cf599c80653b",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ATTR
+	VALUES ("e9742f2e-e2f4-4192-bc46-cf599c80653b",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	"d363c898-4a16-4112-be5e-530b4a2d3a6f",
+	'cipCounter',
+	'',
+	'',
+	'cipCounter',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("68889f51-5059-4bd0-9dad-106c72a16b8e",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_BATTR
+	VALUES ("68889f51-5059-4bd0-9dad-106c72a16b8e",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ATTR
+	VALUES ("68889f51-5059-4bd0-9dad-106c72a16b8e",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	"e9742f2e-e2f4-4192-bc46-cf599c80653b",
+	'copCounter',
+	'',
+	'',
+	'copCounter',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("66da4f56-aae2-4f2b-86fd-64b012d1ca02",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_BATTR
+	VALUES ("66da4f56-aae2-4f2b-86fd-64b012d1ca02",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
+INSERT INTO O_ATTR
+	VALUES ("66da4f56-aae2-4f2b-86fd-64b012d1ca02",
+	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
+	"68889f51-5059-4bd0-9dad-106c72a16b8e",
+	'sbpCounter',
+	'',
+	'',
+	'sbpCounter',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5");
@@ -217,4 +289,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
+	'../BookingSystem.xtuml');
