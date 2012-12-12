@@ -59,6 +59,45 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_TFR
+	VALUES ("82404b0d-e584-4542-a661-a5f3ce678e27",
+	"e815aa95-e0d5-441a-b449-1b7099c06280",
+	'getFreeAccomId',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	1,
+	'
+select any type related by self -> Type[R23] where selected.id == param.typeId;
+
+if(not empty type)
+	select many accoms related by type -> Accommodation[R34];
+	
+	if(not empty accoms)
+		for each accom in accoms
+			select one b related by accom -> Booking[R33];
+			if(empty b)
+				return accom.id;
+			end if;
+		end for;
+		return -1;
+	else
+		return -1;
+	end if;
+else
+	return -1;
+end if;',
+	1,
+	'',
+	"6fc7687a-60e6-40a7-b26a-893b28e25ac5");
+INSERT INTO O_TPARM
+	VALUES ("f1e935eb-4c41-42bb-87a5-50b6c52d7f84",
+	"82404b0d-e584-4542-a661-a5f3ce678e27",
+	'typeId',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"e815aa95-e0d5-441a-b449-1b7099c06280");

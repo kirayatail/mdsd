@@ -22,13 +22,13 @@ INSERT INTO O_ATTR
 	'',
 	'id',
 	0,
-	"d649ab46-edb7-416c-b293-6b495adb66bd",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("d649ab46-edb7-416c-b293-6b495adb66bd",
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
 	"00000000-0000-0000-0000-000000000000",
-	'unique_id',
+	'integer',
 	'',
 	'',
 	'../../../../Datatypes/Datatypes.xtuml');
