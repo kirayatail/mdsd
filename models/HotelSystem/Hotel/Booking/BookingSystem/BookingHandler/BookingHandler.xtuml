@@ -120,23 +120,26 @@ select one accHandler related by self -> AccommodationHandler[R24];
 select many types related by accHandler -> Type[R23] where selected.beds >= param.persons;
 
 if not empty types
-// For each suitable type 
-for each t in types
-	select many bookings related by self -> Booking[R26] where param.starts < selected.ends 
+	// For each suitable type 
+	for each t in types
+		select many bookings related by self -> Booking[R26] where param.starts < selected.ends
 														 and param.ends > selected.starts;
+		// Count the rooms that are occupied of type t
 		bookingCount = 0;
 		for each b in bookings
 			select one type related by b -> Type[R27];
 			if type.id == t.id
 				bookingCount = bookingCount + 1;
 			end if;
-		end for;												 
-		// get n = number of accommodations with type t
-		// tNum = accHandler.getAccsByType(type: t.id);
-		// get all bookings bs where type == t and starts < b.ends and ends > b.starts
-		
-		// if n > bs.size
-		// return t.id
+		end for;
+
+		// Count all rooms of type
+		select many accs related by t -> Accommodation[R10];
+		roomCount = cardinality accs;
+		// Return type id if there are available rooms.
+		if roomCount > bookingCount
+			return t.id;
+		end if;											 
 	end for;
 end if;
 
