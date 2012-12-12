@@ -9,40 +9,6 @@ INSERT INTO SM_SM
 	0);
 INSERT INTO SM_MOORE
 	VALUES ("bc3c6035-ed6a-45bf-a618-b0c76ade3205");
-INSERT INTO SM_EVTDI
-	VALUES ("1ec455fe-1ed2-44e0-8668-3f77e241e79e",
-	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
-	'callerId',
-	'',
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'',
-	"8f98a16b-57c9-46ee-89b7-789eb1125f2c",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../Datatypes/Datatypes.xtuml');
-INSERT INTO SM_EVTDI
-	VALUES ("0d56427d-37e5-42a7-87bb-1593b54b3751",
-	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
-	'sessionId',
-	'',
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'',
-	"8f98a16b-57c9-46ee-89b7-789eb1125f2c",
-	"1ec455fe-1ed2-44e0-8668-3f77e241e79e");
-INSERT INTO SM_EVTDI
-	VALUES ("4ffb26d1-6116-4af4-ae9e-ea6553e0141e",
-	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
-	'bookingId',
-	'',
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'',
-	"8f98a16b-57c9-46ee-89b7-789eb1125f2c",
-	"0d56427d-37e5-42a7-87bb-1593b54b3751");
 INSERT INTO SM_LEVT
 	VALUES ("8f98a16b-57c9-46ee-89b7-789eb1125f2c",
 	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
@@ -441,7 +407,7 @@ INSERT INTO SM_ACT
 Select many accommodations related by booking -> Accommodation[R8];
 if empty accommodations
 	send StaffInterface::checkOutStarted(
-		callerId:rcvd_evt.callerId, 
+		callerId:self.callerId, 
 		processId:self.id, 
 		amountLeft:0, 
 		checkedIn:false);
