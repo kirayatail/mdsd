@@ -162,9 +162,10 @@ INSERT INTO SM_ACT
 	VALUES ("c47e5bb6-0e16-4bd3-ada3-2a0ed07a2820",
 	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
 	1,
-	'//Select booking b related to self
-	//Check b is valid
-	//if b invalid (not checked in)
+	'Select one booking related by self -> Booking[R29];
+	
+Select many accommodations related by booking -> Accommodation[R8];
+if empty accommodations
 		//send error to cID
 		//send terminate
 	//else

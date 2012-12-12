@@ -322,10 +322,20 @@ booking.ends = rcvd_evt.ends;
 select one handler related by self -> BookingHandler[R32];
 typeID = handler.checkAvailability(persons:rcvd_evt.persons, starts: rcvd_evt.starts, ends: rcvd_evt.ends);
 
+
+
 if(typeID == 0)
 	// Send error signal: No available rooms of a type that''s big enough
 else
+	create object instance tStruct of TypeObj;
+	select any suggestion related by self -> BookingHandler[R32] -> AccommodationHandler[R24] -> Type[R23] where selected.id == typeID;
+	tStruct.type.id = suggestion.id;
+	tStruct.type.name = suggestion.name;
+	tStruct.type.price = suggestion.price;
+	tStruct.type.beds = suggestion.beds;
 	// Send struct ''type'' with signal customerBookingStarted
+	send CustomerPort::customerBookingStarted(processId:self.id, callerId:rcvd_evt.callerId, suggestion:tStruct.type);
+	delete object instance tStruct;
 end if;',
 	'');
 INSERT INTO SM_MOAH
