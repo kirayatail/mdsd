@@ -131,7 +131,7 @@ INSERT INTO SM_STATE
 	"00000000-0000-0000-0000-000000000000",
 	'Check in completed',
 	5,
-	0);
+	1);
 INSERT INTO SM_CH
 	VALUES ("2fa197cf-98c5-4da5-9472-21f431a3bef6",
 	"5d428f43-91f2-4ac9-bb13-ecd66cb17e4e",
@@ -263,7 +263,6 @@ INSERT INTO SM_ACT
 
 select many accommodations related by booking -> Accommodation[R33];
 if not empty accommodations
-	send StaffInterface::illegalCheckIn(isIllegal:true);
 	generate CheckInProcess1:terminate to self;
 else
 	generate CheckInProcess2:findAccommodations to self;
@@ -294,13 +293,20 @@ INSERT INTO SM_ACT
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
 	'select one booking related by self -> Booking[R31];
-Select any accommodation related by self -> BookingHandler[R25] ->  AccommodationHandler[R24];
-//the type is the specified and the accommodation is not occupied
-//if accommodations found
-	//send assignAccommodations
-//else
-	//notify caller about error
-	//manualy assign accommodations (?)',
+
+select one acHandler related by self -> BookingHandler[R25] -> AccommodationHandler[R24];
+
+select one bType related by booking -> Type[R35];
+
+accId = acHandler.getFreeAccomId(typeId:bType.id);
+
+if(accId != -1)
+	select any accom related by acHandler -> Accommodation[R21] where selected.id == accId;
+	relate accom to booking across R33;
+	generate CheckInProcess3:completeCheckIn to self;
+else
+	generate CheckInProcess1:terminate to self;
+end if;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("4ee71bec-bb98-498d-b517-fd3d85ccf04c",
@@ -313,8 +319,14 @@ INSERT INTO SM_ACT
 	VALUES ("4ee71bec-bb98-498d-b517-fd3d85ccf04c",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
-	'//Relate accommodations to b
-//Set b.checkedIn = true
+	'
+
+select one b related by self -> Booking[R31];
+
+send StaffInterface::checkedIn(bookingId:b.id);
+
+unrelate b from self across R31;
+
 //Unrelate b from self
 //Return true to caller
 //Terminate self',
@@ -330,8 +342,13 @@ INSERT INTO SM_ACT
 	VALUES ("200c6e0f-6b69-489f-85f5-9225c25d62be",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
-	'//send confirmation about the termination to caller
-//unrelate b to self
+	'
+select one b related by self -> Booking[R31];
+unrelate b from self across R31;
+
+send StaffInterface::illegalCheckIn(isIllegal:true);
+
+
 //delete self',
 	'');
 INSERT INTO SM_TAH
