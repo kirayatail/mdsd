@@ -385,11 +385,11 @@ INSERT INTO C_P
 	'BookingProvider',
 	'');
 INSERT INTO SPR_PEP
-	VALUES ("2ce31739-39eb-4521-8cf6-7a38eb0d82a8",
+	VALUES ("7c2db8af-8f6b-4675-aa1c-d682700d8056",
 	"6155f6dd-c1b1-405d-99d1-f5fc096b6a35",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("2ce31739-39eb-4521-8cf6-7a38eb0d82a8",
+	VALUES ("7c2db8af-8f6b-4675-aa1c-d682700d8056",
 	'startCustomerBooking',
 	'',
 	'',
@@ -401,11 +401,11 @@ INSERT INTO C_EP_PROXY
 	'startCustomerBooking',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("1d56e785-100b-4b1e-a59a-c340a8f92a8a",
+	VALUES ("f3ea1859-b77e-408a-b391-c4f2820615b2",
 	"f71dc9de-ebaa-4be8-9414-d70686f5c51c",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("1d56e785-100b-4b1e-a59a-c340a8f92a8a",
+	VALUES ("f3ea1859-b77e-408a-b391-c4f2820615b2",
 	'customerBookingStarted',
 	'',
 	'',
@@ -417,11 +417,11 @@ INSERT INTO C_EP_PROXY
 	'customerBookingStarted',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("22f7e15d-2773-43cb-ae4d-eebed2cb56d3",
+	VALUES ("c35bd340-d8af-4a0e-a24c-6b9a7ebfbaf4",
 	"310b1211-fcaf-4f9c-ba4f-5b92ee040b4f",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("22f7e15d-2773-43cb-ae4d-eebed2cb56d3",
+	VALUES ("c35bd340-d8af-4a0e-a24c-6b9a7ebfbaf4",
 	'cancelCustomerBooking',
 	'',
 	'',
@@ -433,11 +433,11 @@ INSERT INTO C_EP_PROXY
 	'cancelCustomerBooking',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("9263a523-ff77-4107-941a-93b302cf0216",
+	VALUES ("75b45b11-6a73-4e75-90e1-c5a28391912f",
 	"5a738894-2263-4a7d-8b7c-2d6236abaf56",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("9263a523-ff77-4107-941a-93b302cf0216",
+	VALUES ("75b45b11-6a73-4e75-90e1-c5a28391912f",
 	'pickOption',
 	'',
 	'',
@@ -449,11 +449,11 @@ INSERT INTO C_EP_PROXY
 	'pickOption',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("d170484f-b5ea-4336-b65b-5752ea90d6b2",
+	VALUES ("ea07bc01-5795-43f7-b9f2-63cacbfd50c9",
 	"db8b609e-6eb0-46ca-940e-e660aaddf087",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("d170484f-b5ea-4336-b65b-5752ea90d6b2",
+	VALUES ("ea07bc01-5795-43f7-b9f2-63cacbfd50c9",
 	'providePaymentDetails',
 	'',
 	'',
@@ -465,11 +465,11 @@ INSERT INTO C_EP_PROXY
 	'providePaymentDetails',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("21a28375-5a48-414f-bd29-9fe74cd2c7a2",
+	VALUES ("c1e87ca9-40fe-4d95-af03-d2e97c405358",
 	"c559623e-4c50-44b5-b63d-68f161bd5271",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("21a28375-5a48-414f-bd29-9fe74cd2c7a2",
+	VALUES ("c1e87ca9-40fe-4d95-af03-d2e97c405358",
 	'confirm',
 	'',
 	'',
@@ -481,11 +481,11 @@ INSERT INTO C_EP_PROXY
 	'confirm',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("37532d82-ad4c-4eae-9ff2-7993554029df",
+	VALUES ("789f2027-03c0-4750-8877-7a876f694342",
 	"e5576f92-ca7a-439e-b82f-8b47408fca44",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("37532d82-ad4c-4eae-9ff2-7993554029df",
+	VALUES ("789f2027-03c0-4750-8877-7a876f694342",
 	'paymentDetailsAccepted',
 	'',
 	'',
@@ -497,11 +497,11 @@ INSERT INTO C_EP_PROXY
 	'paymentDetailsAccepted',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("56b32c26-192a-40f7-b03d-a57c919a3652",
+	VALUES ("c42c6793-00e9-4f31-9009-fca71dfc765b",
 	"3d727018-7dfb-4923-b670-33c03bb3a0c9",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("56b32c26-192a-40f7-b03d-a57c919a3652",
+	VALUES ("c42c6793-00e9-4f31-9009-fca71dfc765b",
 	'bookingConfirmed',
 	'',
 	'',
@@ -513,11 +513,11 @@ INSERT INTO C_EP_PROXY
 	'bookingConfirmed',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("6a234b22-989b-4bb7-a979-c03f912febc8",
+	VALUES ("0a321226-ee7c-4601-94f5-5c7d171ec280",
 	"f92f8127-37c0-47dc-8156-d9d7367d7de7",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("6a234b22-989b-4bb7-a979-c03f912febc8",
+	VALUES ("0a321226-ee7c-4601-94f5-5c7d171ec280",
 	'showBooking',
 	'',
 	'',
@@ -529,11 +529,11 @@ INSERT INTO C_EP_PROXY
 	'showBooking',
 	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/CustomerInterface/CustomerInterface.xtuml');
 INSERT INTO SPR_PEP
-	VALUES ("f42b6511-471e-4b51-8469-3205b3c7a8b1",
+	VALUES ("09597813-b22a-4366-86ed-1e8fc1dfe234",
 	"3702f8ae-274e-40a1-b5c6-14b6724d52c4",
 	"07db0a38-2d03-442f-a3ce-5648c9e52e2c");
 INSERT INTO SPR_PS
-	VALUES ("f42b6511-471e-4b51-8469-3205b3c7a8b1",
+	VALUES ("09597813-b22a-4366-86ed-1e8fc1dfe234",
 	'showBookingResponse',
 	'',
 	'',
