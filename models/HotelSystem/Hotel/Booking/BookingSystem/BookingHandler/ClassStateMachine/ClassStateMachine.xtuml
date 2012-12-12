@@ -108,6 +108,33 @@ INSERT INTO SM_EVT
 	'',
 	'BookingHandler_A6',
 	'');
+INSERT INTO SM_SGEVT
+	VALUES ("d22a90e8-50b7-43a4-9fbe-536bfd0366f8",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000",
+	"e2e1954c-9a5e-4471-b6c9-58a13cbe3568",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SPR_PS_PROXY
+	VALUES ("e2e1954c-9a5e-4471-b6c9-58a13cbe3568",
+	'checkOut',
+	'',
+	'',
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
+INSERT INTO SM_SEVT
+	VALUES ("d22a90e8-50b7-43a4-9fbe-536bfd0366f8",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVT
+	VALUES ("d22a90e8-50b7-43a4-9fbe-536bfd0366f8",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000",
+	7,
+	'checkOut',
+	0,
+	'',
+	'BookingHandler_A7',
+	'');
 INSERT INTO SM_STATE
 	VALUES ("7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -141,6 +168,11 @@ INSERT INTO SM_SEME
 	"671f0ef9-81cb-455a-b1aa-07335d9834b5",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_SEME
+	VALUES ("7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
+	"d22a90e8-50b7-43a4-9fbe-536bfd0366f8",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_NSTXN
 	VALUES ("c3b5e836-86ac-426c-8563-fa20ac0244ab",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -173,10 +205,11 @@ INSERT INTO SM_TXN
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NETXN
+INSERT INTO SM_NSTXN
 	VALUES ("22f187f6-f32e-4076-a56c-92f1c5a92a6e",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
+	"d22a90e8-50b7-43a4-9fbe-536bfd0366f8",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("22f187f6-f32e-4076-a56c-92f1c5a92a6e",
@@ -295,12 +328,19 @@ INSERT INTO SM_ACT
 	VALUES ("e0bddda5-30dd-42d1-b4e9-2cb0c7101b4c",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	1,
-	'//Select booking b, b.id = bID
-	//if b!=null
-		//create CheckOutProcess p
-		//relate b to p
-	//else 
-		//send error to caller',
+	'create object instance process of CheckOutProcess;
+select any handler from instances of BookingHandler;
+select any booking related by handler -> Booking[R26] where selected.id == rcvd_evt.bookingId;
+relate handler to process across R28;
+relate handler to booking across R26;
+relate booking to process across R29;
+handler.idCounter = handler.idCounter + 1;
+booking.id = handler.idCounter;
+handler.cbpCounter = handler.cbpCounter + 1;
+process.id =handler.cbpCounter;
+process.callerId = rcvd_evt.callerId;
+
+generate CheckOutProcess1:start();',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("234b6b72-4a8e-46c3-8065-bb16074f28b8",

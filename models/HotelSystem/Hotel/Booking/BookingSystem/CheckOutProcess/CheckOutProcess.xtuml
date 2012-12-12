@@ -31,7 +31,7 @@ INSERT INTO S_DT_PROXY
 	'state<State_Model>',
 	'',
 	'',
-	'../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("8b14e2c0-60e2-43c7-98bb-71fd01ce1d2b",
 	"9760d707-eed5-4abb-b207-c7b2fa266c8d");
@@ -56,7 +56,25 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("38b27951-4b7c-47c5-b8aa-6a1ff157bc2c",
+	"9760d707-eed5-4abb-b207-c7b2fa266c8d");
+INSERT INTO O_BATTR
+	VALUES ("38b27951-4b7c-47c5-b8aa-6a1ff157bc2c",
+	"9760d707-eed5-4abb-b207-c7b2fa266c8d");
+INSERT INTO O_ATTR
+	VALUES ("38b27951-4b7c-47c5-b8aa-6a1ff157bc2c",
+	"9760d707-eed5-4abb-b207-c7b2fa266c8d",
+	"8b14e2c0-60e2-43c7-98bb-71fd01ce1d2b",
+	'callerId',
+	'',
+	'',
+	'callerId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"9760d707-eed5-4abb-b207-c7b2fa266c8d");
@@ -74,4 +92,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
