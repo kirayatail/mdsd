@@ -984,4 +984,4 @@ INSERT INTO O_OBJ_PROXY
 	'BookingHandler',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../BookingHandler.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingHandler/BookingHandler.xtuml');
