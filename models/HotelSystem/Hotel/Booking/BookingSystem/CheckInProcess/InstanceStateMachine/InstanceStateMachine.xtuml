@@ -75,7 +75,9 @@ INSERT INTO SM_ACT
 	'select one booking related by self -> Booking[R31];
 
 select many accommodations related by booking -> Accommodation[R8];
-if incomplete, start>=end, already checked in)
+if not empty accommodations
+
+, start>=end, already checked in)
 		//send error to cID
 		//send terminate
 	//else self b=b self.caller=cID
