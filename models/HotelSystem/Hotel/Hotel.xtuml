@@ -484,7 +484,7 @@ INSERT INTO DIM_ELE
 INSERT INTO DIM_ED
 	VALUES ("033fe600-7651-4bee-ab35-36bd208ed636",
 	"00000000-0000-0000-0000-000000000000",
-	"fb28e5b2-bdbb-45fb-9039-7ccfb4382ebe");
+	"fb28e5b2-bdbb-45fb-9039-7ccfb4382ebe")
 INSERT INTO GD_GE
 	VALUES ("eb56711b-e686-485e-ac74-c0f4f072531c",
 	"fe08c6a7-956d-4540-b654-de8f63a02306",
@@ -826,7 +826,7 @@ INSERT INTO C_R_PROXY
 	'StaffInterface',
 	'',
 	'StaffInteface',
-	'./Testing/Testing.xtuml');
+	'../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO C_P_PROXY
 	VALUES ("5a0a5f2d-e6ac-48a7-b218-692a1c8fbc7d",
 	'StaffInterface',
@@ -846,7 +846,7 @@ INSERT INTO C_R_PROXY
 	'CustomerInteface',
 	'',
 	'CustomerInteface',
-	'./Testing/Testing.xtuml');
+	'../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO C_P_PROXY
 	VALUES ("07db0a38-2d03-442f-a3ce-5648c9e52e2c",
 	'BookingProvider',
@@ -866,7 +866,7 @@ INSERT INTO C_R_PROXY
 	'AdminInterface',
 	'',
 	'AdminInterface',
-	'./Testing/Testing.xtuml');
+	'../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO C_P_PROXY
 	VALUES ("4db8b59f-326b-40ed-aedd-5b73fe3726d7",
 	'AdminInterface',
