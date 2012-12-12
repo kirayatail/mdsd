@@ -294,7 +294,8 @@ INSERT INTO SM_ACT
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
 	'select one booking related by self -> Booking[R31];
-Select any accommodation related by self -> BookingHandler[R25] ->  the type is the specified and the accommodation is not occupied
+Select any accommodation related by self -> BookingHandler[R25] ->  AccommodationHandler[R24];
+//the type is the specified and the accommodation is not occupied
 //if accommodations found
 	//send assignAccommodations
 //else
