@@ -435,4 +435,4 @@ INSERT INTO O_OBJ_PROXY
 	'CustomerBookingTest',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../CustomerBookingTest.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/CustomerBookingTest/CustomerBookingTest.xtuml');
