@@ -72,9 +72,10 @@ INSERT INTO SM_ACT
 	VALUES ("43a373fa-5812-40f5-b231-e340d950d644",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
-	'//Select booking b, b.id = bID
-	//Check b is valid
-	//if b==null or b invalid (incomplete, start>=end, already checked in)
+	'select one booking related by self -> Booking[R31];
+
+select many accommodations related by booking -> Accommodation[R8];
+if incomplete, start>=end, already checked in)
 		//send error to cID
 		//send terminate
 	//else self b=b self.caller=cID
