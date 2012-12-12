@@ -41,6 +41,49 @@ end for;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("4d991865-4b49-4bd5-b010-4a204e70bd94",
+	"33ef95d0-4e51-4627-bdff-efeac8816372");
+INSERT INTO O_BATTR
+	VALUES ("4d991865-4b49-4bd5-b010-4a204e70bd94",
+	"33ef95d0-4e51-4627-bdff-efeac8816372");
+INSERT INTO O_ATTR
+	VALUES ("4d991865-4b49-4bd5-b010-4a204e70bd94",
+	"33ef95d0-4e51-4627-bdff-efeac8816372",
+	"00000000-0000-0000-0000-000000000000",
+	'totalNumberOfTests',
+	'',
+	'',
+	'totalNumberOfTests',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("5719a8ce-64c1-471e-ba49-fb7280d95938",
+	"33ef95d0-4e51-4627-bdff-efeac8816372");
+INSERT INTO O_BATTR
+	VALUES ("5719a8ce-64c1-471e-ba49-fb7280d95938",
+	"33ef95d0-4e51-4627-bdff-efeac8816372");
+INSERT INTO O_ATTR
+	VALUES ("5719a8ce-64c1-471e-ba49-fb7280d95938",
+	"33ef95d0-4e51-4627-bdff-efeac8816372",
+	"4d991865-4b49-4bd5-b010-4a204e70bd94",
+	'Unnamed Attribute',
+	'',
+	'',
+	'Unnamed Attribute',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"33ef95d0-4e51-4627-bdff-efeac8816372");

@@ -18,6 +18,13 @@ INSERT INTO O_TFR
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_TFR
 	VALUES ("2ec425e5-8438-41d3-8f04-b62812e26b73",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
@@ -49,6 +56,13 @@ INSERT INTO O_TPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_TPARM
 	VALUES ("32262546-d60c-47f0-8c6c-a0ea9f233db7",
 	"b05651f5-5b22-4763-97ce-79b1cd021308",
@@ -122,16 +136,10 @@ select many types related by accHandler -> Type[R23] where selected.beds >= para
 if not empty types
 	// For each suitable type 
 	for each t in types
-		select many bookings related by self -> Booking[R26] where param.starts < selected.ends
+		//Count how many rooms of the type are booked
+		select many bookings related by t -> Booking[R27] where param.starts < selected.ends
 														 and param.ends > selected.starts;
-		// Count the rooms that are occupied of type t
-		bookingCount = 0;
-		for each b in bookings
-			select one type related by b -> Type[R27];
-			if type.id == t.id
-				bookingCount = bookingCount + 1;
-			end if;
-		end for;
+		bookingCount = cardinality bookings;
 
 		// Count all rooms of type
 		select many accs related by t -> Accommodation[R10];
