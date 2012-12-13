@@ -495,11 +495,6 @@ else
 	for each accommodation in accommodations
 		unrelate accommodation from booking across R8;
 	end for;
-	send StaffInterface::checkOutStarted(
-		callerId:self.callerId,
-		processId:self.id,
-		amountLeft:0,
-		checkedIn:true);
 	generate CheckOutProcess3:checkPaymentLeft to self;
 end if;',
 	'');
