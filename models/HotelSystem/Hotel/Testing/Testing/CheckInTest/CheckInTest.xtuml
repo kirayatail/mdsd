@@ -1,0 +1,99 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("49f06a3f-d1be-4f8a-81b3-83f08b98cae3",
+	'CheckInTest',
+	8,
+	'CheckInTest',
+	'',
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab");
+INSERT INTO O_NBATTR
+	VALUES ("25442013-7739-44a4-bcbc-6f55b283c8c1",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_BATTR
+	VALUES ("25442013-7739-44a4-bcbc-6f55b283c8c1",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_ATTR
+	VALUES ("25442013-7739-44a4-bcbc-6f55b283c8c1",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3",
+	"00000000-0000-0000-0000-000000000000",
+	'callerId',
+	'',
+	'',
+	'callerId',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("5421172a-3aba-4a16-a2d2-44af2eb7ff1d",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_BATTR
+	VALUES ("5421172a-3aba-4a16-a2d2-44af2eb7ff1d",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_ATTR
+	VALUES ("5421172a-3aba-4a16-a2d2-44af2eb7ff1d",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3",
+	"25442013-7739-44a4-bcbc-6f55b283c8c1",
+	'sessionId',
+	'',
+	'',
+	'sessionId',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("5e5c3ec9-c804-47f3-8d1c-82e2323a2dc6",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_BATTR
+	VALUES ("5e5c3ec9-c804-47f3-8d1c-82e2323a2dc6",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_ATTR
+	VALUES ("5e5c3ec9-c804-47f3-8d1c-82e2323a2dc6",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3",
+	"5421172a-3aba-4a16-a2d2-44af2eb7ff1d",
+	'bookingId',
+	'',
+	'',
+	'bookingId',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("e8d0386e-ed71-44f2-bd9f-9605742a03ef",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_BATTR
+	VALUES ("e8d0386e-ed71-44f2-bd9f-9605742a03ef",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_ATTR
+	VALUES ("e8d0386e-ed71-44f2-bd9f-9605742a03ef",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3",
+	"5e5c3ec9-c804-47f3-8d1c-82e2323a2dc6",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_ID
+	VALUES (1,
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO O_ID
+	VALUES (2,
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO S_SS_PROXY
+	VALUES ("400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	'Testing',
+	'',
+	'',
+	0,
+	"c242977e-23f8-4b6f-8354-c48c5903a4e3",
+	"00000000-0000-0000-0000-000000000000",
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/Testing.xtuml');

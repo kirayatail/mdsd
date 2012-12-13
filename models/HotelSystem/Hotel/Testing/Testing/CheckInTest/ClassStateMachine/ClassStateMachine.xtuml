@@ -1,0 +1,44 @@
+-- BP 7.1 content: ClassStateMachine syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO SM_ASM
+	VALUES ("6082ec7a-2a8d-4715-a44e-0282cd7f9f93",
+	"49f06a3f-d1be-4f8a-81b3-83f08b98cae3");
+INSERT INTO SM_SM
+	VALUES ("6082ec7a-2a8d-4715-a44e-0282cd7f9f93",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("6082ec7a-2a8d-4715-a44e-0282cd7f9f93");
+INSERT INTO GD_MD
+	VALUES ("9f09beff-1262-4c49-9e05-2223f56aa2d5",
+	10,
+	"6082ec7a-2a8d-4715-a44e-0282cd7f9f93",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'');
+INSERT INTO DIM_DIA
+	VALUES ("9f09beff-1262-4c49-9e05-2223f56aa2d5",
+	'',
+	1.000000,
+	4000.000000,
+	3000.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("49f06a3f-d1be-4f8a-81b3-83f08b98cae3",
+	'CheckInTest',
+	8,
+	'CheckInTest',
+	'',
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/CheckInTest/CheckInTest.xtuml');
