@@ -203,10 +203,11 @@ INSERT INTO SM_ACT
 	VALUES ("f5ab3fe0-c1a1-4e50-a089-cbbdf30a1121",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
 	1,
-	'create event instance mess of TestController_A1:''testCompleted''(rcvd_evt.accepted, 
+	'LOG::LogInteger(message: "Values of the failed tests were: ", self.cvcCode);
+/*
+generate TestController_A1:''testCompleted''(testSucceded:rcvd_evt.accepted, message:
 	"Values of the failed tests were: cardHolder: " + self.cardHolder + ". cvcCode: " + self.cvcCode +
-	". cardNumber: " + self.cardNumber) to ProvidePaymentDetailsTest class; 
-
+	". cardNumber: " + self.cardNumber); */
 ',
 	'');
 INSERT INTO SM_TAH
