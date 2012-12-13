@@ -22,28 +22,10 @@ INSERT INTO SM_EVT
 	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
 	"00000000-0000-0000-0000-000000000000",
 	1,
-	'MessageSent',
+	'messageSent',
 	0,
 	'',
 	'CreateSessionTest_A1',
-	'');
-INSERT INTO SM_LEVT
-	VALUES ("4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_SEVT
-	VALUES ("4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_EVT
-	VALUES ("4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000",
-	2,
-	'CreateSession',
-	0,
-	'',
-	'CreateSessionTest_A2',
 	'');
 INSERT INTO SM_SGEVT
 	VALUES ("0445319f-4e7e-45c6-a1be-f6d6418b678e",
@@ -90,17 +72,6 @@ INSERT INTO SM_SEME
 	"a9b2ab16-712c-461b-bf66-3d06d752efac",
 	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_CH
-	VALUES ("5f6e5008-c836-4cc2-b24c-95ce49239cef",
-	"4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO SM_SEME
-	VALUES ("5f6e5008-c836-4cc2-b24c-95ce49239cef",
-	"4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_SEME
 	VALUES ("5f6e5008-c836-4cc2-b24c-95ce49239cef",
 	"0445319f-4e7e-45c6-a1be-f6d6418b678e",
@@ -116,17 +87,6 @@ INSERT INTO SM_STATE
 INSERT INTO SM_SEME
 	VALUES ("efdb4bbc-71b2-478d-8ddd-d81690497c12",
 	"a9b2ab16-712c-461b-bf66-3d06d752efac",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_CH
-	VALUES ("efdb4bbc-71b2-478d-8ddd-d81690497c12",
-	"4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
-	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
-	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO SM_SEME
-	VALUES ("efdb4bbc-71b2-478d-8ddd-d81690497c12",
-	"4bcd84de-d9ec-45ca-8f3d-07f30a6b0051",
 	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_CH
@@ -190,13 +150,13 @@ INSERT INTO SM_ACT
 
 for each test in cst
 	if (rcvd_evt.sessionId == test.id)
-		generate AddPaymentTest2:''sessionCreated'' (processId:rcvd_evt.processId, 
-			accepted:rcvd_evt.accepted) to test;
+		//Add accepted parameter when systemgroup has added it
+		generate CreateSessionTest2:''sessionCreated'' (processId:rcvd_evt.sessionId) to test;
 		break;
 	end if;
 end for;
 
-create event instance mess of AddPaymentTest_A2:''Message sent''() to AddPaymentTest class; 
+create event instance mess of CreateSessionTest_A1:''Message sent''() to AddPaymentTest class; 
 ',
 	'');
 INSERT INTO SM_TAH

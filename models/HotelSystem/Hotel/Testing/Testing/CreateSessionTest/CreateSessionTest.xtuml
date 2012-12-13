@@ -76,9 +76,16 @@ INSERT INTO O_ATTR
 	'',
 	'id',
 	0,
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"8c88c220-fae3-437a-b3e8-c7d618155163");
