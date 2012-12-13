@@ -25,13 +25,6 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../Datatypes/Datatypes.xtuml');
 INSERT INTO C_PP
 	VALUES ("85f513f1-4a81-43a6-8ccc-8aa9b998c1bb",
 	"6155f6dd-c1b1-405d-99d1-f5fc096b6a35",
@@ -77,13 +70,6 @@ INSERT INTO C_PP
 	0,
 	'',
 	"a39c95e8-34f6-4c19-8b79-04cd98437e66");
-INSERT INTO S_DT_PROXY
-	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
-	"00000000-0000-0000-0000-000000000000",
-	'string',
-	'',
-	'',
-	'../../Datatypes/Datatypes.xtuml');
 INSERT INTO C_EP
 	VALUES ("f71dc9de-ebaa-4be8-9414-d70686f5c51c",
 	"b8183d2b-c293-42b1-afc9-0aa5c6fafe59",
@@ -122,13 +108,6 @@ INSERT INTO C_PP
 	0,
 	'',
 	"b4d40ce5-661e-43bf-ba44-e46363907129");
-INSERT INTO S_DT_PROXY
-	VALUES ("f73b4669-5a29-44df-918c-1c1420dd8261",
-	"00000000-0000-0000-0000-000000000000",
-	'Type',
-	'',
-	'',
-	'../../HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO C_EP
 	VALUES ("310b1211-fcaf-4f9c-ba4f-5b92ee040b4f",
 	"b8183d2b-c293-42b1-afc9-0aa5c6fafe59",
@@ -274,13 +253,6 @@ INSERT INTO C_PP
 	0,
 	'',
 	"1cbc7ff8-2e38-41b7-a06c-c9b0379dc115");
-INSERT INTO S_DT_PROXY
-	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
-	"00000000-0000-0000-0000-000000000000",
-	'boolean',
-	'',
-	'',
-	'../../Datatypes/Datatypes.xtuml');
 INSERT INTO C_EP
 	VALUES ("3d727018-7dfb-4923-b670-33c03bb3a0c9",
 	"b8183d2b-c293-42b1-afc9-0aa5c6fafe59",
@@ -327,7 +299,7 @@ INSERT INTO C_PP
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'bookingId',
 	'',
-	0,
+	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO C_EP
@@ -350,13 +322,6 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
-	"00000000-0000-0000-0000-000000000000",
-	'BookingSummary',
-	'',
-	'',
-	'../../HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO IP_IP_PROXY
 	VALUES ("292db3a9-8d29-4506-a0ec-58dab308a3da",
 	"00000000-0000-0000-0000-000000000000",
@@ -366,4 +331,4 @@ INSERT INTO IP_IP_PROXY
 	"00000000-0000-0000-0000-000000000000",
 	'HotelInterfaces',
 	'',
-	'../HotelInterfaces.xtuml');
+	'../../../../../HotelSystem/models/HotelSystem/HotelInterfaces/HotelInterfaces.xtuml');
