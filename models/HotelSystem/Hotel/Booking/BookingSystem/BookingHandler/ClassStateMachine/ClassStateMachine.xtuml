@@ -38,8 +38,8 @@ INSERT INTO SPR_PS_PROXY
 	'checkIn',
 	'',
 	'',
-	1,
-	'../../../Booking.xtuml');
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("1cbbfaee-d3c2-4550-8e54-0e7b7ca33348",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -65,8 +65,8 @@ INSERT INTO SPR_PS_PROXY
 	'checkOut',
 	'',
 	'',
-	1,
-	'../../../Booking.xtuml');
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("f00302e7-33ce-49c8-bf57-2507bb95f308",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -92,8 +92,8 @@ INSERT INTO SPR_PS_PROXY
 	'showBooking',
 	'',
 	'',
-	1,
-	'../../../Booking.xtuml');
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("9895560c-6567-4e0b-9151-2ea0b01156aa",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -119,8 +119,8 @@ INSERT INTO SPR_PS_PROXY
 	'startCustomerBooking',
 	'',
 	'',
-	1,
-	'../../../Booking.xtuml');
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("25a4d66f-e107-45a7-8226-5c37fd25b477",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -255,9 +255,10 @@ relate booking to process across R19;
 handler.idCounter = handler.idCounter + 1;
 booking.id = handler.idCounter;
 handler.cbpCounter = handler.cbpCounter + 1;
+process.id = handler.cbpCounter;
+process.callerId = rcvd_evt.callerId;
 
-generate CustomerBookingProcess1:start(callerID: rcvd_evt.callerId, 
-									   starts: rcvd_evt.start,
+generate CustomerBookingProcess1:start(starts: rcvd_evt.start,
 									   ends: rcvd_evt.end,
 									   persons: rcvd_evt.persons,
 									   rooms: rcvd_evt.rooms,
@@ -973,4 +974,4 @@ INSERT INTO O_OBJ_PROXY
 	'BookingHandler',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../BookingHandler.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingHandler/BookingHandler.xtuml');
