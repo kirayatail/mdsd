@@ -32,6 +32,49 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("b164cbff-738c-4738-b0b7-a0a04460ba3c",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_BATTR
+	VALUES ("b164cbff-738c-4738-b0b7-a0a04460ba3c",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_ATTR
+	VALUES ("b164cbff-738c-4738-b0b7-a0a04460ba3c",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
+	"404a0d7a-a18b-4f83-af8b-38c374e7b009",
+	'callerId',
+	'',
+	'',
+	'callerId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("ff67d93f-3949-4183-91dc-f58a4dc3ca07",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_BATTR
+	VALUES ("ff67d93f-3949-4183-91dc-f58a4dc3ca07",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_ATTR
+	VALUES ("ff67d93f-3949-4183-91dc-f58a4dc3ca07",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
+	"b164cbff-738c-4738-b0b7-a0a04460ba3c",
+	'id',
+	'',
+	'',
+	'id',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
