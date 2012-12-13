@@ -14,16 +14,23 @@ INSERT INTO SM_EVTDI
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	'processId',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"e82f6394-3003-42a7-b4b0-c5bbd7b0263c",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("36f27f77-0c16-468f-9efb-eef5a74c1d61",
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	'amount',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"e82f6394-3003-42a7-b4b0-c5bbd7b0263c",
 	"20a52025-4205-44ca-afa9-76a8f0663c43");

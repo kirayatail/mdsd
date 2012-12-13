@@ -15,6 +15,9 @@ INSERT INTO O_TFR
 	"3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
 	0,
 	'numberOfCBTest = 100;
+//numberOfPPDTest = 100;
+//numberOfAPTest = 100;
+
 id = 0;
 k = TIM::current_clock ();
 next = 1;
@@ -59,13 +62,6 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("5719a8ce-64c1-471e-ba49-fb7280d95938",
 	"33ef95d0-4e51-4627-bdff-efeac8816372");
