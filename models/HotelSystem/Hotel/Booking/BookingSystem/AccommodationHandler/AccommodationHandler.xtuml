@@ -78,6 +78,11 @@ INSERT INTO O_TFR
 		price 70
 		beds 1
 		id 5
+		
+	Whole dormitory
+		price 500
+		beds 8
+		id 6
 */
 
 create object instance t1 of Type;
@@ -85,7 +90,77 @@ t1.name = "Single room";
 t1.beds = 1;
 t1.price = 100;
 t1.id = 1;
-relate t1 to self across RX;',
+
+create object instance t2 of Type;
+t2.name = "Double room";
+t2.beds = 2;
+t2.price = 180;
+t2.id = 2;
+
+create object instance t3 of Type;
+t3.name = "Junior suite";
+t3.price = 250;
+t3.beds = 2;
+t3.id = 3;
+
+create object instance t4 of Type;
+t4.name = "Family Suite";
+t4.price = 500;
+t4.beds = 4;
+t4.id = 4;
+
+create object instance t5 of Type;
+t5.name = "Dormitory";
+t5.price = 70;
+t5.beds = 1;
+t5.id = 5;
+
+create object instance t6 of Type;
+t6.name = "Whole dormitory";
+t6.price = 500;
+t6.beds = 8;
+t6.id = 6;
+
+relate t1 to self across R23;
+relate t2 to self across R23;
+relate t3 to self across R23;
+relate t4 to self across R23;
+relate t5 to self across R23;
+relate t6 to self across R23;
+
+idCount = 1;
+
+while (idCount <= 123)
+	create object instance r of Accommodation;
+	r.id = idCount;
+	r.bookable = true;
+	
+	if idCount <=40
+		relate r to t1 across R34;
+	else
+		if idCount <= 80
+			relate r to t2 across R34;
+		else
+			if idCount <= 95
+				relate r to t3 across R34;
+			else
+				if idCount <= 105
+					relate r to t4 across R34;
+				else
+					if idCount <= 121
+						relate r to t5 across R34;
+					else
+						relate r to t6 across R34;
+					end if;
+				end if;
+			end if;
+		end if;
+	end if;
+	
+	relate r to self across R21;
+	
+	idCount = idCount +1;
+end while;',
 	1,
 	'',
 	"b77fdde0-7105-40e3-9109-6a1a5eea0032");
