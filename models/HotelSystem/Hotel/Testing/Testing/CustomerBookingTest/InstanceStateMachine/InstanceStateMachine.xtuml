@@ -36,13 +36,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"eeaee4eb-e44c-460d-9982-84f1e3c84847",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
-	"00000000-0000-0000-0000-000000000000",
-	'string',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("0824ce60-b22a-4e1f-9036-40271b432b43",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -52,13 +45,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"e4b49a41-e50b-4dcc-9f73-ac2d2c356f0b",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("956b044e-be47-4b40-b295-a7d51bf68b56",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -648,7 +634,7 @@ INSERT INTO SM_ACT
 	VALUES ("27652ac0-2c0c-4f05-87f7-92999280880e",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'send CustomerInterface::confirm(processId:rcvd_evt.processId);',
+	'send CustomerInterface::confirm(processId:rcvd_evt.processID);',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("5c7f754f-8812-4ff7-b0af-37e9e5f1aac6",
