@@ -12,28 +12,12 @@ INSERT INTO SM_MOORE
 INSERT INTO SM_EVTDI
 	VALUES ("5b1b6dc1-b598-4ceb-9b06-35db48596597",
 	"ec68aac5-d173-4104-95e2-0940eabb3daa",
-	'callerId',
+	'bookingId',
 	'',
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"38d24969-fe79-45b8-824b-a2850f88acf8",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
-INSERT INTO SM_EVTDI
-	VALUES ("f64b505f-fa78-4227-bf64-d680e198215f",
-	"ec68aac5-d173-4104-95e2-0940eabb3daa",
-	'processId',
-	'',
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'',
-	"38d24969-fe79-45b8-824b-a2850f88acf8",
-	"5b1b6dc1-b598-4ceb-9b06-35db48596597");
 INSERT INTO SM_LEVT
 	VALUES ("5cee51b6-196f-4faa-bb0c-dcf3e1e79dbc",
 	"ec68aac5-d173-4104-95e2-0940eabb3daa",

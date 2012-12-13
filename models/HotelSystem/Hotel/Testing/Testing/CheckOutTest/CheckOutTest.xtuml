@@ -25,13 +25,67 @@ INSERT INTO O_ATTR
 	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("f129f013-df25-4265-ac05-77f6cd3252fa",
+	"88569554-3047-4133-a619-d8400a628280");
+INSERT INTO O_BATTR
+	VALUES ("f129f013-df25-4265-ac05-77f6cd3252fa",
+	"88569554-3047-4133-a619-d8400a628280");
+INSERT INTO O_ATTR
+	VALUES ("f129f013-df25-4265-ac05-77f6cd3252fa",
+	"88569554-3047-4133-a619-d8400a628280",
+	"ae4639cc-61be-4c97-b915-7bd7fd976609",
+	'callerId',
+	'',
+	'',
+	'callerId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
 	"00000000-0000-0000-0000-000000000000",
-	'state<State_Model>',
+	'integer',
 	'',
 	'',
-	'../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("e2ae364e-36ae-4652-b1f7-f1ddd3d8d61b",
+	"88569554-3047-4133-a619-d8400a628280");
+INSERT INTO O_BATTR
+	VALUES ("e2ae364e-36ae-4652-b1f7-f1ddd3d8d61b",
+	"88569554-3047-4133-a619-d8400a628280");
+INSERT INTO O_ATTR
+	VALUES ("e2ae364e-36ae-4652-b1f7-f1ddd3d8d61b",
+	"88569554-3047-4133-a619-d8400a628280",
+	"f129f013-df25-4265-ac05-77f6cd3252fa",
+	'sessionId',
+	'',
+	'',
+	'sessionId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("8f62327b-f4a7-4fe2-8373-79e93326587e",
+	"88569554-3047-4133-a619-d8400a628280");
+INSERT INTO O_BATTR
+	VALUES ("8f62327b-f4a7-4fe2-8373-79e93326587e",
+	"88569554-3047-4133-a619-d8400a628280");
+INSERT INTO O_ATTR
+	VALUES ("8f62327b-f4a7-4fe2-8373-79e93326587e",
+	"88569554-3047-4133-a619-d8400a628280",
+	"e2ae364e-36ae-4652-b1f7-f1ddd3d8d61b",
+	'bookingId',
+	'',
+	'',
+	'bookingId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"88569554-3047-4133-a619-d8400a628280");
@@ -49,4 +103,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c242977e-23f8-4b6f-8354-c48c5903a4e3",
 	"00000000-0000-0000-0000-000000000000",
-	'../Testing.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/Testing.xtuml');
