@@ -487,8 +487,7 @@ Select many accommodations related by booking -> Accommodation[R33];
 if empty accommodations
 	send StaffInterface::checkOutStarted(
 		callerId:self.callerId, 
-		processId:self.id, 
-		amountLeft:0, 
+		processId:self.id,
 		checkedIn:false);
 	generate CheckOutProcess2:terminate to self;
 else
@@ -498,7 +497,6 @@ else
 	send StaffInterface::checkOutStarted(
 		callerId:self.callerId,
 		processId:self.id,
-		amountLeft:0,
 		checkedIn:true);
 	generate CheckOutProcess3:checkPaymentLeft to self;
 end if;',
@@ -549,11 +547,7 @@ tabSum = booking.getTabSum();
 if (tabSum == 0)
 	generate CheckOutProcess4:completeCheckOut to self;
 else
-	send StaffInterface::checkOutStarted(
-	callerId:self.callerId,
-	processId:self.id,
-	amountLeft:tabSum,
-	checkedIn:true);
+	
 end if;',
 	'');
 INSERT INTO SM_TAH
@@ -733,6 +727,11 @@ INSERT INTO DIM_CON
 	VALUES ("d5d7889f-d769-43a9-9815-c0e33691a454",
 	4548.000000,
 	3228.000000,
+	"546a8c67-4b2a-474b-8830-e28cba4ff6fb");
+INSERT INTO DIM_CON
+	VALUES ("e5b7dda0-3d39-4094-b6ad-f3ed106fc6cf",
+	4548.000000,
+	3168.000000,
 	"546a8c67-4b2a-474b-8830-e28cba4ff6fb");
 INSERT INTO GD_GE
 	VALUES ("047608e1-0ea9-427c-80f4-d15f7618adbe",
@@ -1398,6 +1397,11 @@ INSERT INTO DIM_CON
 	VALUES ("f52e02c9-481c-4f45-ada8-23fa53a8e379",
 	5100.000000,
 	3456.000000,
+	"a79106a2-d766-4246-9f11-7f70ff66d23d");
+INSERT INTO DIM_CON
+	VALUES ("5c441b9b-f193-4bda-b2fa-a651be4d7d82",
+	5185.000000,
+	3372.000000,
 	"a79106a2-d766-4246-9f11-7f70ff66d23d");
 INSERT INTO GD_GE
 	VALUES ("2f01b697-efb4-4d23-8b38-a91b8f61fd9c",
