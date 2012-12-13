@@ -14,10 +14,17 @@ INSERT INTO SM_EVTDI
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
 	'accepted',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"e19bafad-15ad-4b81-8d82-2da842d18b5e",
 	'',
 	"51e46fbd-77a3-4211-b014-e1ba1a236733",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
+	"00000000-0000-0000-0000-000000000000",
+	'boolean',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("8f13fcf8-38fb-4dff-a446-d22c2b486af6",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
@@ -203,7 +210,7 @@ INSERT INTO SM_ACT
 	VALUES ("f5ab3fe0-c1a1-4e50-a089-cbbdf30a1121",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
 	1,
-	'LOG::LogInteger(message: "Values of the failed tests were: ", self.cvcCode);
+	'LOG::LogInteger(message: "Values of the failed tests were: ", .cvcCode);
 /*
 generate TestController_A1:''testCompleted''(testSucceded:rcvd_evt.accepted, message:
 	"Values of the failed tests were: cardHolder: " + self.cardHolder + ". cvcCode: " + self.cvcCode +

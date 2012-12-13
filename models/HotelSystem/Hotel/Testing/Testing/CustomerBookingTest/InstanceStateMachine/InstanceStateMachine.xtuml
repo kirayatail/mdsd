@@ -21,7 +21,7 @@ INSERT INTO SM_EVTDI
 INSERT INTO SM_EVTDI
 	VALUES ("b10a23a1-2a0f-4033-9131-9b3105995574",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	'typeId',
+	'type',
 	'',
 	"f73b4669-5a29-44df-918c-1c1420dd8261",
 	'',
@@ -212,7 +212,7 @@ INSERT INTO SM_ACT
 	VALUES ("b3d90052-2235-4d40-ba88-2fcae307a4eb",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:rcvd_evt.typeId.id);
+	'send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:rcvd_evt.type.id);
 
 send CustomerInterface::providePaymentDetails(processId:rcvd_evt.processId, cardHolder:"testis testsson", cvcCode:234, cardNumber:1234567890123456);',
 	'');

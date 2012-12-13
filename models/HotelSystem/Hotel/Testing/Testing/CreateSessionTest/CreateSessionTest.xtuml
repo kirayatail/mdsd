@@ -1,0 +1,95 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("8c88c220-fae3-437a-b3e8-c7d618155163",
+	'CreateSessionTest',
+	9,
+	'CreateSessionTest',
+	'',
+	"400b8d54-fb2d-4457-8f15-6e041a0160ab");
+INSERT INTO O_NBATTR
+	VALUES ("246de9fe-c89a-40f8-8e74-cdb950cb345e",
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_BATTR
+	VALUES ("246de9fe-c89a-40f8-8e74-cdb950cb345e",
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_ATTR
+	VALUES ("246de9fe-c89a-40f8-8e74-cdb950cb345e",
+	"8c88c220-fae3-437a-b3e8-c7d618155163",
+	"00000000-0000-0000-0000-000000000000",
+	'username',
+	'',
+	'',
+	'username',
+	0,
+	"856c2096-9d47-49f5-a1d5-f50fd9558416",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("1961e1b2-1b14-412e-9656-9de20ed089b9",
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_BATTR
+	VALUES ("1961e1b2-1b14-412e-9656-9de20ed089b9",
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_ATTR
+	VALUES ("1961e1b2-1b14-412e-9656-9de20ed089b9",
+	"8c88c220-fae3-437a-b3e8-c7d618155163",
+	"246de9fe-c89a-40f8-8e74-cdb950cb345e",
+	'password',
+	'',
+	'',
+	'password',
+	0,
+	"856c2096-9d47-49f5-a1d5-f50fd9558416",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("882b616f-0e43-4ed0-af0c-bab0f6b9116f",
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_BATTR
+	VALUES ("882b616f-0e43-4ed0-af0c-bab0f6b9116f",
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_ATTR
+	VALUES ("882b616f-0e43-4ed0-af0c-bab0f6b9116f",
+	"8c88c220-fae3-437a-b3e8-c7d618155163",
+	"1961e1b2-1b14-412e-9656-9de20ed089b9",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	"00000000-0000-0000-0000-000000000000",
+	'state<State_Model>',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_ID
+	VALUES (1,
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO O_ID
+	VALUES (2,
+	"8c88c220-fae3-437a-b3e8-c7d618155163");
+INSERT INTO S_SS_PROXY
+	VALUES ("400b8d54-fb2d-4457-8f15-6e041a0160ab",
+	'Testing',
+	'',
+	'',
+	0,
+	"c242977e-23f8-4b6f-8354-c48c5903a4e3",
+	"00000000-0000-0000-0000-000000000000",
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/Testing.xtuml');
