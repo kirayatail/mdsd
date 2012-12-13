@@ -48,8 +48,45 @@ INSERT INTO O_TFR
 	'',
 	"3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
 	1,
-	'',
-	3,
+	'/*
+	__Create types__
+	
+	There will exist types with the same amount of beds but different prices.
+	Not all continous integral amounts of beds will be represented, No rooms with 3 beds for example
+	
+	Single room
+		price 100
+		beds 1
+		id 1
+	
+	Double room
+		price 180
+		beds 2
+		id 2
+	
+	Junior suite
+		price 250
+		beds 2
+		id 3
+	
+	Family suite
+		price 500
+		beds 4
+		id 4
+	
+	Dormitory
+		price 70
+		beds 1
+		id 5
+*/
+
+create object instance t1 of Type;
+t1.name = "Single room";
+t1.beds = 1;
+t1.price = 100;
+t1.id = 1;
+relate t1 to self across RX;',
+	1,
 	'',
 	"b77fdde0-7105-40e3-9109-6a1a5eea0032");
 INSERT INTO S_DT_PROXY
