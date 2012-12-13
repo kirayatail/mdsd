@@ -189,8 +189,8 @@ INSERT INTO SM_ACT
 	'select many cst from CreateSessionTest;
 
 for each test in cst
-	if (rcvd_evt.sessionId == test.processId)
-		generate AddPaymentTest2:''paymentAccepted'' (processId:rcvd_evt.processId, 
+	if (rcvd_evt.sessionId == test.id)
+		generate AddPaymentTest2:''sessionCreated'' (processId:rcvd_evt.processId, 
 			accepted:rcvd_evt.accepted) to test;
 		break;
 	end if;
