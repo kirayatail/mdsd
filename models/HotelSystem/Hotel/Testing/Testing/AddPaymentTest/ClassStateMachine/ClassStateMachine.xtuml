@@ -9,6 +9,22 @@ INSERT INTO SM_SM
 	0);
 INSERT INTO SM_MOORE
 	VALUES ("4dacf4ae-75c7-4a0e-82cd-6c24ce420757");
+INSERT INTO SM_EVTDI
+	VALUES ("864b936b-40c3-4748-ba18-e7f98ed05da5",
+	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
+	'processId',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"ca5479a1-794a-4792-960d-224a8cec3d42",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("ca5479a1-794a-4792-960d-224a8cec3d42",
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
@@ -22,7 +38,7 @@ INSERT INTO SM_EVT
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
 	"00000000-0000-0000-0000-000000000000",
 	1,
-	'MessageSent',
+	'initiateAddPaymentTest',
 	0,
 	'',
 	'AddPaymentTest_A1',
@@ -31,42 +47,19 @@ INSERT INTO SM_STATE
 	VALUES ("5b2e7430-4fc7-41f9-ad32-89f9679bac4b",
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
 	"00000000-0000-0000-0000-000000000000",
-	'Wait',
+	'WaitState',
 	1,
 	0);
-INSERT INTO SM_CH
-	VALUES ("5b2e7430-4fc7-41f9-ad32-89f9679bac4b",
-	"ca5479a1-794a-4792-960d-224a8cec3d42",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	"00000000-0000-0000-0000-000000000000",
-	'');
 INSERT INTO SM_SEME
 	VALUES ("5b2e7430-4fc7-41f9-ad32-89f9679bac4b",
 	"ca5479a1-794a-4792-960d-224a8cec3d42",
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_STATE
-	VALUES ("77d88809-7099-4893-b07e-8ea081ff9418",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	"00000000-0000-0000-0000-000000000000",
-	'AddingPayment',
-	2,
-	0);
-INSERT INTO SM_CH
-	VALUES ("77d88809-7099-4893-b07e-8ea081ff9418",
-	"ca5479a1-794a-4792-960d-224a8cec3d42",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO SM_SEME
-	VALUES ("77d88809-7099-4893-b07e-8ea081ff9418",
-	"ca5479a1-794a-4792-960d-224a8cec3d42",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NETXN
+INSERT INTO SM_NSTXN
 	VALUES ("5d56a251-f443-47d1-9efd-7e669a29910c",
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
 	"5b2e7430-4fc7-41f9-ad32-89f9679bac4b",
+	"ca5479a1-794a-4792-960d-224a8cec3d42",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("5d56a251-f443-47d1-9efd-7e669a29910c",
@@ -86,30 +79,6 @@ INSERT INTO SM_ACT
 	1,
 	'',
 	'');
-INSERT INTO SM_MOAH
-	VALUES ("1d366c54-4f0c-45d1-9347-404075460cc9",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	"77d88809-7099-4893-b07e-8ea081ff9418");
-INSERT INTO SM_AH
-	VALUES ("1d366c54-4f0c-45d1-9347-404075460cc9",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757");
-INSERT INTO SM_ACT
-	VALUES ("1d366c54-4f0c-45d1-9347-404075460cc9",
-	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	1,
-	'select many apt from AddPaymentTest;
-
-for each test in apt
-	if (rcvd_evt.processId == test.processId)
-		generate AddPaymentTest2:''paymentAccepted'' (processId:rcvd_evt.processId, 
-			accepted:rcvd_evt.accepted) to test;
-		break;
-	end if;
-end for;
-
-create event instance mess of AddPaymentTest_A2:''Message sent''() to AddPaymentTest class; 
-',
-	'');
 INSERT INTO SM_TAH
 	VALUES ("02f67b63-1136-408d-b951-4c9b0516484f",
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
@@ -120,8 +89,11 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("02f67b63-1136-408d-b951-4c9b0516484f",
 	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
-	3,
-	'',
+	1,
+	'create object instance apt of AddPaymentTest;
+apt.processId = rcvd_evt.processId;
+
+generate AddPaymentTest1:''initiateAddPaymentTest'' () to apt;',
 	'');
 INSERT INTO GD_MD
 	VALUES ("cc43e76b-bad8-42bb-95b7-ee59342e5639",
@@ -189,44 +161,16 @@ INSERT INTO DIM_CON
 	4200.000000,
 	3060.000000,
 	"fc27ae7d-0296-4882-91ed-5e66bf817b2c");
-INSERT INTO GD_GE
-	VALUES ("2c052fd7-dea4-4c6d-a030-db485bec1a8b",
-	"cc43e76b-bad8-42bb-95b7-ee59342e5639",
-	"77d88809-7099-4893-b07e-8ea081ff9418",
-	41,
-	0);
-INSERT INTO GD_SHP
-	VALUES ("2c052fd7-dea4-4c6d-a030-db485bec1a8b");
-INSERT INTO GD_NCS
-	VALUES ("2c052fd7-dea4-4c6d-a030-db485bec1a8b");
-INSERT INTO DIM_ND
-	VALUES (204.000000,
-	144.000000,
-	"2c052fd7-dea4-4c6d-a030-db485bec1a8b");
-INSERT INTO DIM_GE
-	VALUES (4608.000000,
-	3060.000000,
-	"2c052fd7-dea4-4c6d-a030-db485bec1a8b",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("2c052fd7-dea4-4c6d-a030-db485bec1a8b",
-	0,
-	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_CON
-	VALUES ("af9d1405-f318-481a-bf63-dcf112096a9d",
-	4608.000000,
-	3096.000000,
-	"2c052fd7-dea4-4c6d-a030-db485bec1a8b");
+	VALUES ("9ddcd42d-8309-458f-9f28-2831386081f8",
+	4200.000000,
+	3204.000000,
+	"fc27ae7d-0296-4882-91ed-5e66bf817b2c");
 INSERT INTO DIM_CON
-	VALUES ("2ef9794a-070d-4acd-86c8-770c7de3dd7a",
-	4608.000000,
-	3180.000000,
-	"2c052fd7-dea4-4c6d-a030-db485bec1a8b");
-INSERT INTO DIM_CON
-	VALUES ("1d2ea66c-d874-4491-a2d2-676115667529",
-	4608.000000,
-	3096.000000,
-	"2c052fd7-dea4-4c6d-a030-db485bec1a8b");
+	VALUES ("3f24c660-4af6-47e5-9f9c-fbc8c0ff6210",
+	4116.000000,
+	3204.000000,
+	"fc27ae7d-0296-4882-91ed-5e66bf817b2c");
 INSERT INTO GD_GE
 	VALUES ("c9d170a5-2d87-4c39-b340-4ddacae64540",
 	"cc43e76b-bad8-42bb-95b7-ee59342e5639",
@@ -266,8 +210,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"3b127180-462e-4269-b372-48aa50935377");
 INSERT INTO DIM_GE
-	VALUES (0.000000,
-	0.000000,
+	VALUES (4024.000000,
+	2969.000000,
 	"3b127180-462e-4269-b372-48aa50935377",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE

@@ -97,6 +97,31 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("5f981555-c8f1-4967-97d3-f8b4764d0da4",
+	"23a44bdf-704e-4aa4-a7a9-c8e66db25255");
+INSERT INTO O_BATTR
+	VALUES ("5f981555-c8f1-4967-97d3-f8b4764d0da4",
+	"23a44bdf-704e-4aa4-a7a9-c8e66db25255");
+INSERT INTO O_ATTR
+	VALUES ("5f981555-c8f1-4967-97d3-f8b4764d0da4",
+	"23a44bdf-704e-4aa4-a7a9-c8e66db25255",
+	"351c448c-0ef9-440f-8233-3e5ec890f937",
+	'expirationDate',
+	'',
+	'',
+	'expirationDate',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"23a44bdf-704e-4aa4-a7a9-c8e66db25255");

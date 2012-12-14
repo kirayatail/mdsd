@@ -9,24 +9,6 @@ INSERT INTO SM_SM
 	0);
 INSERT INTO SM_MOORE
 	VALUES ("7d9739b4-6b22-4e94-97af-264a6110860e");
-INSERT INTO SM_EVTDI
-	VALUES ("20a52025-4205-44ca-afa9-76a8f0663c43",
-	"7d9739b4-6b22-4e94-97af-264a6110860e",
-	'processId',
-	'',
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'',
-	"e82f6394-3003-42a7-b4b0-c5bbd7b0263c",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_EVTDI
-	VALUES ("36f27f77-0c16-468f-9efb-eef5a74c1d61",
-	"7d9739b4-6b22-4e94-97af-264a6110860e",
-	'amount',
-	'',
-	"fce637ce-efce-4558-a806-dabefe9b0a9d",
-	'',
-	"e82f6394-3003-42a7-b4b0-c5bbd7b0263c",
-	"20a52025-4205-44ca-afa9-76a8f0663c43");
 INSERT INTO SM_LEVT
 	VALUES ("1e56b795-e7a0-4c67-821b-f6a6e3e52bb3",
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
@@ -40,7 +22,7 @@ INSERT INTO SM_EVT
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	"00000000-0000-0000-0000-000000000000",
 	1,
-	'startTesting',
+	'initiateAddPaymentTest',
 	0,
 	'',
 	'AddPaymentTest1',
@@ -58,7 +40,7 @@ INSERT INTO SM_EVT
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	"00000000-0000-0000-0000-000000000000",
 	2,
-	'PaymentAdded',
+	'goToFinalState',
 	0,
 	'',
 	'AddPaymentTest2',
@@ -90,7 +72,7 @@ INSERT INTO SM_STATE
 	VALUES ("5e43cdb5-0363-4426-b4ec-4e4bc0c9bf7c",
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	"00000000-0000-0000-0000-000000000000",
-	'Testing',
+	'AddPayment',
 	2,
 	0);
 INSERT INTO SM_CH
@@ -113,9 +95,9 @@ INSERT INTO SM_STATE
 	VALUES ("7ad2dc98-5038-4ef7-b2eb-bcc40ccf9323",
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	"00000000-0000-0000-0000-000000000000",
-	'TestingDone',
+	'FinalState',
 	3,
-	0);
+	1);
 INSERT INTO SM_CH
 	VALUES ("7ad2dc98-5038-4ef7-b2eb-bcc40ccf9323",
 	"1e56b795-e7a0-4c67-821b-f6a6e3e52bb3",
@@ -185,6 +167,8 @@ INSERT INTO SM_ACT
 	"7d9739b4-6b22-4e94-97af-264a6110860e",
 	1,
 	'send StaffInterface::addPayment(processId:self.processId,amount:self.amount);
+
+generate AddPaymentTest2:''goToFinalState''() to self;
 ',
 	'');
 INSERT INTO SM_TAH
@@ -344,8 +328,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"051a8cba-c67f-4e79-a754-3e5605a5dff1");
 INSERT INTO DIM_GE
-	VALUES (4335.000000,
-	3070.000000,
+	VALUES (4302.000000,
+	3048.000000,
 	"051a8cba-c67f-4e79-a754-3e5605a5dff1",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE

@@ -45,13 +45,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"59f27a7d-0d21-4f57-b85a-69b54a1e5ef0",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
-	"00000000-0000-0000-0000-000000000000",
-	'boolean',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("5cee51b6-196f-4faa-bb0c-dcf3e1e79dbc",
 	"ec68aac5-d173-4104-95e2-0940eabb3daa",
