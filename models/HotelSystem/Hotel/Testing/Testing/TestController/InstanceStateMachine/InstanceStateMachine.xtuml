@@ -245,28 +245,22 @@ self.totalNumberOfTests = numberOfCBTest; //+numberOfPPDTest + numberOfAPTest
 self.numberOfTestsDone = 0;
 
 id = 0;
-k = TIM::current_clock ();
+//k = TIM::current_clock ();
 next = 1;
 next = next * 1103515245 + 12345;
 while (id < numberOfCBTest)
 	create object instance t of CustomerBookingTest;
 	t.id = id;
-	t.start = next%100;
+	t.seed = next;
 	next = next * 1103515245 + 12345;
-	t.end = next%100;
-	next = next * 1103515245 + 12345;
-	t.rooms = next%3;
-	next = next * 1103515245 + 12345;
-	t.persons = next%5;
-	next = next * 1103515245 + 12345;
-	t.name = "testnamn";
 	id = id + 1;
+	generate CustomerBookingTest1:startTest to t;
 end while;
 
-select many tests from CustomerBookingTest;
-for each t in tests
-	generate CustomerBookingTest1:startTest to t;
-end for;
+//select many tests from CustomerBookingTest;
+//for each t in tests
+	//
+//end for;
 
 
 ',

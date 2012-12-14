@@ -23,10 +23,17 @@ INSERT INTO SM_EVTDI
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	'type',
 	'',
-	"f73b4669-5a29-44df-918c-1c1420dd8261",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"d46861a3-382d-465f-b33b-e5cf744110c3",
 	"3f512085-a32d-4699-b613-fbc772ca0bf5");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("eb407bb9-4efe-46b3-b024-cca2aea5920f",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -566,7 +573,17 @@ INSERT INTO SM_ACT
 	VALUES ("c0e6686f-84cc-4c72-a455-0d967f664512",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'send CustomerInterface::startCustomerBooking(callerId:self.id,start:self.start,end:self.end,
+	'self.start = self.seed % 100;
+self.seed = self.seed * 1103515245 + 12345;
+self.end = self.seed % 100;
+self.seed = self.seed * 1103515245 + 12345;
+self.rooms = self.seed % 3;
+self.seed = self.seed * 1103515245 + 12345;
+self.persons = self.seed%5;
+self.seed = self.seed * 1103515245 + 12345;
+self.name = "testnamn";
+
+send CustomerInterface::startCustomerBooking(callerId:self.id,start:self.start,end:self.end,
 	persons:self.persons,rooms:self.rooms,name:self.name);
 
 //Pseudorandom test
@@ -601,10 +618,18 @@ INSERT INTO SM_ACT
 	VALUES ("b3d90052-2235-4d40-ba88-2fcae307a4eb",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'//Nice test
-send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:rcvd_evt.type.id);
+	'self.pid = rcvd_evt.processId;
 
-send CustomerInterface::providePaymentDetails(processId:rcvd_evt.processId, cardHolder:"testis testsson", cvcCode:234, cardNumber:1234567890123456);
+cvc = self.seed % 1000;
+self.seed = self.seed * 1103515245 + 12345;
+cn = self.seed;
+self.seed = self.seed * 1103515245 + 12345;
+ed = self.seed % 10000;
+self.seed = self.seed * 1103515245 + 12345;
+
+send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:rcvd_evt.type);
+
+send CustomerInterface::providePaymentDetails(processId:rcvd_evt.processId, cardHolder:"testis testsson", cvcCode:cvc, cardNumber:cn, expirationDate:ed);
 
 //Pseudorandom test
 //send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:random()%100);
@@ -646,8 +671,10 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("5c7f754f-8812-4ff7-b0af-37e9e5f1aac6",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
-	'',
+	1,
+	'select any tc from TestController;
+
+generate TestController2:testDone to tc;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("cfff6be0-88b9-47d0-bf9c-16882ebfe0ab",
