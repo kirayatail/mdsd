@@ -90,6 +90,15 @@ INSERT INTO SM_EVTDI
 	'',
 	"3899d5cd-ad71-44ed-8dcd-4128f20014be",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVTDI
+	VALUES ("948d6e2e-d124-4034-a0a2-d371a197f128",
+	"ef5684f0-4163-4827-88b0-aeda2e83b833",
+	'expirationDate',
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	"8d59ab80-eee4-4a24-9ac7-ff7e14588981",
+	"7d82ffce-6b77-45f9-b6a7-031236c86279");
 INSERT INTO SM_LEVT
 	VALUES ("8d59ab80-eee4-4a24-9ac7-ff7e14588981",
 	"ef5684f0-4163-4827-88b0-aeda2e83b833",
@@ -606,14 +615,14 @@ select one paymentDetails related by customer->PaymentDetails[R13];
 //If payment details are already stored, update them, else create new.
 if not empty paymentDetails
 	paymentDetails.cardNumber = rcvd_evt.cardNumber
-	//paymentDetails.expirationDate = rcvd_evt.expirationDate;
+	paymentDetails.expirationDate = rcvd_evt.expirationDate;
 	paymentDetails.cvcCode = rcvd_evt.cvcCode;
 	paymentDetails.cardHolder = rcvd_evt.cardHolder;
 else
 	create object instance paymentDetails of PaymentDetails;
 	relate paymentDetails to customer across R13;
 	paymentDetails.cardNumber = rcvd_evt.cardNumber;
-	//paymentDetails.expirationDate = rcvd_evt.expirationDate;
+	paymentDetails.expirationDate = rcvd_evt.expirationDate;
 	paymentDetails.cvcCode = rcvd_evt.cvcCode;
 	paymentDetails.cardHolder = rcvd_evt.cardHolder;
 end if;
