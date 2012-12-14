@@ -81,6 +81,33 @@ INSERT INTO SM_EVT
 	'',
 	'BookingHandler_A5',
 	'');
+INSERT INTO SM_SGEVT
+	VALUES ("9aecd716-c5bb-422d-93ca-7610cfc6682d",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000",
+	"61880ad0-3d2d-4075-8851-87e1f7044d40",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SPR_PS_PROXY
+	VALUES ("61880ad0-3d2d-4075-8851-87e1f7044d40",
+	'checkOut',
+	'',
+	'',
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/Booking.xtuml');
+INSERT INTO SM_SEVT
+	VALUES ("9aecd716-c5bb-422d-93ca-7610cfc6682d",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVT
+	VALUES ("9aecd716-c5bb-422d-93ca-7610cfc6682d",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000",
+	6,
+	'checkOut',
+	0,
+	'',
+	'BookingHandler_A6',
+	'');
 INSERT INTO SM_STATE
 	VALUES ("7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -109,6 +136,11 @@ INSERT INTO SM_SEME
 	"25a4d66f-e107-45a7-8226-5c37fd25b477",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_SEME
+	VALUES ("7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
+	"9aecd716-c5bb-422d-93ca-7610cfc6682d",
+	"92461f96-4b23-40b5-8aff-0cb5cd202190",
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_NSTXN
 	VALUES ("c3b5e836-86ac-426c-8563-fa20ac0244ab",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
@@ -141,10 +173,11 @@ INSERT INTO SM_TXN
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NETXN
+INSERT INTO SM_NSTXN
 	VALUES ("b7d3472f-914d-43b5-b78e-75c295bd95e0",
 	"92461f96-4b23-40b5-8aff-0cb5cd202190",
 	"7ba30fbd-1ec1-4616-93e4-ee4604ff17e7",
+	"9aecd716-c5bb-422d-93ca-7610cfc6682d",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("b7d3472f-914d-43b5-b78e-75c295bd95e0",
@@ -252,15 +285,12 @@ INSERT INTO SM_ACT
 select any handler from instances of BookingHandler;
 select any booking related by handler -> Booking[R26] where selected.id == rcvd_evt.bookingId;
 relate handler to process across R28;
-relate handler to booking across R26;
 relate booking to process across R29;
-handler.idCounter = handler.idCounter + 1;
-booking.id = handler.idCounter;
 handler.cbpCounter = handler.cbpCounter + 1;
 process.id =handler.cbpCounter;
 process.callerId = rcvd_evt.callerId;
 
-generate CheckOutProcess1:start();',
+generate CheckOutProcess1:start() to process;',
 	'');
 INSERT INTO GD_MD
 	VALUES ("3063f5af-50a0-4745-9f36-5f3f63edab2f",
