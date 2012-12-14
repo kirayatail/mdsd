@@ -53,33 +53,38 @@ INSERT INTO O_TFR
 	
 	There will exist types with the same amount of beds but different prices.
 	Not all continous integral amounts of beds will be represented, No rooms with 3 beds for example
+	Prices expressed in the unit "Pebbles".
 	
-	Single room
+	NOTE: "whole dormitory" does not occupy other dormitory accommodations and vice versa. 
+	Consider two dormitory rooms with single beds bookable and two rooms that are only bookable in bulk.
+	
+	
+	Single room x40
 		price 100
 		beds 1
 		id 1
 	
-	Double room
+	Double room x40
 		price 180
 		beds 2
 		id 2
 	
-	Junior suite
+	Junior suite x15
 		price 250
 		beds 2
 		id 3
 	
-	Family suite
+	Family suite x10
 		price 500
 		beds 4
 		id 4
 	
-	Dormitory
+	Dormitory x 16
 		price 70
 		beds 1
 		id 5
 		
-	Whole dormitory
+	Whole dormitory x2
 		price 500
 		beds 8
 		id 6
