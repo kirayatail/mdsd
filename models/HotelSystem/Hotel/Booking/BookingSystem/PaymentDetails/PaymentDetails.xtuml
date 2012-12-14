@@ -65,16 +65,9 @@ INSERT INTO O_ATTR
 	'',
 	'expirationDate',
 	0,
-	"bf232dc7-d342-49ca-8c62-e039f4c30e2f",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("bf232dc7-d342-49ca-8c62-e039f4c30e2f",
-	"00000000-0000-0000-0000-000000000000",
-	'date',
-	'',
-	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("a580a896-0166-461a-bbe9-ba92c6204a10",
 	"ba9f6d12-0861-4d32-96fd-fa25a08fcbf4");
