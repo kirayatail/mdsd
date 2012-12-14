@@ -95,10 +95,17 @@ INSERT INTO SM_EVTDI
 	"ef5684f0-4163-4827-88b0-aeda2e83b833",
 	'expirationDate',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"bf232dc7-d342-49ca-8c62-e039f4c30e2f",
 	'',
 	"8d59ab80-eee4-4a24-9ac7-ff7e14588981",
 	"7d82ffce-6b77-45f9-b6a7-031236c86279");
+INSERT INTO S_DT_PROXY
+	VALUES ("bf232dc7-d342-49ca-8c62-e039f4c30e2f",
+	"00000000-0000-0000-0000-000000000000",
+	'date',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("8d59ab80-eee4-4a24-9ac7-ff7e14588981",
 	"ef5684f0-4163-4827-88b0-aeda2e83b833",

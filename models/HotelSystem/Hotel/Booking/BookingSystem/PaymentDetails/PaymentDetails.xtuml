@@ -18,6 +18,13 @@ INSERT INTO O_TFR
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
+	"00000000-0000-0000-0000-000000000000",
+	'boolean',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("b168084c-0790-4b70-8aa9-b820f070483e",
 	"ba9f6d12-0861-4d32-96fd-fa25a08fcbf4");
@@ -33,9 +40,16 @@ INSERT INTO O_ATTR
 	'',
 	'cardNumber',
 	0,
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("0213815f-2e31-4e0e-832e-1b1eb74bb0a5",
 	"ba9f6d12-0861-4d32-96fd-fa25a08fcbf4");
@@ -51,9 +65,16 @@ INSERT INTO O_ATTR
 	'',
 	'expirationDate',
 	0,
-	"00000000-0000-0000-0000-000000000000",
+	"bf232dc7-d342-49ca-8c62-e039f4c30e2f",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("bf232dc7-d342-49ca-8c62-e039f4c30e2f",
+	"00000000-0000-0000-0000-000000000000",
+	'date',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("a580a896-0166-461a-bbe9-ba92c6204a10",
 	"ba9f6d12-0861-4d32-96fd-fa25a08fcbf4");
@@ -69,9 +90,16 @@ INSERT INTO O_ATTR
 	'',
 	'cardHolder',
 	0,
-	"00000000-0000-0000-0000-000000000000",
+	"856c2096-9d47-49f5-a1d5-f50fd9558416",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("acfa8ac2-67dc-45bc-acda-9af80f86821a",
 	"ba9f6d12-0861-4d32-96fd-fa25a08fcbf4");
@@ -87,7 +115,7 @@ INSERT INTO O_ATTR
 	'',
 	'cvcCode',
 	0,
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
 INSERT INTO O_ID
