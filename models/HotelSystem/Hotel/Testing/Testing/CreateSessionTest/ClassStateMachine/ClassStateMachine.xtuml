@@ -102,7 +102,8 @@ INSERT INTO SM_ACT
 	VALUES ("ea361bc7-7136-4d41-bc7e-6336d70fa882",
 	"de5d8989-5aa7-4f6c-8948-55b63d722fd1",
 	1,
-	'select many cst from CreateSessionTest;
+	'/*
+select many cst from CreateSessionTest;
 
 for each test in cst
 	if (rcvd_evt.sessionId == test.id)
@@ -113,7 +114,7 @@ for each test in cst
 end for;
 
 create event instance mess of CreateSessionTest_A1:''Message sent''() to AddPaymentTest class; 
-',
+*/',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("ca1e0190-6c83-4218-b482-49b53a46cc47",
