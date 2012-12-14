@@ -485,10 +485,6 @@ INSERT INTO SM_ACT
 
 Select many accommodations related by booking -> Accommodation[R33];
 if empty accommodations
-	send StaffInterface::checkOutStarted(
-		callerId:self.callerId, 
-		processId:self.id,
-		checkedIn:false);
 	generate CheckOutProcess2:terminate to self;
 else
 	for each accommodation in accommodations
@@ -544,10 +540,10 @@ INSERT INTO SM_ACT
 	'Select one booking related by self -> Booking[R29];
 
 tabSum = booking.getTabSum();
-if (tabSum == 0)
+if (tabSum <= 0)
 	generate CheckOutProcess4:completeCheckOut to self;
 else
-	
+	send StaffInterface::leftToPay(processId:self.id, amountLeft:tabSum);
 end if;',
 	'');
 INSERT INTO SM_TAH
@@ -634,7 +630,9 @@ INSERT INTO SM_ACT
 	1,
 	'select one booking related by self -> Booking[R29];
 
-send StaffInterface::checkedOut(bookingId:booking.id);',
+send StaffInterface::checkedOut(bookingId:booking.id);
+
+unrelate self from booking across R29;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("3533492f-6339-4778-8750-412bfe5ff1dc",

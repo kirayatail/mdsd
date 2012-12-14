@@ -14,7 +14,28 @@ INSERT INTO O_TFR
 	'',
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	1,
-	'',
+	'tabSum = 0;
+select one type related by self -> Type[R35];
+tabSum = type.price;
+
+select many tabItems related by self -> TabItem[R3];
+
+if (not empty tabItems)
+	for each item in tabItems
+		tabSum = tabSum + item.price;
+	end for;
+end if;
+
+
+select many payments related by self -> Payment[R2];
+
+if (not empty payments)
+	for each item in payments
+		tabSum = tabSum - item.amount;
+	end for;
+end if;
+
+return tabSum;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
