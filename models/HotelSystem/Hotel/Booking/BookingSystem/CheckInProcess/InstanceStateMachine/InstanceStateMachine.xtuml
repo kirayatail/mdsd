@@ -651,7 +651,7 @@ else //ckeck in specified accommodation, maybe responsibility of AccommodationHa
 	if not empty accommodation //accommodation exists and is bookable
 		select one checkedInBooking related by accommodation->Booking[R33];
 		if empty checkedInBooking  //accommodation currently not occupied
-			relate booking to self across R33;
+			relate booking to accommodation across R33;
 			generate CheckInProcess3:completeCheckIn to self;
 		else
 			generate CheckInProcess1:terminate to self;
