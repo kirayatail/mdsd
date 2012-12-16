@@ -165,7 +165,7 @@ INSERT INTO SM_STATE
 	"00000000-0000-0000-0000-000000000000",
 	'Terminated',
 	6,
-	0);
+	1);
 INSERT INTO SM_EIGN
 	VALUES ("0ff317ce-5763-469f-a0c2-8ca684095e0a",
 	"5d428f43-91f2-4ac9-bb13-ecd66cb17e4e",
@@ -327,17 +327,14 @@ INSERT INTO SM_ACT
 	VALUES ("4ee71bec-bb98-498d-b517-fd3d85ccf04c",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
-	'
+	'select one bookingHandler related by self -> BookingHandler[R25];
+unrelate bookingHandler from self across R25;
 
-select one b related by self -> Booking[R31];
+select one booking related by self -> Booking[R31];
 
 send StaffInterface::checkedIn(bookingId:b.id);
 
-unrelate b from self across R31;
-
-//Unrelate b from self
-//Return true to caller
-//Terminate self',
+unrelate b from self across R31;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("200c6e0f-6b69-489f-85f5-9225c25d62be",
@@ -350,13 +347,14 @@ INSERT INTO SM_ACT
 	VALUES ("200c6e0f-6b69-489f-85f5-9225c25d62be",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
-	'select one b related by self -> Booking[R31];
-unrelate b from self across R31;
+	'select one booking related by self -> Booking[R31];
+unrelate booking from self across R31;
+
+select one bookingHandler related by self -> BookingHandler[R25];
+unrelate bookingHandler from self across R25;
 
 send StaffInterface::illegalCheckIn(isIllegal:true);
-
-
-//delete self',
+',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("744f888b-37fc-4e54-a70c-75a8f0f4a13f",
@@ -656,8 +654,8 @@ INSERT INTO DIM_ND
 	109.000000,
 	"b401f308-945e-48b3-b53b-aa334fab5f12");
 INSERT INTO DIM_GE
-	VALUES (4356.000000,
-	3264.000000,
+	VALUES (4332.000000,
+	3276.000000,
 	"b401f308-945e-48b3-b53b-aa334fab5f12",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -666,13 +664,13 @@ INSERT INTO DIM_ELE
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_CON
 	VALUES ("693f4226-6bf0-4d01-b0bc-81fcd15be3fd",
-	4356.000000,
-	3308.000000,
+	4332.000000,
+	3318.000000,
 	"b401f308-945e-48b3-b53b-aa334fab5f12");
 INSERT INTO DIM_CON
 	VALUES ("122e92ca-df43-4c93-bcb7-a55ce03f8b89",
-	4513.000000,
-	3289.000000,
+	4489.000000,
+	3300.000000,
 	"b401f308-945e-48b3-b53b-aa334fab5f12");
 INSERT INTO GD_GE
 	VALUES ("cacd5b88-0448-4bc6-94e8-f55b5509d665",
@@ -713,8 +711,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"2640e81b-c10f-41a6-83a9-3296b650a5c3");
 INSERT INTO DIM_GE
-	VALUES (4126.000000,
-	3270.000000,
+	VALUES (4114.000000,
+	3275.000000,
 	"2640e81b-c10f-41a6-83a9-3296b650a5c3",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -761,8 +759,8 @@ INSERT INTO DIM_WAY
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("643a43ff-e9e1-494f-b563-d47db290eb53",
-	4356.000000,
-	3308.000000,
+	4332.000000,
+	3318.000000,
 	"cacd5b88-0448-4bc6-94e8-f55b5509d665",
 	"00000000-0000-0000-0000-000000000000",
 	"c3a14767-7559-4da4-a3ce-cd94de4680dd");
@@ -1023,8 +1021,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"d43cb936-607e-4649-a2f7-fbfc76687e59");
 INSERT INTO DIM_GE
-	VALUES (4518.000000,
-	3213.000000,
+	VALUES (4506.000000,
+	3218.500000,
 	"d43cb936-607e-4649-a2f7-fbfc76687e59",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -1065,8 +1063,8 @@ INSERT INTO DIM_WAY
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("1782992d-205e-4014-8434-06542883e4f1",
-	4513.000000,
-	3289.000000,
+	4489.000000,
+	3300.000000,
 	"24f95727-822c-404c-aa0a-fe2ffcfde8f8",
 	"00000000-0000-0000-0000-000000000000",
 	"dd97471e-bc4a-4dad-84cd-19c92f4b96d0");
@@ -1097,4 +1095,4 @@ INSERT INTO O_OBJ_PROXY
 	'CheckInProcess',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../CheckInProcess.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/CheckInProcess/CheckInProcess.xtuml');
