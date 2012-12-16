@@ -689,11 +689,12 @@ INSERT INTO SM_ACT
 	1,
 	'// Should associate the chosen type to the booking when there is actually more than one alternative.
 
+select one booking related by self->Booking[R19];
+
 //Check that the chosen type is one of the options
-select one type related by self->Booking[R19]->Type[R35] where selected.id==rcvd_evt.typeId;
+select one type related by booking->Type[R35] where selected.id==rcvd_evt.typeId;
 if not empty type
 	//Add a tab item for the type and dates of stay.
-	select one booking related by type->Booking[R35];
 	create object instance stayTabItem of TabItem;
 	stayTabItem.name=type.name;
 	stayTabItem.price=type.price*(booking.ends-booking.starts);
