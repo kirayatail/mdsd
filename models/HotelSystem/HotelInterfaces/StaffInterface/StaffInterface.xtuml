@@ -231,6 +231,15 @@ INSERT INTO C_PP
 	0,
 	'',
 	"6fbfb019-3740-49b9-848a-73d2cc5cb6dc");
+INSERT INTO C_PP
+	VALUES ("c04057dd-9623-42da-910e-525c211f7dad",
+	"f2f8bfee-3692-4160-9187-fed01d1c3af4",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'expirationDate',
+	'',
+	0,
+	'',
+	"830cf4e7-5036-49b6-85d3-a7185b7aca1e");
 INSERT INTO C_EP
 	VALUES ("45c348ef-5d45-4316-9333-5bd2f06c197c",
 	"484ddcc1-d05f-458e-97c2-08054a279658",

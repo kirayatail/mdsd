@@ -14,7 +14,16 @@ INSERT INTO O_TFR
 	'',
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	1,
-	'',
+	'select any type related by self -> Type[R23] where selected.id == param.type;
+
+select many accoms related by type -> Accommodation[R34];
+count = 0;
+
+for each accom in accoms
+	count = count +1;
+end for;
+
+return count;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
@@ -22,11 +31,18 @@ INSERT INTO O_TPARM
 	VALUES ("e88efba1-e2cc-47cb-81f7-70ee77b87f76",
 	"b77fdde0-7105-40e3-9109-6a1a5eea0032",
 	'type',
-	"d649ab46-edb7-416c-b293-6b495adb66bd",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TFR
 	VALUES ("6fc7687a-60e6-40a7-b26a-893b28e25ac5",
 	"e815aa95-e0d5-441a-b449-1b7099c06280",
@@ -155,6 +171,13 @@ end while;',
 	1,
 	'',
 	"b77fdde0-7105-40e3-9109-6a1a5eea0032");
+INSERT INTO S_DT_PROXY
+	VALUES ("3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TFR
 	VALUES ("82404b0d-e584-4542-a661-a5f3ce678e27",
 	"e815aa95-e0d5-441a-b449-1b7099c06280",
@@ -211,4 +234,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
+	'../BookingSystem.xtuml');

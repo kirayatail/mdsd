@@ -1733,4 +1733,4 @@ INSERT INTO O_OBJ_PROXY
 	'CheckInProcess',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/CheckInProcess/CheckInProcess.xtuml');
+	'../CheckInProcess.xtuml');

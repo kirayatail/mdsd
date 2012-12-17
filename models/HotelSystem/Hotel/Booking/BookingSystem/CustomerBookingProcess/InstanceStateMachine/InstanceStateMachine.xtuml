@@ -18,6 +18,13 @@ INSERT INTO SM_EVTDI
 	'',
 	"8d59ab80-eee4-4a24-9ac7-ff7e14588981",
 	"d984519a-dd54-4949-9132-3412610e8162");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("d984519a-dd54-4949-9132-3412610e8162",
 	"ef5684f0-4163-4827-88b0-aeda2e83b833",
@@ -36,6 +43,13 @@ INSERT INTO SM_EVTDI
 	'',
 	"8d59ab80-eee4-4a24-9ac7-ff7e14588981",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("29530719-e69a-49bd-b3db-06651bbac0d0",
 	"ef5684f0-4163-4827-88b0-aeda2e83b833",
@@ -620,7 +634,7 @@ select one paymentDetails related by customer->PaymentDetails[R13];
 
 //If payment details are already stored, update them, else create new.
 if not empty paymentDetails
-	paymentDetails.cardNumber = rcvd_evt.cardNumber
+	paymentDetails.cardNumber = rcvd_evt.cardNumber;
 	paymentDetails.expirationDate = rcvd_evt.expirationDate;
 	paymentDetails.cvcCode = rcvd_evt.cvcCode;
 	paymentDetails.cardHolder = rcvd_evt.cardHolder;
@@ -1907,4 +1921,4 @@ INSERT INTO O_OBJ_PROXY
 	'CustomerBookingProcess',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/CustomerBookingProcess/CustomerBookingProcess.xtuml');
+	'../CustomerBookingProcess.xtuml');
