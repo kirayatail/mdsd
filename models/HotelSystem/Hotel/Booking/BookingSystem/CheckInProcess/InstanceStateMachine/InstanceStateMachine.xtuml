@@ -515,7 +515,8 @@ INSERT INTO SM_ACT
 	VALUES ("0aab9a87-dd8f-4e93-9a86-b0f2e35a1e96",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	1,
-	'select one booking related by self -> Booking[R31];
+	'/**** Concurrency unsafe code ****
+select one booking related by self -> Booking[R31];
 
 select one acHandler related by self -> BookingHandler[R25] -> AccommodationHandler[R24];
 
@@ -529,7 +530,10 @@ if(accId != -1)
 	generate CheckInProcess3:completeCheckIn to self;
 else
 	generate CheckInProcess1:terminate to self;
-end if;',
+end if;
+*/
+
+generate AccommodationHandler_A2:assignRoom(processId:self.id) to AccommodationHandler class;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("4ee71bec-bb98-498d-b517-fd3d85ccf04c",
