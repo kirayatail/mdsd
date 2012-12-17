@@ -397,7 +397,9 @@ INSERT INTO SM_ACT
 	VALUES ("21b8716c-555c-4e55-98fd-02d0834cd584",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
 	1,
-	'select any cbt from CustomerBookingTest where selected.pid == self.processId;',
+	'select any cbt from CustomerBookingTest where selected.processId == self.processId;
+
+generate CustomerBookingTest3:''PaymentDetailsOK'' to cbt;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("5fe64d2b-9fcf-45a9-bdcb-0ffbbf5c522f",
