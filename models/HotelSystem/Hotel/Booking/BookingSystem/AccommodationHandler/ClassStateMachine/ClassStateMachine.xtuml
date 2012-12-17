@@ -14,16 +14,23 @@ INSERT INTO SM_EVTDI
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
 	'processId',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"060d8a99-fca2-4f6e-83b5-1f6ed2d3a349",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("f48e9c4a-26e1-4aeb-95d4-f0265e08a026",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
 	'bookingId',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"060d8a99-fca2-4f6e-83b5-1f6ed2d3a349",
 	"8bdd84cc-69d0-46e7-a2ea-e366b315162b");
@@ -32,7 +39,7 @@ INSERT INTO SM_EVTDI
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
 	'accommodationId',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"060d8a99-fca2-4f6e-83b5-1f6ed2d3a349",
 	"f48e9c4a-26e1-4aeb-95d4-f0265e08a026");
@@ -45,13 +52,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"a9430c9b-a0b4-4f29-ae5f-316f56747afc",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("060d8a99-fca2-4f6e-83b5-1f6ed2d3a349",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
@@ -160,17 +160,18 @@ select any accHandler from instances of AccommodationHandler;
 select any process related by accHandler->BookingHandler[R24]->CheckInProcess[R25] where selected.id==rcvd_evt.processId;
 select any booking related by accHandler->BookingHandler[R24]->Booking[R26] where selected.id==rcvd_evt.bookingId;
 
-select any accommodation related by accHandler->Accommodation[R12] where selected.id==rcvd_evt.accommodationId and selected.bookable==true;
+select any accommodation related by accHandler->Accommodation[R21] where selected.id==rcvd_evt.accommodationId and selected.bookable==true;
 if not empty accommodation //accommodation exists and is bookable
 	// Make sure the accommodation is not associated to any booking
 	select one checkedInBooking related by accommodation->Booking[R33];
 	if empty checkedInBooking  //accommodation currently not occupied
 		relate booking to accommodation across R33;
-		generate AccommodationAssignationSuccessful to process;
+		//generate AccommodationAssignationSuccessful to process;
 	else
-		generate CheckInProcess1:AccommodationAssignationFailure to process;
+		//generate CheckInProcess1:AccommodationAssignationFailure to process;
+	end if;
 else
-	generate CheckInProcess1:AccommodationAssignationFailure to process;
+	//generate CheckInProcess1:AccommodationAssignationFailure to process;
 end if;',
 	'');
 INSERT INTO SM_TAH

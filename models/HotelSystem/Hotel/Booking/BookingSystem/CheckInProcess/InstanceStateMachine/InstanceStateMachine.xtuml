@@ -14,10 +14,17 @@ INSERT INTO SM_EVTDI
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
 	'accommodationId',
 	'',
-	"00000000-0000-0000-0000-000000000000",
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	"cbc2ba28-a930-4f5b-916f-edfe83e047c9",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("5d428f43-91f2-4ac9-bb13-ecd66cb17e4e",
 	"53ac3645-28e6-45ec-9749-9afa787b9cb3",
@@ -551,9 +558,9 @@ unrelate bookingHandler from self across R25;
 
 select one booking related by self -> Booking[R31];
 
-send StaffInterface::checkedIn(bookingId:b.id, processId:self.id);
+send StaffInterface::checkedIn(bookingId:booking.id, processId:self.id);
 
-unrelate b from self across R31;',
+unrelate booking from self across R31;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("200c6e0f-6b69-489f-85f5-9225c25d62be",
@@ -1737,4 +1744,4 @@ INSERT INTO O_OBJ_PROXY
 	'CheckInProcess',
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53",
-	'../CheckInProcess.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/CheckInProcess/CheckInProcess.xtuml');
