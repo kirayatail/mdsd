@@ -567,7 +567,7 @@ self.persons = self.seed%5;
 self.seed = self.seed * 1103515245 + 12345;
 self.name = "testnamn";
 
-send CustomerInterface::startCustomerBooking(callerId:self.id,start:self.start,end:self.end,
+send CustomerInterface::startCustomerBooking(callerId:self.callerId,start:self.start,end:self.end,
 	persons:self.persons,rooms:self.rooms,name:self.name);
 
 //Pseudorandom test
@@ -629,7 +629,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("91c1fdda-5c73-4207-923e-6c8045e845d0",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -672,7 +672,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("cfff6be0-88b9-47d0-bf9c-16882ebfe0ab",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -685,7 +685,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("9422a342-b7fb-4449-b9c1-667bb782f82b",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -714,7 +714,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("d73df8ab-90b3-4fcf-a189-79eff446d2c2",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -727,7 +727,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("9f2fb251-235e-4ca9-94de-c06446d74fc1",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -740,7 +740,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("fdc7ce64-f99d-49b4-a30c-d9237ba42673",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO GD_MD
