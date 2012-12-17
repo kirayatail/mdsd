@@ -568,7 +568,7 @@ unrelate booking from self across R31;
 select one bookingHandler related by self -> BookingHandler[R25];
 unrelate bookingHandler from self across R25;
 
-send StaffInterface::illegalCheckIn(isIllegal:true);
+send StaffInterface::illegalCheckIn(isIllegal:true, processId:self.id);
 ',
 	'');
 INSERT INTO SM_TAH
