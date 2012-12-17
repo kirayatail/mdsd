@@ -285,7 +285,7 @@ INSERT INTO SM_STATE
 	"00000000-0000-0000-0000-000000000000",
 	'CheckInFailed',
 	5,
-	1);
+	0);
 INSERT INTO SM_CH
 	VALUES ("7f927ad5-4d2e-4060-b3de-b2c8d69ff19e",
 	"5cee51b6-196f-4faa-bb0c-dcf3e1e79dbc",
@@ -451,7 +451,10 @@ INSERT INTO SM_ACT
 	VALUES ("ccd6f0de-1b2e-4265-b267-cb69072ff840",
 	"ec68aac5-d173-4104-95e2-0940eabb3daa",
 	1,
-	'//Generate testcomplete to testcontroller',
+	'select any tc from TestController;
+generate TestController2:''testDone'' (testSucceded:true) to tc;
+
+generate CheckOutTest_A1:''initiateCheckOutTest''(bookingId:self.bookingId, callerId:self.callerId) to CheckOutTest class;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("eddb7203-672d-45e0-a548-54cd25478387",
@@ -464,7 +467,9 @@ INSERT INTO SM_ACT
 	VALUES ("eddb7203-672d-45e0-a548-54cd25478387",
 	"ec68aac5-d173-4104-95e2-0940eabb3daa",
 	1,
-	'//generate event to testcontroller',
+	'select any tc from TestController;
+generate TestController2:''testDone'' (testSucceded:false) to tc;
+generate TestController2:''testDone'' (testSucceded:false) to tc;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("ca502b54-7fcc-4c01-8172-b5b7ed0f4d33",
@@ -937,8 +942,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"e2226dbf-1f54-4860-b724-b13523949e9d");
 INSERT INTO DIM_GE
-	VALUES (4699.000000,
-	3300.000000,
+	VALUES (4673.000000,
+	3298.000000,
 	"e2226dbf-1f54-4860-b724-b13523949e9d",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
