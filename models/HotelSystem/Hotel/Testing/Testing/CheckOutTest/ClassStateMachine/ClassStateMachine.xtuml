@@ -18,13 +18,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"c11d818a-2187-4ea3-b44f-16c6e048d7c6",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("06344caa-0cf3-469b-9a5f-d2300c2ced90",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
@@ -52,6 +45,87 @@ INSERT INTO SM_EVT
 	'',
 	'CheckOutTest_A1',
 	'');
+INSERT INTO SM_SGEVT
+	VALUES ("845bf79e-4f71-4353-9b07-edd592ab008f",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	"0646d0ee-3229-45a7-a3f3-03fd601a9e24");
+INSERT INTO SPR_RS_PROXY
+	VALUES ("0646d0ee-3229-45a7-a3f3-03fd601a9e24",
+	'checkOutStarted',
+	'',
+	'',
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
+INSERT INTO SM_SEVT
+	VALUES ("845bf79e-4f71-4353-9b07-edd592ab008f",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVT
+	VALUES ("845bf79e-4f71-4353-9b07-edd592ab008f",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000",
+	2,
+	'checkOutStarted',
+	0,
+	'',
+	'CheckOutTest_A2',
+	'');
+INSERT INTO SM_SGEVT
+	VALUES ("7e97f688-b8e9-4165-bad5-70447cf2d855",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	"359ec540-bdb3-4865-9ad7-1527b4b2e3c2");
+INSERT INTO SPR_RS_PROXY
+	VALUES ("359ec540-bdb3-4865-9ad7-1527b4b2e3c2",
+	'leftToPay',
+	'',
+	'',
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
+INSERT INTO SM_SEVT
+	VALUES ("7e97f688-b8e9-4165-bad5-70447cf2d855",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVT
+	VALUES ("7e97f688-b8e9-4165-bad5-70447cf2d855",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000",
+	3,
+	'leftToPay',
+	0,
+	'',
+	'CheckOutTest_A3',
+	'');
+INSERT INTO SM_SGEVT
+	VALUES ("e500a177-2a6e-4465-84ee-2c867844afc2",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	"cbaf4fce-6c57-4737-ac67-a52851683f9b");
+INSERT INTO SPR_RS_PROXY
+	VALUES ("cbaf4fce-6c57-4737-ac67-a52851683f9b",
+	'checkedOut',
+	'',
+	'',
+	3,
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
+INSERT INTO SM_SEVT
+	VALUES ("e500a177-2a6e-4465-84ee-2c867844afc2",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVT
+	VALUES ("e500a177-2a6e-4465-84ee-2c867844afc2",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000",
+	4,
+	'checkedOut',
+	0,
+	'',
+	'CheckOutTest_A4',
+	'');
 INSERT INTO SM_STATE
 	VALUES ("13ad5fce-eda4-4601-917a-f66437f36438",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
@@ -64,30 +138,48 @@ INSERT INTO SM_SEME
 	"c11d818a-2187-4ea3-b44f-16c6e048d7c6",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NETXN
+INSERT INTO SM_SEME
+	VALUES ("13ad5fce-eda4-4601-917a-f66437f36438",
+	"845bf79e-4f71-4353-9b07-edd592ab008f",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_SEME
+	VALUES ("13ad5fce-eda4-4601-917a-f66437f36438",
+	"7e97f688-b8e9-4165-bad5-70447cf2d855",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_SEME
+	VALUES ("13ad5fce-eda4-4601-917a-f66437f36438",
+	"e500a177-2a6e-4465-84ee-2c867844afc2",
+	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_NSTXN
 	VALUES ("afb25617-9a39-4e85-8201-d85216d16f77",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	"13ad5fce-eda4-4601-917a-f66437f36438",
+	"845bf79e-4f71-4353-9b07-edd592ab008f",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("afb25617-9a39-4e85-8201-d85216d16f77",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	"13ad5fce-eda4-4601-917a-f66437f36438",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NETXN
+INSERT INTO SM_NSTXN
 	VALUES ("72f1f29c-c8e2-4a9c-a5c7-e0edb98ad8d4",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	"13ad5fce-eda4-4601-917a-f66437f36438",
+	"7e97f688-b8e9-4165-bad5-70447cf2d855",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("72f1f29c-c8e2-4a9c-a5c7-e0edb98ad8d4",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	"13ad5fce-eda4-4601-917a-f66437f36438",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO SM_NETXN
+INSERT INTO SM_NSTXN
 	VALUES ("ccd1d48f-7031-4f32-8714-ebd89d8252bb",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	"13ad5fce-eda4-4601-917a-f66437f36438",
+	"e500a177-2a6e-4465-84ee-2c867844afc2",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_TXN
 	VALUES ("ccd1d48f-7031-4f32-8714-ebd89d8252bb",
@@ -133,10 +225,11 @@ INSERT INTO SM_ACT
 
 for each test in cot
 	if (rcvd_evt.callerId == test.callerId and rcvd_evt.checkedIn)
-		generate CheckOutTest3:''checkOutStarted'' (callerId:rcvd_evt.callerId,processId:rcvd_evt.processId) to test;
+		test.processId = rcvd_evt.processId;
+		generate CheckOutTest3:''checkOutStarted'' () to test;
 		break;
 	elif (rcvd_evt.callerId == test.callerId and not rcvd_evt.checkedIn)
-		generate CheckOutTest4:''checkOutFailed'' (callerId:rcvd_evt.callerId,processId:rcvd_evt.processId) to test;
+		generate CheckOutTest4:''checkOutFailed'' () to test;
 		break;
 	end if;
 end for;',
@@ -156,7 +249,7 @@ INSERT INTO SM_ACT
 
 for each test in cot
 	if (rcvd_evt.processId == test.processId)
-		generate CheckOutTest5:''paymentLeft'' (processId:rcvd_evt.processId) to test;
+		generate CheckOutTest5:''paymentLeft'' (amountLeft:rcvd_evt.amountLeft) to test;
 		break;
 	end if;
 end for;',
@@ -172,11 +265,15 @@ INSERT INTO SM_ACT
 	VALUES ("b6ce3380-825d-43a9-8bfb-74488f3bcf16",
 	"8a82b09c-04d6-4cb8-9c26-640d196a73dd",
 	1,
-	'select many cit from CheckOutTest;
+	'select many cot from CheckOutTest;
 
-for each test in cit
-	if (rcvd_evt.bookingId == test.bookingId)
-		generate CheckOutTest2:''checkedOut'' (bookingId:rcvd_evt.bookingId) to test;
+for each test in cot
+	if (rcvd_evt.processId == test.processId)
+		if(rcvd_evt.bookingId == -1)
+			generate CheckOutTest4:''checkOutFailed'' () to test;
+		else
+			generate CheckOutTest2:''checkedOut'' () to test;	
+		end if;
 		break;
 	end if;
 end for;',
@@ -344,8 +441,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"a7b8c4da-6822-4a2d-bacd-6a594e52d839");
 INSERT INTO DIM_GE
-	VALUES (4000.000000,
-	2991.000000,
+	VALUES (3996.000000,
+	2993.000000,
 	"a7b8c4da-6822-4a2d-bacd-6a594e52d839",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
