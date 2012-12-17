@@ -110,6 +110,13 @@ INSERT INTO S_MBR
 	"856c2096-9d47-49f5-a1d5-f50fd9558416",
 	"ea8a18e2-255c-4cd2-95ad-43eb86d73842",
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO S_MBR
 	VALUES ("7c626970-29a1-4a5a-8f13-f98a3c71b642",
 	'price',

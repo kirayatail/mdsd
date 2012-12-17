@@ -58,7 +58,7 @@ INSERT INTO SPR_RS_PROXY
 	'customerBookingStarted',
 	'',
 	'',
-	3,
+	1,
 	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("7ad58bc3-1b99-444c-a919-b1e7b2c027f7",
@@ -85,7 +85,7 @@ INSERT INTO SPR_RS_PROXY
 	'bookingConfirmed',
 	'',
 	'',
-	3,
+	1,
 	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("62495850-1c7f-464f-ac0e-c2aa85e7880f",
@@ -284,7 +284,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("ab313cab-2caa-44b0-8714-2a756c43fec7",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -298,18 +298,15 @@ INSERT INTO SM_ACT
 	VALUES ("9f3551a0-7518-4e3d-bde6-5af1d32e267d",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
 	1,
-	'select many cbt from CustomerBookingTest;
+	'select any cbt from instances of CustomerBookingTest where selected.callerId == rcvd_evt.callerId;
 
-for each test in cbt
-	if (rcvd_evt.callerId == test.callerId)
-		if(rcvd_evt.suggestion.id == -1)
-			generate CustomerBookingTest5:''Failure!'' ("Couldn''t find a suitable accommodation") to test;
-		end if
-		generate CustomerBookingTest2:''BookingCreated'' (processId:rcvd_evt.processId, type:rcvd_evt.suggestion.id) to test;
-	end if;
-end for;
+if(rcvd_evt.suggestion.id == -1)
+	generate CustomerBookingTest5:''Failure!'' ("Couldn''t find a suitable accommodation") to test;
+else
+	generate CustomerBookingTest2:''BookingCreated'' (processId:rcvd_evt.processId, type:rcvd_evt.suggestion.id) to test;
+end if;
 
-create event instance mess of CustomerBookingTest_A2:''Message sent''() to CustomerBookingTest class; 
+generate CustomerBookingTest_A2:''Message sent''() to CustomerBookingTest class; 
 ',
 	'');
 INSERT INTO SM_TAH
@@ -322,7 +319,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("42e24298-90c4-47ea-ab32-f87351b74792",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -335,7 +332,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("15a501a6-161f-48f9-bfee-4f1d263e17b7",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -371,7 +368,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("6fefe7ef-00ca-464d-9e36-d96b17be3e93",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -384,7 +381,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("9f95d7a2-5a6e-4aa9-92ca-23942502137d",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO GD_MD
