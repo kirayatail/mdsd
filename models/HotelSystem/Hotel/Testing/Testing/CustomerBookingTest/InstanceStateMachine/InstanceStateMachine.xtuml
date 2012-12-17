@@ -643,7 +643,7 @@ INSERT INTO SM_ACT
 	VALUES ("27652ac0-2c0c-4f05-87f7-92999280880e",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'send CustomerInterface::confirm(processId:rcvd_evt.processID);',
+	'send CustomerInterface::confirm(processId:self.processId);',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("5c7f754f-8812-4ff7-b0af-37e9e5f1aac6",
@@ -658,7 +658,9 @@ INSERT INTO SM_ACT
 	1,
 	'select any tc from TestController;
 
-generate TestController2:testDone to tc;',
+generate TestController2:testDone to tc;
+
+generate CheckInTest_A1:''initiateCheckInTest''(bookingId:self.bookingId, callerId:self.callerId) to CheckInTest class;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("cfff6be0-88b9-47d0-bf9c-16882ebfe0ab",
