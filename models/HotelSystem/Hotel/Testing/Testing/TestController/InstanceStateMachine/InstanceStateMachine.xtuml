@@ -9,6 +9,22 @@ INSERT INTO SM_SM
 	0);
 INSERT INTO SM_MOORE
 	VALUES ("4eae2453-2a57-415f-9019-b51e312fe612");
+INSERT INTO SM_EVTDI
+	VALUES ("cad9842e-7124-43d4-bcdd-4d13f1ea63b0",
+	"4eae2453-2a57-415f-9019-b51e312fe612",
+	'testSucceded',
+	'',
+	"e19bafad-15ad-4b81-8d82-2da842d18b5e",
+	'',
+	"be789566-8c8d-4bc2-ba8e-240a0c8f442a",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
+	"00000000-0000-0000-0000-000000000000",
+	'boolean',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("21aae3a7-ec4a-44f8-a5d9-7f7a3a2ce073",
 	"4eae2453-2a57-415f-9019-b51e312fe612",
@@ -238,10 +254,10 @@ INSERT INTO SM_ACT
 	"4eae2453-2a57-415f-9019-b51e312fe612",
 	1,
 	'numberOfCBTest = 100;
-//numberOfPPDTest = 100;
-//numberOfAPTest = 100;
 
-self.totalNumberOfTests = numberOfCBTest; //+numberOfPPDTest + numberOfAPTest
+self.totalNumberOfTests = numberOfCBTest*3; //times three because each booking consists of three
+											//steps: CustomerBookingTest, CheckInTest, and
+											//CheckOutTest.
 self.numberOfTestsDone = 0;
 
 id = 0;
@@ -249,18 +265,12 @@ next = 1;
 next = next * 1103515245 + 12345;
 while (id < numberOfCBTest)
 	create object instance t of CustomerBookingTest;
-	t.id = id;
+	t.callerId = id;
 	t.seed = next;
 	next = next * 1103515245 + 12345;
 	id = id + 1;
 	generate CustomerBookingTest1:startTest to t;
 end while;
-
-//select many tests from CustomerBookingTest;
-//for each t in tests
-	//
-//end for;
-
 
 ',
 	'');
@@ -275,7 +285,10 @@ INSERT INTO SM_ACT
 	VALUES ("76c6e8ee-25de-4bdf-9380-12a92727f53a",
 	"4eae2453-2a57-415f-9019-b51e312fe612",
 	1,
-	'self.numberOfTestsDone = self.numberOfTestsDone + 1;',
+	'self.numberOfTestsDone = self.numberOfTestsDone + 1;
+if (rcvd_evt.testSucceded)
+	self.numberOfTestsSucceded = self.numberOfTestsSucceded + 1;
+end if;',
 	'');
 INSERT INTO SM_MOAH
 	VALUES ("f27873f8-0769-43b2-8871-16c74466f89f",
