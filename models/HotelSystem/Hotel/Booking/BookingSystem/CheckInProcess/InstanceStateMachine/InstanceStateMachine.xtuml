@@ -547,7 +547,7 @@ unrelate bookingHandler from self across R25;
 
 select one booking related by self -> Booking[R31];
 
-send StaffInterface::checkedIn(bookingId:b.id);
+send StaffInterface::checkedIn(bookingId:b.id, processId:self.id);
 
 unrelate b from self across R31;',
 	'');
@@ -568,7 +568,7 @@ unrelate booking from self across R31;
 select one bookingHandler related by self -> BookingHandler[R25];
 unrelate bookingHandler from self across R25;
 
-send StaffInterface::checkedIn(bookingId:-1);
+send StaffInterface::checkedIn(bookingId:-1, processId:self.id);
 ',
 	'');
 INSERT INTO SM_TAH

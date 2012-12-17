@@ -508,7 +508,7 @@ INSERT INTO SM_ACT
 	VALUES ("3d00c9d6-0d4d-44df-8e5c-a04bb3dfa39a",
 	"bc3c6035-ed6a-45bf-a618-b0c76ade3205",
 	1,
-	'send StaffInterface::checkedOut(bookingId:-1); //send notification about the termination to caller
+	'send StaffInterface::checkedOut(bookingId:-1, processId:self.id); //send notification about the termination to caller
 
 select one booking related by self -> Booking[R29];
 unrelate booking from self across R29;',
@@ -630,7 +630,7 @@ INSERT INTO SM_ACT
 	1,
 	'select one booking related by self -> Booking[R29];
 
-send StaffInterface::checkedOut(bookingId:booking.id);
+send StaffInterface::checkedOut(bookingId:booking.id, processId:self.id);
 
 unrelate self from booking across R29;',
 	'');
