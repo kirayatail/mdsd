@@ -14,7 +14,7 @@ INSERT INTO O_TFR
 	'',
 	"e19bafad-15ad-4b81-8d82-2da842d18b5e",
 	1,
-	'',
+	'return false;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");
@@ -24,7 +24,7 @@ INSERT INTO S_DT_PROXY
 	'boolean',
 	'',
 	'',
-	'../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("3e08501f-9d41-4116-b9b3-2b62bf55ab6f",
 	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
@@ -49,7 +49,7 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("b9e806ab-8224-436a-a7f0-695dd24a6510",
 	"9c3d6dba-2ca7-427a-bb3f-990ca1dd13d1");
@@ -85,4 +85,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../BookingSystem.xtuml');
+	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
