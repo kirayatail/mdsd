@@ -18,6 +18,15 @@ INSERT INTO SM_EVTDI
 	'',
 	"ca5479a1-794a-4792-960d-224a8cec3d42",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVTDI
+	VALUES ("84eee988-c88d-4a68-8d49-27056fc91604",
+	"4dacf4ae-75c7-4a0e-82cd-6c24ce420757",
+	'amountToPay',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"ca5479a1-794a-4792-960d-224a8cec3d42",
+	"864b936b-40c3-4748-ba18-e7f98ed05da5");
 INSERT INTO S_DT_PROXY
 	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
 	"00000000-0000-0000-0000-000000000000",
@@ -92,6 +101,7 @@ INSERT INTO SM_ACT
 	1,
 	'create object instance apt of AddPaymentTest;
 apt.processId = rcvd_evt.processId;
+apt.amount = rcvd_evt.amountToPay;
 
 generate AddPaymentTest1:''initiateAddPaymentTest'' () to apt;',
 	'');
