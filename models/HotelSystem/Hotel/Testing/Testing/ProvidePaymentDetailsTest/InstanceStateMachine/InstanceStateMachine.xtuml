@@ -315,7 +315,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("8b6db914-b9d9-4d9e-98ff-6604f34610e4",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -343,7 +343,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("2a4b9ee2-b90b-4057-bee2-ca65ae13ff35",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -357,9 +357,7 @@ INSERT INTO SM_ACT
 	VALUES ("f5ab3fe0-c1a1-4e50-a089-cbbdf30a1121",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
 	1,
-	'generate AddPaymentTest_A1:''initiateAddPaymentTest''(processId:self.processId) to AddPaymentTest class;
-
-generate ProvidePaymentDetailsTest4:''goToFinalState''() to self;
+	'generate ProvidePaymentDetailsTest4:''goToFinalState''() to self;
 ',
 	'');
 INSERT INTO SM_TAH
@@ -372,7 +370,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("c45599c5-8aa4-4327-a2ee-8eab0f7e95c3",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -385,7 +383,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("0ab2e5cd-4a13-4a53-b81b-c16243cb1a68",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_MOAH
@@ -399,7 +397,7 @@ INSERT INTO SM_ACT
 	VALUES ("21b8716c-555c-4e55-98fd-02d0834cd584",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
 	1,
-	'',
+	'select any cbt from CustomerBookingTest where selected.pid == self.processId;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("5fe64d2b-9fcf-45a9-bdcb-0ffbbf5c522f",
@@ -411,7 +409,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("5fe64d2b-9fcf-45a9-bdcb-0ffbbf5c522f",
 	"3366ceb0-b871-432e-9708-17e3dad920eb",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO GD_MD
