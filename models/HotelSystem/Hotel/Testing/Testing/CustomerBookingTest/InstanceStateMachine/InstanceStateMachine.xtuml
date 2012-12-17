@@ -699,7 +699,10 @@ INSERT INTO SM_ACT
 	VALUES ("826ca0dc-d129-4f83-85fb-90843a206270",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'LOG::LogInfo(message:rcvd_evt.message);',
+	'select any tc from TestController;
+generate TestController2:''testDone'' (testSucceded:false) to tc;
+generate TestController2:''testDone'' (testSucceded:false) to tc;
+generate TestController2:''testDone'' (testSucceded:false) to tc;',
 	'');
 INSERT INTO SM_TAH
 	VALUES ("d73df8ab-90b3-4fcf-a189-79eff446d2c2",
