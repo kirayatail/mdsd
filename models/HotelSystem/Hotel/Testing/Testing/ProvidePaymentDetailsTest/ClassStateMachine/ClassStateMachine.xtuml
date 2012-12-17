@@ -157,6 +157,10 @@ INSERT INTO SM_ACT
 	1,
 	'create object instance ppdt of ProvidePaymentDetailsTest;
 ppdt.processId = rcvd_evt.processId;
+ppdt.cardHolder = "test";
+ppdt.cvcCode = 111;
+ppdt.cardNumber = 1111222233334444;
+ppdt.expirationDate = 1234;
 
 generate ProvidePaymentDetailsTest1:''initiateProvidePaymentDetailsTest'' () to ppdt;',
 	'');

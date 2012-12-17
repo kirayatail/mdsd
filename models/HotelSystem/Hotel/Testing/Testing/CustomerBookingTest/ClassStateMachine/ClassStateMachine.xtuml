@@ -367,7 +367,10 @@ INSERT INTO SM_ACT
 	'select many cbt from CustomerBookingTest;
 
 for each test in cbt
-	if (rcvd_evt.callerId == test.id)
+	if (rcvd_evt.callerId == test.callerId)
+		if(rcvd_evt.suggestion.id == -1)
+			generate CustomerBookingTest5:''Failure!'' ("Couldn''t find a suitable accommodation") to test;
+		end if
 		generate CustomerBookingTest2:''BookingCreated'' (processId:rcvd_evt.processId, type:rcvd_evt.suggestion.id) to test;
 	end if;
 end for;
