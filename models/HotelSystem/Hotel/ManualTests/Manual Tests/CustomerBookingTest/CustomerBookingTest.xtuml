@@ -4,7 +4,7 @@ INSERT INTO O_OBJ
 	VALUES ("62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
 	'CustomerBookingTest',
 	1,
-	'KEY',
+	'CustomerBookingTest',
 	'',
 	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
 INSERT INTO O_NBATTR

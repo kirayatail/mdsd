@@ -2,9 +2,9 @@
 
 INSERT INTO O_OBJ
 	VALUES ("a524c043-b99b-4df8-9e33-bf5dc707df43",
-	'Unnamed Class',
+	'CheckInTest',
 	2,
-	'KEY',
+	'CheckInTest',
 	'',
 	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
 INSERT INTO O_ID
