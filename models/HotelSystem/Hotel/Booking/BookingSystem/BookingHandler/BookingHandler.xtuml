@@ -24,7 +24,7 @@ INSERT INTO S_DT_PROXY
 	'void',
 	'',
 	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TFR
 	VALUES ("2ec425e5-8438-41d3-8f04-b62812e26b73",
 	"f1a4f925-3f6a-4d33-8549-ffb1ef015db5",
@@ -62,7 +62,7 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_TPARM
 	VALUES ("32262546-d60c-47f0-8c6c-a0ea9f233db7",
 	"b05651f5-5b22-4763-97ce-79b1cd021308",
@@ -130,6 +130,10 @@ INSERT INTO O_TFR
 	1,
 	'// If start date >= end date, there are no types matching the search criteria.
 if param.starts >= param.ends
+	return -1;
+end if;
+
+if param.persons <= 0
 	return -1;
 end if;
 
@@ -293,4 +297,4 @@ INSERT INTO S_SS_PROXY
 	0,
 	"c0eb1a5b-457e-4353-a295-25de28f467f1",
 	"00000000-0000-0000-0000-000000000000",
-	'../../../../../../../HotelSystem/models/HotelSystem/Hotel/Booking/BookingSystem/BookingSystem.xtuml');
+	'../BookingSystem.xtuml');
