@@ -8,31 +8,6 @@ INSERT INTO O_OBJ
 	'',
 	"039b251e-463b-4e95-ba19-5c91e87add53");
 INSERT INTO O_NBATTR
-	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
-	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
-INSERT INTO O_BATTR
-	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
-	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
-INSERT INTO O_ATTR
-	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
-	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
-	"00000000-0000-0000-0000-000000000000",
-	'current_state',
-	'',
-	'',
-	'current_state',
-	0,
-	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
-	'',
-	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
-	"00000000-0000-0000-0000-000000000000",
-	'state<State_Model>',
-	'',
-	'',
-	'../../../../Datatypes/Datatypes.xtuml');
-INSERT INTO O_NBATTR
 	VALUES ("b164cbff-738c-4738-b0b7-a0a04460ba3c",
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
 INSERT INTO O_BATTR
@@ -75,6 +50,31 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_BATTR
+	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
+INSERT INTO O_ATTR
+	VALUES ("404a0d7a-a18b-4f83-af8b-38c374e7b009",
+	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8",
+	"00000000-0000-0000-0000-000000000000",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	"00000000-0000-0000-0000-000000000000",
+	'state<State_Model>',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"6de6ac15-8c3e-491f-a43d-f4b74a9f07b8");
