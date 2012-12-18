@@ -133,7 +133,7 @@ if param.starts >= param.ends
 	return -1;
 end if;
 
-if param.persons <= 0
+if param.persons >= 0
 	return -1;
 end if;
 
