@@ -14,16 +14,17 @@ INSERT INTO O_TFR
 	'',
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	1,
-	'select any type related by self -> Type[R23] where selected.id == param.type;
+	'count = 0;
+select any type related by self -> Type[R23] where selected.id == param.type;
 
 select many accoms related by type -> Accommodation[R34];
-count = 0;
+
 
 for each accom in accoms
 	count = count +1;
 end for;
 
-return count;',
+return 0;',
 	1,
 	'',
 	"00000000-0000-0000-0000-000000000000");

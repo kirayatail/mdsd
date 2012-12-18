@@ -18,6 +18,13 @@ INSERT INTO SM_EVTDI
 	'',
 	"d46861a3-382d-465f-b33b-e5cf744110c3",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("b10a23a1-2a0f-4033-9131-9b3105995574",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -36,6 +43,13 @@ INSERT INTO SM_EVTDI
 	'',
 	"eeaee4eb-e44c-460d-9982-84f1e3c84847",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("956b044e-be47-4b40-b295-a7d51bf68b56",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -658,7 +672,7 @@ INSERT INTO SM_ACT
 	1,
 	'select any tc from TestController;
 
-generate TestController2:testDone to tc;
+generate TestController2:testDone(testSucceded:true) to tc; // Assuming the test succeeded, might not be so =\
 
 generate CheckInTest_A1:''initiateCheckInTest''(bookingId:self.bookingId, callerId:self.callerId) to CheckInTest class;',
 	'');
@@ -1696,4 +1710,4 @@ INSERT INTO O_OBJ_PROXY
 	'CustomerBookingTest',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/CustomerBookingTest/CustomerBookingTest.xtuml');
+	'../CustomerBookingTest.xtuml');
