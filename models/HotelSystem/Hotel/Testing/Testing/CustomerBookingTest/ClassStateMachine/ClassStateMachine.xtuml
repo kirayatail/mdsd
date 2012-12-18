@@ -350,6 +350,7 @@ INSERT INTO SM_ACT
 
 for each test in cbt
 	if (rcvd_evt.processId == test.processId)
+		test.bookingId = rcvd_evt.bookingId;
 		generate CustomerBookingTest4:''ConfirmationOK'' () to test;
 		break;
 	end if;
