@@ -2,11 +2,29 @@
 
 INSERT INTO O_OBJ
 	VALUES ("62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
-	'CustomerBookingTest',
+	'ManualCustomerBookingTest',
 	1,
-	'CustomerBookingTest',
+	'ManualCustomerBookingTest',
 	'',
 	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
+INSERT INTO O_TFR
+	VALUES ("ce78a8a0-d57d-4906-bdba-187f85c28e9e",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	'bookWithSingle',
+	'',
+	"3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
+	0,
+	'generate SignalDispatch_A5:createBookingTest(starts:1, ends:3, rooms:1, persons:1, name:"Nils Hult")to SignalDispatch class;',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("98ba5c64-71e3-43fb-9110-bb06b82c67e6",
 	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
@@ -172,6 +190,24 @@ INSERT INTO S_DT_PROXY
 	'',
 	'',
 	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("da992780-c9ad-45a2-ac73-12afe60ad491",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("da992780-c9ad-45a2-ac73-12afe60ad491",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("da992780-c9ad-45a2-ac73-12afe60ad491",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"8fdd8e75-a784-4423-8d6d-dc13b31ebe77",
+	'bookingId',
+	'',
+	'',
+	'bookingId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");

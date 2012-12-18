@@ -7,6 +7,31 @@ INSERT INTO O_OBJ
 	'SignalDispatch',
 	'',
 	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
+INSERT INTO O_NBATTR
+	VALUES ("14b7ad6a-009a-4308-8c3d-722342929a3c",
+	"a524c043-b99b-4df8-9e33-bf5dc707df43");
+INSERT INTO O_BATTR
+	VALUES ("14b7ad6a-009a-4308-8c3d-722342929a3c",
+	"a524c043-b99b-4df8-9e33-bf5dc707df43");
+INSERT INTO O_ATTR
+	VALUES ("14b7ad6a-009a-4308-8c3d-722342929a3c",
+	"a524c043-b99b-4df8-9e33-bf5dc707df43",
+	"00000000-0000-0000-0000-000000000000",
+	'idCounter',
+	'',
+	'',
+	'idCounter',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"a524c043-b99b-4df8-9e33-bf5dc707df43");
