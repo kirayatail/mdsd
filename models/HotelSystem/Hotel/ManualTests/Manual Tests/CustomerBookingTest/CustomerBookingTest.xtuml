@@ -4,7 +4,7 @@ INSERT INTO O_OBJ
 	VALUES ("62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
 	'CustomerBookingTest',
 	1,
-	'KEY',
+	'CustomerBookingTest',
 	'',
 	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
 INSERT INTO O_NBATTR
@@ -147,6 +147,31 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("8fdd8e75-a784-4423-8d6d-dc13b31ebe77",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("8fdd8e75-a784-4423-8d6d-dc13b31ebe77",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("8fdd8e75-a784-4423-8d6d-dc13b31ebe77",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"27fc6b8f-8156-4c0d-a4c1-0202515f5b23",
+	'name',
+	'',
+	'',
+	'name',
+	0,
+	"856c2096-9d47-49f5-a1d5-f50fd9558416",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO O_ID
 	VALUES (0,
 	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
