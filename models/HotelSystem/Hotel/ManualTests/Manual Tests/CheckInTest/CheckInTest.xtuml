@@ -1,0 +1,27 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("a524c043-b99b-4df8-9e33-bf5dc707df43",
+	'CheckInTest',
+	2,
+	'CheckInTest',
+	'',
+	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
+INSERT INTO O_ID
+	VALUES (0,
+	"a524c043-b99b-4df8-9e33-bf5dc707df43");
+INSERT INTO O_ID
+	VALUES (1,
+	"a524c043-b99b-4df8-9e33-bf5dc707df43");
+INSERT INTO O_ID
+	VALUES (2,
+	"a524c043-b99b-4df8-9e33-bf5dc707df43");
+INSERT INTO S_SS_PROXY
+	VALUES ("2ff85be6-15c3-4760-a5e3-b5a425d5d3f5",
+	'Manual Tests',
+	'',
+	'',
+	0,
+	"3aa467ef-f026-4498-a2bb-ab3a41d226b3",
+	"00000000-0000-0000-0000-000000000000",
+	'../Manual Tests.xtuml');
