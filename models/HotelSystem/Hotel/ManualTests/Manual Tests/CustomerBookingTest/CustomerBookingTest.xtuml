@@ -1,0 +1,167 @@
+-- BP 7.1 content: ModelClass syschar: 3 persistence-version: 7.1.5
+
+INSERT INTO O_OBJ
+	VALUES ("62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	'CustomerBookingTest',
+	1,
+	'KEY',
+	'',
+	"2ff85be6-15c3-4760-a5e3-b5a425d5d3f5");
+INSERT INTO O_NBATTR
+	VALUES ("98ba5c64-71e3-43fb-9110-bb06b82c67e6",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("98ba5c64-71e3-43fb-9110-bb06b82c67e6",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("98ba5c64-71e3-43fb-9110-bb06b82c67e6",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"00000000-0000-0000-0000-000000000000",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	"00000000-0000-0000-0000-000000000000",
+	'state<State_Model>',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("e1f85caa-b43f-461a-bbf8-8be6b1d5a2a4",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("e1f85caa-b43f-461a-bbf8-8be6b1d5a2a4",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("e1f85caa-b43f-461a-bbf8-8be6b1d5a2a4",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"98ba5c64-71e3-43fb-9110-bb06b82c67e6",
+	'starts',
+	'',
+	'',
+	'starts',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../Datatypes/Datatypes.xtuml');
+INSERT INTO O_NBATTR
+	VALUES ("3bdd9372-c4c3-4c42-a19d-de8fc9306361",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("3bdd9372-c4c3-4c42-a19d-de8fc9306361",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("3bdd9372-c4c3-4c42-a19d-de8fc9306361",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"e1f85caa-b43f-461a-bbf8-8be6b1d5a2a4",
+	'ends',
+	'',
+	'',
+	'ends',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("4410bcee-1e0f-4c47-9896-a8b77b921da2",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("4410bcee-1e0f-4c47-9896-a8b77b921da2",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("4410bcee-1e0f-4c47-9896-a8b77b921da2",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"3bdd9372-c4c3-4c42-a19d-de8fc9306361",
+	'rooms',
+	'',
+	'',
+	'rooms',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("eac08d82-602d-48fc-b280-6d03d59056ad",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("eac08d82-602d-48fc-b280-6d03d59056ad",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("eac08d82-602d-48fc-b280-6d03d59056ad",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"4410bcee-1e0f-4c47-9896-a8b77b921da2",
+	'persons',
+	'',
+	'',
+	'persons',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("16de5e14-8b87-48d4-a148-2edb3bbd6096",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("16de5e14-8b87-48d4-a148-2edb3bbd6096",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("16de5e14-8b87-48d4-a148-2edb3bbd6096",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"eac08d82-602d-48fc-b280-6d03d59056ad",
+	'id',
+	'',
+	'',
+	'id',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("27fc6b8f-8156-4c0d-a4c1-0202515f5b23",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_BATTR
+	VALUES ("27fc6b8f-8156-4c0d-a4c1-0202515f5b23",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ATTR
+	VALUES ("27fc6b8f-8156-4c0d-a4c1-0202515f5b23",
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc",
+	"16de5e14-8b87-48d4-a148-2edb3bbd6096",
+	'processId',
+	'',
+	'',
+	'processId',
+	0,
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ID
+	VALUES (1,
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO O_ID
+	VALUES (2,
+	"62cb0bef-a2d2-4e79-9a9b-7d2a64a045bc");
+INSERT INTO S_SS_PROXY
+	VALUES ("2ff85be6-15c3-4760-a5e3-b5a425d5d3f5",
+	'Manual Tests',
+	'',
+	'',
+	0,
+	"3aa467ef-f026-4498-a2bb-ab3a41d226b3",
+	"00000000-0000-0000-0000-000000000000",
+	'../Manual Tests.xtuml');
