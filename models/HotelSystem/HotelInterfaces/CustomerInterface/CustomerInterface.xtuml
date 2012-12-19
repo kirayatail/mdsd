@@ -338,6 +338,13 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("39e9020c-5f64-461d-8ad1-7713ad65a35b",
+	"00000000-0000-0000-0000-000000000000",
+	'BookingSummary',
+	'',
+	'',
+	'../../../../../HotelSystem/models/HotelSystem/HotelBookingDatatypes/HotelBookingDatatypes.xtuml');
 INSERT INTO IP_IP_PROXY
 	VALUES ("292db3a9-8d29-4506-a0ec-58dab308a3da",
 	"00000000-0000-0000-0000-000000000000",
