@@ -18,13 +18,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"be789566-8c8d-4bc2-ba8e-240a0c8f442a",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
-	"00000000-0000-0000-0000-000000000000",
-	'boolean',
-	'',
-	'',
-	'../../../../../Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("21aae3a7-ec4a-44f8-a5d9-7f7a3a2ce073",
 	"4eae2453-2a57-415f-9019-b51e312fe612",
@@ -262,15 +255,12 @@ self.numberOfTestsDone = 0;
 
 id = 0;
 next = 1;
-next = next * 1103515245 + 12345;
+next = Math::abs(i:next * 1103515245 + 12345);
 while (id < numberOfCBTest)
 	create object instance t of CustomerBookingTest;
 	t.callerId = id;
-	if(next < 0)
-		next = next * -1;
-	end if;
 	t.seed = next;
-	next = next * 1103515245 + 12345;
+	next = Math::abs(i:next * 1103515245 + 12345);
 	id = id + 1;
 	generate CustomerBookingTest1:startTest to t;
 end while;
@@ -778,4 +768,4 @@ INSERT INTO O_OBJ_PROXY
 	'TestController',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../TestController.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/TestController/TestController.xtuml');

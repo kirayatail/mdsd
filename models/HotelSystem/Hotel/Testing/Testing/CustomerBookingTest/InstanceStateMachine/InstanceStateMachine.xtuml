@@ -24,7 +24,7 @@ INSERT INTO S_DT_PROXY
 	'integer',
 	'',
 	'',
-	'../../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("b10a23a1-2a0f-4033-9131-9b3105995574",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -49,7 +49,7 @@ INSERT INTO S_DT_PROXY
 	'string',
 	'',
 	'',
-	'../../../../../Datatypes/Datatypes.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_LEVT
 	VALUES ("956b044e-be47-4b40-b295-a7d51bf68b56",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
@@ -571,14 +571,14 @@ INSERT INTO SM_ACT
 	VALUES ("c0e6686f-84cc-4c72-a455-0d967f664512",
 	"ac13c1bd-8ca9-4893-8577-8eb7ec945bb6",
 	1,
-	'self.start = self.seed % 100;
+	'self.start = Math::abs(i:self.seed % 100);
 self.seed = self.seed * 1103515245 + 12345;
-self.end = self.seed % 100;
+self.end = Math::abs(i:self.seed % 100);
 self.seed = self.seed * 1103515245 + 12345;
-self.rooms = self.seed % 3;
+self.rooms = Math::abs(i:self.seed % 3);
 self.seed = self.seed * 1103515245 + 12345;
-self.persons = self.seed%5;
-self.seed = self.seed * 1103515245 + 12345;
+self.persons = Math::abs(i:self.seed%5);
+self.seed = Math::abs(i:self.seed * 1103515245 + 12345);
 self.name = "testnamn";
 
 send CustomerInterface::startCustomerBooking(callerId:self.callerId,start:self.start,end:self.end,
@@ -618,12 +618,12 @@ INSERT INTO SM_ACT
 	1,
 	'self.processId = rcvd_evt.processId;
 
-cvc = self.seed % 1000;
+cvc = Math::abs(i:self.seed % 1000);
 self.seed = self.seed * 1103515245 + 12345;
-cn = self.seed;
+cn = Math::abs(i:self.seed);
 self.seed = self.seed * 1103515245 + 12345;
-ed = self.seed % 10000;
-self.seed = self.seed * 1103515245 + 12345;
+ed = Math::abs(i:self.seed % 10000);
+self.seed = Math::abs(i:self.seed * 1103515245 + 12345);
 
 send CustomerInterface::pickOption(processId:rcvd_evt.processId, typeId:rcvd_evt.type);
 
@@ -1710,4 +1710,4 @@ INSERT INTO O_OBJ_PROXY
 	'CustomerBookingTest',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../CustomerBookingTest.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/CustomerBookingTest/CustomerBookingTest.xtuml');
