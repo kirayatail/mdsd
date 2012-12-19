@@ -19,8 +19,8 @@ INSERT INTO GD_MD
 	1,
 	4275,
 	3161,
-	0,
-	0,
+	200,
+	150,
 	0,
 	'');
 INSERT INTO GD_GE
@@ -47,29 +47,6 @@ INSERT INTO DIM_ELE
 	1,
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO GD_GE
-	VALUES ("30acaf6f-19ca-45c0-90a3-248d84ab9bf1",
-	"75296522-68ca-4516-be00-7b6dd9092ae0",
-	"4f21d286-6b3a-4b7c-ae0d-630ccef9478a",
-	12,
-	0);
-INSERT INTO GD_SHP
-	VALUES ("30acaf6f-19ca-45c0-90a3-248d84ab9bf1");
-INSERT INTO GD_NCS
-	VALUES ("30acaf6f-19ca-45c0-90a3-248d84ab9bf1");
-INSERT INTO DIM_ND
-	VALUES (240.000000,
-	108.000000,
-	"30acaf6f-19ca-45c0-90a3-248d84ab9bf1");
-INSERT INTO DIM_GE
-	VALUES (4116.000000,
-	3000.000000,
-	"30acaf6f-19ca-45c0-90a3-248d84ab9bf1",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("30acaf6f-19ca-45c0-90a3-248d84ab9bf1",
-	1,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO GD_GE
 	VALUES ("ebc5dd80-6a59-4eed-9d96-a249560efec6",
 	"75296522-68ca-4516-be00-7b6dd9092ae0",
 	"2d089092-4d28-4353-aad6-f7ff325a19eb",
@@ -91,6 +68,29 @@ INSERT INTO DIM_GE
 INSERT INTO DIM_ELE
 	VALUES ("ebc5dd80-6a59-4eed-9d96-a249560efec6",
 	1,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_GE
+	VALUES ("63c1a3a8-fc68-4d0f-8f45-68a777fb8e6f",
+	"75296522-68ca-4516-be00-7b6dd9092ae0",
+	"393341f5-4f7a-480d-8621-79f1d9d01944",
+	12,
+	0);
+INSERT INTO GD_SHP
+	VALUES ("63c1a3a8-fc68-4d0f-8f45-68a777fb8e6f");
+INSERT INTO GD_NCS
+	VALUES ("63c1a3a8-fc68-4d0f-8f45-68a777fb8e6f");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"63c1a3a8-fc68-4d0f-8f45-68a777fb8e6f");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"63c1a3a8-fc68-4d0f-8f45-68a777fb8e6f",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("63c1a3a8-fc68-4d0f-8f45-68a777fb8e6f",
+	0,
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_DIA
 	VALUES ("75296522-68ca-4516-be00-7b6dd9092ae0",
@@ -139,7 +139,7 @@ INSERT INTO S_DT_PROXY
 13:25:10. The accuracy of external time is dependent on the architecture and
 implementation.',
 	'',
-	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Datatypes/Datatypes.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO S_BRG
 	VALUES ("09de517b-625e-4c45-b2f1-e2860a63b35f",
 	"ecd85f72-c051-49cc-ae13-6ad9fc76aa16",
@@ -335,7 +335,7 @@ INSERT INTO S_DT_PROXY
 	' The system clock counts time in ticks. The size of a tick is dependent on the
  architecture and implementation.',
 	'',
-	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Datatypes/Datatypes.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO S_BRG
 	VALUES ("1abc4e65-875c-44cd-8713-eb38818e69c8",
 	"ecd85f72-c051-49cc-ae13-6ad9fc76aa16",
@@ -372,7 +372,7 @@ INSERT INTO S_DT_PROXY
 	'inst_ref<Timer>',
 	'',
 	'',
-	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Datatypes/Datatypes.xtuml');
+	'../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO S_BRG
 	VALUES ("f4a3eab7-1a77-4c18-a648-426e074a76ba",
 	"ecd85f72-c051-49cc-ae13-6ad9fc76aa16",
@@ -506,25 +506,6 @@ INSERT INTO S_BPARM
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000",
-	'');
-INSERT INTO S_EEIP
-	VALUES ("d8aad36a-ec45-4438-a304-7af04e363352",
-	"4f21d286-6b3a-4b7c-ae0d-630ccef9478a");
-INSERT INTO S_EE
-	VALUES ("4f21d286-6b3a-4b7c-ae0d-630ccef9478a",
-	'Architecture',
-	'',
-	'ARCH',
-	"c242977e-23f8-4b6f-8354-c48c5903a4e3");
-INSERT INTO S_BRG
-	VALUES ("d4835def-fdc2-46fc-9188-c363a4cd091e",
-	"4f21d286-6b3a-4b7c-ae0d-630ccef9478a",
-	'shutdown',
-	'',
-	0,
-	"00000000-0000-0000-0000-000000000000",
-	'control stop;',
-	1,
 	'');
 INSERT INTO S_EEIP
 	VALUES ("d8aad36a-ec45-4438-a304-7af04e363352",
@@ -695,3 +676,29 @@ INSERT INTO S_BPARM
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
+INSERT INTO S_EEIP
+	VALUES ("d8aad36a-ec45-4438-a304-7af04e363352",
+	"393341f5-4f7a-480d-8621-79f1d9d01944");
+INSERT INTO S_EE
+	VALUES ("393341f5-4f7a-480d-8621-79f1d9d01944",
+	'Architecture',
+	'',
+	'ARCH',
+	"c242977e-23f8-4b6f-8354-c48c5903a4e3");
+INSERT INTO S_BRG
+	VALUES ("41a5835d-2875-4efe-9f67-c965d7728dcc",
+	"393341f5-4f7a-480d-8621-79f1d9d01944",
+	'shutdown',
+	'',
+	0,
+	"3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
+	'control stop;',
+	1,
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("3eef3a3b-426d-40c5-97d2-aff4ca61e7a7",
+	"00000000-0000-0000-0000-000000000000",
+	'void',
+	'',
+	'',
+	'../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
