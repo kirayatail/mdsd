@@ -18,13 +18,6 @@ INSERT INTO SM_EVTDI
 	'',
 	"060d8a99-fca2-4f6e-83b5-1f6ed2d3a349",
 	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
-	"00000000-0000-0000-0000-000000000000",
-	'integer',
-	'',
-	'',
-	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO SM_EVTDI
 	VALUES ("f48e9c4a-26e1-4aeb-95d4-f0265e08a026",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
@@ -52,6 +45,49 @@ INSERT INTO SM_EVTDI
 	'',
 	"a9430c9b-a0b4-4f29-ae5f-316f56747afc",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVTDI
+	VALUES ("149134c4-1930-44b1-9049-65f45f0e66e8",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	'processId',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
+INSERT INTO SM_EVTDI
+	VALUES ("cf5de866-9709-4c0c-80e3-0c8d9c9d9d42",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	'persons',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"149134c4-1930-44b1-9049-65f45f0e66e8");
+INSERT INTO SM_EVTDI
+	VALUES ("faa10dee-4c2f-4f11-9df4-cab77f0a2b4d",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	'starts',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"cf5de866-9709-4c0c-80e3-0c8d9c9d9d42");
+INSERT INTO SM_EVTDI
+	VALUES ("4232ba70-cc63-4df9-a18b-21d42151f823",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	'ends',
+	'',
+	"fce637ce-efce-4558-a806-dabefe9b0a9d",
+	'',
+	"f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"faa10dee-4c2f-4f11-9df4-cab77f0a2b4d");
 INSERT INTO SM_LEVT
 	VALUES ("060d8a99-fca2-4f6e-83b5-1f6ed2d3a349",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
@@ -88,6 +124,24 @@ INSERT INTO SM_EVT
 	'',
 	'AccommodationHandler_A2',
 	'');
+INSERT INTO SM_LEVT
+	VALUES ("f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_SEVT
+	VALUES ("f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVT
+	VALUES ("f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"00000000-0000-0000-0000-000000000000",
+	3,
+	'assignType',
+	0,
+	'',
+	'AccommodationHandler_A3',
+	'');
 INSERT INTO SM_STATE
 	VALUES ("6f17822f-4f41-4398-832b-ba023d975db2",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
@@ -105,6 +159,11 @@ INSERT INTO SM_SEME
 	"a9430c9b-a0b4-4f29-ae5f-316f56747afc",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_SEME
+	VALUES ("6f17822f-4f41-4398-832b-ba023d975db2",
+	"f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_NSTXN
 	VALUES ("a1824665-4d17-4c72-9565-02cf0634b179",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
@@ -127,6 +186,17 @@ INSERT INTO SM_TXN
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
 	"6f17822f-4f41-4398-832b-ba023d975db2",
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_NSTXN
+	VALUES ("2422f925-da77-42c4-bc66-0ab0184a571f",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"6f17822f-4f41-4398-832b-ba023d975db2",
+	"f77cd51d-7ed8-491e-808e-0a7ff7c42346",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_TXN
+	VALUES ("2422f925-da77-42c4-bc66-0ab0184a571f",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"6f17822f-4f41-4398-832b-ba023d975db2",
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO SM_MOAH
 	VALUES ("cab17443-984c-4e9b-9377-f284aceb0e12",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
@@ -137,7 +207,7 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("cab17443-984c-4e9b-9377-f284aceb0e12",
 	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
-	3,
+	1,
 	'',
 	'');
 INSERT INTO SM_TAH
@@ -204,6 +274,45 @@ if not empty process
 	end if;
 end if;',
 	'');
+INSERT INTO SM_TAH
+	VALUES ("f6f990e8-5717-4c77-a2d8-7704c013238c",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	"2422f925-da77-42c4-bc66-0ab0184a571f");
+INSERT INTO SM_AH
+	VALUES ("f6f990e8-5717-4c77-a2d8-7704c013238c",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a");
+INSERT INTO SM_ACT
+	VALUES ("f6f990e8-5717-4c77-a2d8-7704c013238c",
+	"2c0ea73d-3dab-46db-b860-e1b140c4153a",
+	1,
+	'select any process from CustomerBookingProcess where selected.id == rcvd_evt.processId; 
+select one handler related by process -> BookingHandler[R32];
+typeID = handler.checkAvailability(persons:rcvd_evt.persons, starts: rcvd_evt.starts, ends: rcvd_evt.ends);
+
+create object instance tStruct of TypeObj;
+
+if(typeID == -1)
+	tStruct.type.id = -1;
+	tStruct.type.name = "null";
+	tStruct.type.price = 0;
+	tStruct.type.beds = 0;
+	// Send error signal: No available rooms of a type that''s big enough
+	send CustomerPort::customerBookingStarted(processId:process.id, suggestion:tStruct.type, callerId:process.callerId);
+	generate CustomerBookingProcess2:cancel to process;
+else
+	select any suggestion related by process -> BookingHandler[R32] -> AccommodationHandler[R24] -> Type[R23] where selected.id == typeID;
+	tStruct.type.id = suggestion.id;
+	tStruct.type.name = suggestion.name;
+	tStruct.type.price = suggestion.price;
+	tStruct.type.beds = suggestion.beds;
+	// Link booking to type
+	select one booking related by process -> Booking[R19];
+	relate booking to suggestion across R35;
+	// Send struct ''type'' with signal customerBookingStarted
+	send CustomerPort::customerBookingStarted(processId:process.id, suggestion:tStruct.type, callerId:process.callerId);
+end if;
+delete object instance tStruct;',
+	'');
 INSERT INTO GD_MD
 	VALUES ("7311f07b-6a95-4d1b-ad4d-a6b0806c0393",
 	10,
@@ -264,6 +373,16 @@ INSERT INTO DIM_CON
 	VALUES ("14bdf05e-8b7a-4be6-a7d3-0d2e9ae0edd8",
 	4500.000000,
 	3227.000000,
+	"7819d060-c6d5-4a14-91a5-c33af40bc7a0");
+INSERT INTO DIM_CON
+	VALUES ("07e6bf77-0b7f-4f61-b381-a85f5eee9638",
+	4440.000000,
+	3251.000000,
+	"7819d060-c6d5-4a14-91a5-c33af40bc7a0");
+INSERT INTO DIM_CON
+	VALUES ("51c4b1dc-4212-4ea5-ae4e-9432249647d2",
+	4366.000000,
+	3251.000000,
 	"7819d060-c6d5-4a14-91a5-c33af40bc7a0");
 INSERT INTO GD_GE
 	VALUES ("424b406a-f5a3-4f8c-85ee-a3ca7ee73adc",
@@ -515,6 +634,131 @@ INSERT INTO DIM_ED
 	VALUES ("dc92cdac-96f0-4ff5-addb-5b98f78bca31",
 	"14bdf05e-8b7a-4be6-a7d3-0d2e9ae0edd8",
 	"e4584470-5381-4bae-a14a-d150430cc33e");
+INSERT INTO GD_GE
+	VALUES ("7bf06ca4-d465-4877-b2be-4bb413603189",
+	"7311f07b-6a95-4d1b-ad4d-a6b0806c0393",
+	"2422f925-da77-42c4-bc66-0ab0184a571f",
+	42,
+	0);
+INSERT INTO GD_CON
+	VALUES ("7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("02e2efb2-0664-4655-b02f-a6cc6c74be6e",
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"02e2efb2-0664-4655-b02f-a6cc6c74be6e");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"02e2efb2-0664-4655-b02f-a6cc6c74be6e",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("02e2efb2-0664-4655-b02f-a6cc6c74be6e",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("a2888a60-4e02-4fec-8b75-61d0180544eb",
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"a2888a60-4e02-4fec-8b75-61d0180544eb");
+INSERT INTO DIM_GE
+	VALUES (4453.000000,
+	3270.000000,
+	"a2888a60-4e02-4fec-8b75-61d0180544eb",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("a2888a60-4e02-4fec-8b75-61d0180544eb",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("5b0686e1-0486-44f1-8804-9b696ba8915b",
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"5b0686e1-0486-44f1-8804-9b696ba8915b");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"5b0686e1-0486-44f1-8804-9b696ba8915b",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("5b0686e1-0486-44f1-8804-9b696ba8915b",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("03e36fb8-2574-4401-820f-8f36faf9e2e4",
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000",
+	"19e1b056-e16a-4e39-9ca2-6f99019b3082",
+	"395076ae-6f0e-4945-8fae-ff28b74cb7cc");
+INSERT INTO GD_LS
+	VALUES ("5f85badd-66f6-47f3-a43a-b931d45c2bbd",
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"03e36fb8-2574-4401-820f-8f36faf9e2e4",
+	"395076ae-6f0e-4945-8fae-ff28b74cb7cc",
+	"ac120e3d-a795-44f0-a77d-4e11269b3a65");
+INSERT INTO GD_LS
+	VALUES ("b124e47c-0d1f-4b6a-a029-24c546536c41",
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"5f85badd-66f6-47f3-a43a-b931d45c2bbd",
+	"ac120e3d-a795-44f0-a77d-4e11269b3a65",
+	"566ff95b-8cee-43e9-91bb-b7d9e8d9eb50");
+INSERT INTO DIM_WAY
+	VALUES ("19e1b056-e16a-4e39-9ca2-6f99019b3082",
+	4440.000000,
+	3251.000000,
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("566ff95b-8cee-43e9-91bb-b7d9e8d9eb50",
+	4366.000000,
+	3251.000000,
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000",
+	"19e1b056-e16a-4e39-9ca2-6f99019b3082");
+INSERT INTO DIM_WAY
+	VALUES ("395076ae-6f0e-4945-8fae-ff28b74cb7cc",
+	4440.000000,
+	3301.000000,
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("ac120e3d-a795-44f0-a77d-4e11269b3a65",
+	4366.000000,
+	3301.000000,
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"7bf06ca4-d465-4877-b2be-4bb413603189",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("7bf06ca4-d465-4877-b2be-4bb413603189",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("07e6bf77-0b7f-4f61-b381-a85f5eee9638",
+	"51c4b1dc-4212-4ea5-ae4e-9432249647d2",
+	"7bf06ca4-d465-4877-b2be-4bb413603189");
 INSERT INTO DIM_DIA
 	VALUES ("7311f07b-6a95-4d1b-ad4d-a6b0806c0393",
 	'',
