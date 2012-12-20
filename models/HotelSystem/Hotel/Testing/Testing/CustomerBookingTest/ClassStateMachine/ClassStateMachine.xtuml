@@ -59,7 +59,7 @@ INSERT INTO SPR_RS_PROXY
 	'',
 	'',
 	1,
-	'../../../Testing.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("7ad58bc3-1b99-444c-a919-b1e7b2c027f7",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
@@ -86,7 +86,7 @@ INSERT INTO SPR_RS_PROXY
 	'',
 	'',
 	1,
-	'../../../Testing.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("62495850-1c7f-464f-ac0e-c2aa85e7880f",
 	"554591c9-1bd8-494a-a337-8c49d5a56b8b",
@@ -301,9 +301,9 @@ INSERT INTO SM_ACT
 	'select any cbt from instances of CustomerBookingTest where selected.callerId == rcvd_evt.callerId;
 
 if(rcvd_evt.suggestion.id == -1)
-	generate CustomerBookingTest5:''Failure!''(message:"Couldn''t find a suitable accommodation") to cbt;
+	generate CustomerBookingTest6:''ErrorFromSystem''() to cbt;
 else
-	generate CustomerBookingTest2:BookingCreated(processId:rcvd_evt.processId, type:rcvd_evt.suggestion.id) to cbt;
+	generate CustomerBookingTest2:''BookingCreated''(processId:rcvd_evt.processId, type:rcvd_evt.suggestion.id) to cbt;
 end if;
 
 generate CustomerBookingTest_A2:''Message sent''() to CustomerBookingTest class; 
@@ -958,4 +958,4 @@ INSERT INTO O_OBJ_PROXY
 	'CustomerBookingTest',
 	'',
 	"400b8d54-fb2d-4457-8f15-6e041a0160ab",
-	'../CustomerBookingTest.xtuml');
+	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing/CustomerBookingTest/CustomerBookingTest.xtuml');

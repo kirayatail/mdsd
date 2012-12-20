@@ -56,7 +56,7 @@ INSERT INTO SPR_RS_PROXY
 	'checkInStarted',
 	'',
 	'',
-	3,
+	1,
 	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("1d365e50-ea8e-4264-8a70-3b703ef3ed2e",
@@ -83,7 +83,7 @@ INSERT INTO SPR_RS_PROXY
 	'checkedIn',
 	'',
 	'',
-	3,
+	1,
 	'../../../../../../../../HotelSystem/models/HotelSystem/Hotel/Testing/Testing.xtuml');
 INSERT INTO SM_SEVT
 	VALUES ("27ace414-f291-4422-b12b-e4c11ddbb0cc",

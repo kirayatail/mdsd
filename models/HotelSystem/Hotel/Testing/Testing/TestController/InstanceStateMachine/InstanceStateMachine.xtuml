@@ -246,7 +246,7 @@ INSERT INTO SM_ACT
 	VALUES ("a5dbad20-b144-4dd0-8d46-a898f7d4da47",
 	"4eae2453-2a57-415f-9019-b51e312fe612",
 	1,
-	'numberOfCBTest = 100;
+	'numberOfCBTest = 4;
 
 self.totalNumberOfTests = numberOfCBTest*3; //times three because each booking consists of three
 											//steps: CustomerBookingTest, CheckInTest, and

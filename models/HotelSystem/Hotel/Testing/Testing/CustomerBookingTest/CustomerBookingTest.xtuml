@@ -25,6 +25,13 @@ INSERT INTO O_ATTR
 	"9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("9648ec88-f5a4-46e9-a55f-ffe03c03c63f",
+	"00000000-0000-0000-0000-000000000000",
+	'state<State_Model>',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("c5f6ad62-8ee5-4be0-92dc-11d9d0548a16",
 	"b3bca08e-d891-436f-ad6d-b9f8462ba110");
@@ -43,6 +50,13 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	"00000000-0000-0000-0000-000000000000",
+	'integer',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("3ab11bb2-d3a2-41e6-9416-a2a609b90830",
 	"b3bca08e-d891-436f-ad6d-b9f8462ba110");
@@ -133,6 +147,13 @@ INSERT INTO O_ATTR
 	"856c2096-9d47-49f5-a1d5-f50fd9558416",
 	'',
 	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("856c2096-9d47-49f5-a1d5-f50fd9558416",
+	"00000000-0000-0000-0000-000000000000",
+	'string',
+	'',
+	'',
+	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("d021e4b3-e87a-4c53-a161-5c8a07200603",
 	"b3bca08e-d891-436f-ad6d-b9f8462ba110");
@@ -187,10 +208,28 @@ INSERT INTO O_ATTR
 	"fce637ce-efce-4558-a806-dabefe9b0a9d",
 	'',
 	'');
+INSERT INTO O_NBATTR
+	VALUES ("2eca291b-8bab-49c9-beaf-8fa01aa7a385",
+	"b3bca08e-d891-436f-ad6d-b9f8462ba110");
+INSERT INTO O_BATTR
+	VALUES ("2eca291b-8bab-49c9-beaf-8fa01aa7a385",
+	"b3bca08e-d891-436f-ad6d-b9f8462ba110");
+INSERT INTO O_ATTR
+	VALUES ("2eca291b-8bab-49c9-beaf-8fa01aa7a385",
+	"b3bca08e-d891-436f-ad6d-b9f8462ba110",
+	"3fa42369-3566-41b0-9a6e-9b5c661f235f",
+	'predictedOutcome',
+	'',
+	'',
+	'predictedOutcome',
+	0,
+	"e19bafad-15ad-4b81-8d82-2da842d18b5e",
+	'',
+	'');
 INSERT INTO S_DT_PROXY
-	VALUES ("fce637ce-efce-4558-a806-dabefe9b0a9d",
+	VALUES ("e19bafad-15ad-4b81-8d82-2da842d18b5e",
 	"00000000-0000-0000-0000-000000000000",
-	'integer',
+	'boolean',
 	'',
 	'',
 	'../../../../../../../HotelSystem/models/HotelSystem/Datatypes/Datatypes.xtuml');
